@@ -1,0 +1,68 @@
+.home {
+
+    //^ BREAKPOINT MOBILE
+    &__content {
+        &__title {  
+            margin-left: $gutter-medium;
+            &__h3 {
+                margin-top: $gutter-very-large;
+                margin-left: $gutter-medium;
+                font-size: $font-size-medium;
+                color: $titles;
+                padding-bottom: $gutter-large;
+                .icons {
+                    color: $titles;
+                    font-size: $font-size-extra-small;
+                    margin-right: $gutter-medium;
+                }
+            }
+        }
+        &__text-normal {
+            text-align: justify;
+            margin-left: $gutter-medium;
+            margin-right: $gutter-medium;
+            margin-bottom: $gutter-large;
+        }
+        &__projects {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: $gutter-regular;
+        }
+    }
+
+    //^ MEDIUM BREAKPOINT
+    @media (min-width: $breakpoint-medium-min-width) {
+        &__content {
+            &__title {
+                &__h3 {
+                    font-size: $font-size-regular;
+                }
+                .icons {
+                    font-size: $font-size-very-small;
+                }
+            }
+            &__projects {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    }
+
+
+    //^ LARGE BREAKPOINT
+    @media (min-width: $breakpoint-large-min-width) {
+        &__content {
+            &__title {
+                &__h3 {
+                    font-size: $font-size-large;
+                }
+                .icons {
+                    font-size: $font-size-small;
+                }
+            }
+        }
+    }
+}

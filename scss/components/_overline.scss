@@ -1,0 +1,28 @@
+.overline__site-title {
+
+    //^ MOBILE BREAKPOINT
+    width: 275px;
+    height: 1px;
+    background-image: linear-gradient(to right, darkgoldenrod, rgba(184, 134, 11, 0.15));
+    border-radius: 2px;
+    position: relative;
+    left: -$gutter-very-small;
+    
+    //^ MEDIUM BREAKPOINT
+    @media (min-width: $breakpoint-medium-min-width) {
+        width: 500px;
+        left: -$gutter-regular;
+    }
+
+    //^ LARGE BREAKPOINT
+    @media (min-width: $breakpoint-large-min-width) {
+        width: 800px;
+        left: -$gutter-very-large;
+    }
+}
+
+.animated {
+    animation-name: slide;
+    animation-direction: normal;
+    animation-duration: 1.5s;
+}
