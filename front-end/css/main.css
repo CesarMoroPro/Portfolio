@@ -1,0 +1,364 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v5.0.1 | 20191019
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu, ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Quicksand Regular";
+  src: url("../../assets/fonts/Quicksand/Quicksand-Regular.ttf");
+}
+.home {
+  min-width: 330px;
+  margin-left: 10.6666666667px;
+  margin-right: 10.6666666667px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Quicksand";
+}
+
+p {
+  letter-spacing: 0.75px;
+  line-height: 24px;
+}
+
+.home__header {
+  width: 100%;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.home__header__profil {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.home__header__profil__id {
+  width: 85%;
+  display: flex;
+  padding: 8px;
+}
+.home__header__profil__id__pic {
+  margin-left: 32px;
+  margin-top: 10.6666666667px;
+  width: 125px;
+  height: 125px;
+  border: solid 2.5px darkgoldenrod;
+  border-radius: 120px;
+}
+.home__header__profil__id__name {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10.6666666667px;
+}
+.home__header__profil__id__name__h1 {
+  font-size: 1.7391304348em;
+  color: darkgoldenrod;
+  line-height: 1.7391304348em;
+}
+.home__header__profil__social {
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: stretch;
+  padding: 8px;
+  margin-right: 32px;
+}
+.home__header__profil__social__fab {
+  font-size: 2.5em;
+  color: darkgoldenrod;
+}
+.home__header__profil__social__fab:hover {
+  color: rgba(184, 134, 11, 0.75);
+}
+.home__header__title {
+  min-width: 330px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2px;
+}
+.home__header__title__h2 {
+  text-align: center;
+  font-size: 2em;
+  color: darkgoldenrod;
+  font-style: italic;
+  text-transform: uppercase;
+  letter-spacing: 10.6666666667px;
+  margin: 4px;
+}
+@media (min-width: 740px) {
+  .home__header__profil__id {
+    width: 70%;
+  }
+  .home__header__profil__id__pic {
+    width: 150px;
+    height: 150px;
+  }
+  .home__header__profil__id__name__h1 {
+    font-size: 2em;
+  }
+  .home__header__profil__social {
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .home__header__profil__social__fab {
+    font-size: 3em;
+  }
+  .home__header__title__h2 {
+    font-size: 2.5em;
+    letter-spacing: 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .home__header__profil__id__pic {
+    width: 200px;
+    height: 200px;
+  }
+  .home__header__profil__id__name__h1 {
+    font-size: 2.5em;
+  }
+  .home__header__profil__social__fab {
+    font-size: 64px;
+  }
+  .home__header__title__h2 {
+    font-size: 3em;
+    letter-spacing: 64px;
+  }
+}
+
+.home__content__title {
+  margin-left: 10.6666666667px;
+}
+.home__content__title__h3 {
+  margin-top: 32px;
+  margin-left: 10.6666666667px;
+  font-size: 1.7391304348em;
+  color: darkgoldenrod;
+  padding-bottom: 24px;
+}
+.home__content__title__h3 .icons {
+  color: darkgoldenrod;
+  font-size: 0.8em;
+  margin-right: 10.6666666667px;
+}
+.home__content__text-normal {
+  text-align: justify;
+  margin-left: 10.6666666667px;
+  margin-right: 10.6666666667px;
+  margin-bottom: 24px;
+}
+.home__content__projects {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+}
+@media (min-width: 740px) {
+  .home__content__title__h3 {
+    font-size: 2em;
+  }
+  .home__content__title .icons {
+    font-size: 0.8888888889em;
+  }
+  .home__content__projects {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 1024px) {
+  .home__content__title__h3 {
+    font-size: 2.5em;
+  }
+  .home__content__title .icons {
+    font-size: 1em;
+  }
+}
+
+.home__footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  margin-top: 128px;
+  margin-bottom: 32px;
+}
+.home__footer p {
+  color: darkgoldenrod;
+}
+
+.home__content__project-card {
+  width: 330px;
+  margin: 32px;
+  border-radius: 5px;
+}
+.home__content__project-card__title {
+  width: 330px;
+  background-image: linear-gradient(to right, rgba(220, 220, 220, 0.45), rgba(255, 255, 255, 0.15));
+  position: absolute;
+  margin: 0;
+  text-align: center;
+  padding: 6.1538461538px 0;
+  border-radius: 5px 5px 0 0;
+  font-family: "Zen Dots";
+}
+.home__content__project-card__img {
+  width: 330px;
+  height: 220px;
+  border-radius: 5px;
+  box-shadow: 0px 7.5px 1em -0.15em #423309;
+}
+.home__content__project-card__text {
+  width: 95%;
+  padding: 10.6666666667px 6.1538461538px;
+  display: none;
+  text-align: justify;
+}
+.home__content__project-card__text-date {
+  padding: 10.6666666667px 6.1538461538px;
+  font-style: italic;
+  font-size: 0.8888888889em;
+  display: none;
+}
+.home__content__project-card__text-date .date {
+  color: darkgoldenrod;
+}
+
+.blurry__img {
+  box-shadow: 0px 7.5px 1em -0.2em black;
+}
+.blurry__img-link {
+  filter: blur(0.15em);
+  opacity: 0.5;
+}
+.blurry__div {
+  display: flex;
+  color: black;
+  background-color: red;
+}
+
+.overline__site-title {
+  width: 275px;
+  height: 1px;
+  background-image: linear-gradient(to right, darkgoldenrod, rgba(184, 134, 11, 0.15));
+  border-radius: 2px;
+  position: relative;
+  left: -6.1538461538px;
+}
+@media (min-width: 740px) {
+  .overline__site-title {
+    width: 500px;
+    left: -16px;
+  }
+}
+@media (min-width: 1024px) {
+  .overline__site-title {
+    width: 800px;
+    left: -32px;
+  }
+}
+
+.animated {
+  animation-name: slide;
+  animation-direction: normal;
+  animation-duration: 1.5s;
+}
+
+.underline__site-title {
+  width: 275px;
+  height: 1px;
+  background-image: linear-gradient(to right, darkgoldenrod, rgba(184, 134, 11, 0.15));
+  border-radius: 2px;
+  position: relative;
+  left: -6.1538461538px;
+}
+@media (min-width: 740px) {
+  .underline__site-title {
+    width: 500px;
+    left: -16px;
+  }
+}
+@media (min-width: 1024px) {
+  .underline__site-title {
+    width: 800px;
+    left: -32px;
+  }
+}
+
+.link {
+  color: darkgoldenrod;
+  text-decoration: underline 1.5px;
+}
+
+.link:hover {
+  color: rgba(184, 134, 11, 0.75);
+  text-decoration: none;
+}
+
+.link-title {
+  margin: 8px;
+}
+
+/*# sourceMappingURL=main.css.map */

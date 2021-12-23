@@ -1,0 +1,69 @@
+//^ BREAKPOINTS
+$breakpoint-toosmall-max-width: 378px;
+$breakpoint-small-min-width: 379px;
+$breakpoint-medium-min-width: 740px;
+$breakpoint-large-min-width: 1024px;
+
+
+//^ GUTTER SIZES
+//? SIZE REFERENCE: 
+$gutter-regular: 16px;
+//? OTHERS GUTTERS SIZES:
+$gutter-ultra-small: math.div($gutter-regular, 8);
+$gutter-extra-small: math.div($gutter-regular, 4);
+$gutter-very-small: math.div($gutter-regular, 2.6);
+$gutter-small: math.div($gutter-regular, 2);
+
+$gutter-medium: math.div($gutter-regular, 1.5);
+
+$gutter-large: $gutter-regular * 1.5;
+$gutter-very-large: $gutter-regular * 2;
+$gutter-extra-large: $gutter-regular * 4;
+$gutter-ultra-large: $gutter-regular * 8;
+
+
+//^ FONT FAMILY
+$font-main-light: 'Quicksand';
+$font-main-regular: 'Quicksand Regular';
+$font-card-title: 'Zen Dots';
+
+
+//^ FONT SIZES
+//? SIZE REFERENCE:
+$font-size-regular: 2em;
+//? OTHERS FONT SIZES:
+$font-size-extra-small: math.div($font-size-regular, 2.5);
+$font-size-very-small: math.div($font-size-regular, 2.25);
+$font-size-small: math.div($font-size-regular, 2);
+
+$font-size-medium: math.div($font-size-regular, 1.15);
+
+$font-size-large: $font-size-regular * 1.25; //2.5em
+$font-size-very-large: $font-size-regular * 1.5; //3em
+$font-size-extra-large: $font-size-regular * 2;
+
+
+//^ COLORS
+//? WHITE
+$white: rgb(255 255 255);
+$white-transparent: rgba(255, 255, 255, 0.15);
+//? GOLD
+$gold: rgb(184 134 11);
+$gold-semi-transparent: rgba(184, 134, 11, 0.75);
+$gold-transparent: rgba(184, 134, 11, 0.15);
+$gold-gradient: linear-gradient(to right, $gold-semi-transparent, $gold-transparent);
+$gold-gradient-to-white: linear-gradient(to right, $gold, $gold-transparent);
+//? GREY
+$grey-light: rgb(220 220 220);
+$grey-light-transparent: rgba(220, 220, 220, 0.45);
+$grey-light-gradient: linear-gradient(to right, $grey-light-transparent, $white-transparent);
+
+$titles: $gold;
+$titles-semi-transparent: $gold-semi-transparent;
+$titles-gradient-to-white: $gold-gradient-to-white;
+
+$shadow-blurry: #423309;
+$shadow-regular: black;
+
+
+

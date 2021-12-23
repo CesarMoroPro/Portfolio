@@ -1,0 +1,13 @@
+.home {
+    &__footer{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: baseline;
+        margin-top: $gutter-ultra-large;
+        margin-bottom: $gutter-very-large;
+        p {
+            color: $titles;
+        }
+    }
+}

@@ -1,0 +1,11 @@
+.link {
+    color: $titles;
+    text-decoration: underline 1.5px;
+}
+.link:hover {
+    color: $titles-semi-transparent;
+    text-decoration: none;
+}
+.link-title {
+    margin: $gutter-small;
+}

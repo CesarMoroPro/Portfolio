@@ -1,0 +1,139 @@
+.home {
+    //^ MOBILE-FIRST
+        &__header {
+            width: 100%;
+            margin-bottom: $gutter-regular;
+            display: flex;
+            flex-direction: column;
+            &__profil {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                &__id {
+                    width: 85%;
+                    display: flex;
+                    padding: $gutter-small;
+                    &__pic {
+                        margin-left: $gutter-very-large;
+                        margin-top: $gutter-medium;
+                        width: 125px;
+                        height: 125px;
+                        border: solid 2.5px $titles;
+                        border-radius: 120px;
+                    }
+                    &__name {
+                        width: 50%;
+                        display: flex;
+                        justify-content: center;;
+                        align-items: center;
+                        padding-left: $gutter-medium;
+                        &__h1 {
+                            font-size: $font-size-medium;
+                            color: $titles;
+                            line-height: $font-size-medium;
+                        }
+                    }
+                }
+                &__social {
+                    width: 15%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    align-self: stretch;
+                    padding: $gutter-small;
+                    margin-right: $gutter-very-large;
+                    &__fab {
+                        font-size: $font-size-large;
+                        color: $titles;
+                    }
+                    &__fab:hover {
+                            color: $titles-semi-transparent;
+    
+                    }
+                }
+            }
+            &__title {
+                min-width: 330px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 2px;
+                &__h2 {
+                    text-align: center;
+                    font-size: $font-size-regular;
+                    color: $titles;
+                    font-style: italic;
+                    text-transform: uppercase;
+                    letter-spacing: $gutter-medium;
+                    margin: $gutter-extra-small;
+                }
+            }
+        }
+
+
+    //^ MEDIUM BREAKPOINT
+    @media (min-width: $breakpoint-medium-min-width) {
+        &__header {
+            &__profil {
+                &__id {
+                    width: 70%;
+                    &__pic {
+                        width: 150px;
+                        height: 150px;
+                    }
+                    &__name {
+                        &__h1 {
+                            font-size: $font-size-regular;
+                        }
+                    }
+                }
+                &__social {
+                    width: 30%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    &__fab {
+                        font-size: $font-size-very-large;
+                    }
+                }
+            }
+            &__title {
+                &__h2 {
+                    font-size: $font-size-large;
+                    letter-spacing: $gutter-very-large;
+                }
+            }
+        }
+    }
+                
+    //^ LARGE BREAKPOINT
+    @media (min-width: $breakpoint-large-min-width) {
+        &__header {
+            &__profil {
+                &__id {
+                    &__pic {
+                        width: 200px;
+                        height: 200px;
+                    }
+                    &__name {
+                        &__h1 {
+                            font-size: $font-size-large;
+                        }
+                    }
+                }
+                &__social {
+                    &__fab {
+                        font-size: $gutter-extra-large;
+                    }
+                }
+            }
+            &__title {
+                &__h2 {
+                    font-size: $font-size-very-large;
+                    letter-spacing: $gutter-extra-large;
+                }
+            }
+        }
+    }
+}

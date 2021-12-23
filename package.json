@@ -1,5 +1,29 @@
 {
   "dependencies": {
-    "reset-css": "^5.0.1"
-  }
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "reset-css": "^5.0.1",
+    "swiper": "^7.3.4"
+  },
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio César Moro",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "comp": "echo 'sass /var/www/projets/personnels/Portfolio/front-end/scss/main.scss /var/www/projets/personnels/Portfolio/front-end/scss/main.css'",
+    "watch": "sass --watch /var/www/projets/personnels/Portfolio/front-end/scss:/var/www/projets/personnels/Portfolio/front-end/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/CesarMoroPro/Portfolio.git"
+  },
+  "keywords": [
+    "Jazska2021!"
+  ],
+  "author": "César MORO",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CesarMoroPro/Portfolio/issues"
+  },
+  "homepage": "https://github.com/CesarMoroPro/Portfolio#readme"
 }

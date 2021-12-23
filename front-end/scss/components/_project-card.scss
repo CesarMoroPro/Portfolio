@@ -1,0 +1,61 @@
+.home {
+    &__content {
+        &__project-card{
+            width: 330px;
+            // border: $titles solid 1px 1px 1px;
+            margin: $gutter-very-large;
+            border-radius: 5px;
+            &__title {
+                width: 330px;
+                background-image: $grey-light-gradient;
+                position: absolute;
+                margin: 0;
+                text-align: center;;
+                padding: $gutter-very-small 0;
+                border-radius: 5px 5px 0 0;
+                font-family: $font-card-title;
+            }
+            &__img {
+                width: 330px;
+                height: 220px;
+                border-radius: 5px;
+                box-shadow: 0px 7.5px 1em -0.15em $shadow-blurry;
+            }
+            &__text {
+                width: 95%;
+                padding: $gutter-medium $gutter-very-small;
+                display: none;
+                text-align: justify;
+            }
+            &__text-date {
+                padding: $gutter-medium $gutter-very-small;
+                font-style: italic;
+                font-size: $font-size-very-small;
+                display: none;
+                .date {
+                    color: $titles;
+                }
+            }
+        }
+    }
+}
+
+
+.blurry {
+    &__img {
+        box-shadow: 0px 7.5px 1em -0.2em $shadow-regular;
+    }
+
+    &__img-link {
+        filter: blur(0.15em);
+        opacity: 0.50;
+    }
+
+    &__div {
+        display: flex;
+        color: black;
+        background-color: red;
+    }
+
+    
+}
