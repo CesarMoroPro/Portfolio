@@ -254,6 +254,14 @@ p {
   margin: 32px;
   border-radius: 5px;
 }
+.home__content__project-card__divs__div-text {
+  width: 330px;
+  position: absolute;
+  z-index: 1;
+  height: 220px;
+  display: flex;
+  align-items: center;
+}
 .home__content__project-card__title {
   width: 330px;
   background-image: linear-gradient(to right, rgba(220, 220, 220, 0.45), rgba(255, 255, 255, 0.15));
@@ -275,12 +283,15 @@ p {
   padding: 10.6666666667px 6.1538461538px;
   display: none;
   text-align: justify;
+  font-size: 1.3333333333em;
+  line-height: 1.3em;
+  text-overflow: ellipsis;
 }
 .home__content__project-card__text-date {
   padding: 10.6666666667px 6.1538461538px;
   font-style: italic;
   font-size: 0.8888888889em;
-  display: none;
+  visibility: hidden;
 }
 .home__content__project-card__text-date .date {
   color: darkgoldenrod;
@@ -292,11 +303,6 @@ p {
 .blurry__img-link {
   filter: blur(0.15em);
   opacity: 0.5;
-}
-.blurry__div {
-  display: flex;
-  color: black;
-  background-color: red;
 }
 
 .overline__site-title {

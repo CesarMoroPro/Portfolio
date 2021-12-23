@@ -1,11 +1,16 @@
 let projects =  {
                 'portfolio' :   {
                                 'title'     : 'Portfolio',
-                                'excerp'    : 'JS : Comme pour tous créateurs, chaque projet réalisé alimente mon portfolio.\nVous vous trouvez justement sur ce projet.',
-                                'date'      : 'Date de dernière mise à jour : '
-
+                                'excerp'    : 'Comme pour tout créateur, chaque projet que je réalise alimente mon portfolio. Vous vous trouvez justement sur cette réalisation.',
+                                'date'      : ''
+                },
+                'voyages'   :   {
+                                'title'     : 'Voyages',
+                                'excerp'    : 'Des aurores boérales de Norvège aux forêts tropicales des îles d\'Hawaii, parcourez ce projet pour découvrir une partie du monde.',
+                                'date'      : ''
                 }
 }
+
 
 //^ Creation of the variables to be handled
 
@@ -26,13 +31,9 @@ function blurry() {
     cardLink.classList.add('blurry__img-link');
 
     cardTitle.style.display = 'none';
-    cardText.style.display = 'none';
-    cardDate.style.display = 'block';
-
-    excerp.classList.add('blurry__div');
-    cardTitle.append(excerp);
-    excerp.textContent = projects['portfolio']['excerp']
-    console.log(excerp);
+    cardText.textContent = projects['portfolio']['excerp'];
+    cardText.style.display = 'block';
+    cardDate.style.visibility = 'visible';
 };
 
 function unblurry() {
@@ -43,16 +44,15 @@ function unblurry() {
     
     cardTitle.style.display = 'block';
     cardText.style.display = 'none';
-    cardDate.style.display = 'none';
+    cardDate.style.visibility = 'hidden'; 
 
-    excerp.remove();    
+    console.log(cardProject);
 };
 
 
 //^ Creation of EventListeners
-
-cardImage.addEventListener('mouseover', blurry);
+cardProject.addEventListener('mouseover', blurry);
 
 
 //^ Suppression of EventListeners
-cardImage.addEventListener('mouseout', unblurry);
+cardProject.addEventListener('mouseout', unblurry);

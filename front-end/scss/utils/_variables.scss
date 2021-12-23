@@ -5,6 +5,12 @@ $breakpoint-medium-min-width: 740px;
 $breakpoint-large-min-width: 1024px;
 
 
+//^ FONT FAMILY
+$font-main-light: 'Quicksand';
+$font-main-regular: 'Quicksand Regular';
+$font-card-title: 'Zen Dots';
+
+
 //^ GUTTER SIZES
 //? SIZE REFERENCE: 
 $gutter-regular: 16px;
@@ -22,12 +28,6 @@ $gutter-extra-large: $gutter-regular * 4;
 $gutter-ultra-large: $gutter-regular * 8;
 
 
-//^ FONT FAMILY
-$font-main-light: 'Quicksand';
-$font-main-regular: 'Quicksand Regular';
-$font-card-title: 'Zen Dots';
-
-
 //^ FONT SIZES
 //? SIZE REFERENCE:
 $font-size-regular: 2em;
@@ -36,11 +36,17 @@ $font-size-extra-small: math.div($font-size-regular, 2.5);
 $font-size-very-small: math.div($font-size-regular, 2.25);
 $font-size-small: math.div($font-size-regular, 2);
 
-$font-size-medium: math.div($font-size-regular, 1.15);
+$font-size-medium-small: math.div($font-size-regular, 1.75);
+$font-size-medium: math.div($font-size-regular, 1.5);
+$font-size-medium-regular: math.div($font-size-regular, 1.15);
 
 $font-size-large: $font-size-regular * 1.25; //2.5em
 $font-size-very-large: $font-size-regular * 1.5; //3em
 $font-size-extra-large: $font-size-regular * 2;
+
+
+//^ CARD SIZES
+$card-height: 220px;
 
 
 //^ COLORS
@@ -58,10 +64,12 @@ $grey-light: rgb(220 220 220);
 $grey-light-transparent: rgba(220, 220, 220, 0.45);
 $grey-light-gradient: linear-gradient(to right, $grey-light-transparent, $white-transparent);
 
+//? TITLES
 $titles: $gold;
 $titles-semi-transparent: $gold-semi-transparent;
 $titles-gradient-to-white: $gold-gradient-to-white;
 
+//? SHADOWS
 $shadow-blurry: #423309;
 $shadow-regular: black;
 

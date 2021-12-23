@@ -5,6 +5,16 @@
             // border: $titles solid 1px 1px 1px;
             margin: $gutter-very-large;
             border-radius: 5px;
+            &__divs {
+                &__div-text {
+                    width: 330px;
+                    position: absolute;
+                    z-index: 1;
+                    height: $card-height;
+                    display: flex;
+                    align-items: center;
+                }
+            }
             &__title {
                 width: 330px;
                 background-image: $grey-light-gradient;
@@ -17,7 +27,7 @@
             }
             &__img {
                 width: 330px;
-                height: 220px;
+                height: $card-height;
                 border-radius: 5px;
                 box-shadow: 0px 7.5px 1em -0.15em $shadow-blurry;
             }
@@ -26,12 +36,16 @@
                 padding: $gutter-medium $gutter-very-small;
                 display: none;
                 text-align: justify;
+                font-size: $font-size-medium;
+                line-height: 1.3em;
+                text-overflow: ellipsis;
+
             }
             &__text-date {
                 padding: $gutter-medium $gutter-very-small;
                 font-style: italic;
                 font-size: $font-size-very-small;
-                display: none;
+                visibility: hidden;
                 .date {
                     color: $titles;
                 }
@@ -39,7 +53,6 @@
         }
     }
 }
-
 
 .blurry {
     &__img {
@@ -49,13 +62,5 @@
     &__img-link {
         filter: blur(0.15em);
         opacity: 0.50;
-    }
-
-    &__div {
-        display: flex;
-        color: black;
-        background-color: red;
-    }
-
-    
+    }   
 }

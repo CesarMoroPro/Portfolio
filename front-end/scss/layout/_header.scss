@@ -28,9 +28,9 @@
                         align-items: center;
                         padding-left: $gutter-medium;
                         &__h1 {
-                            font-size: $font-size-medium;
+                            font-size: $font-size-medium-regular;
                             color: $titles;
-                            line-height: $font-size-medium;
+                            line-height: $font-size-medium-regular;
                         }
                     }
                 }
