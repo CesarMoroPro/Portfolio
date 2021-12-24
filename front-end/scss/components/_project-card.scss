@@ -12,6 +12,7 @@
                     z-index: 1;
                     height: $card-height;
                     display: flex;
+                    flex-direction: column;
                     align-items: center;
                 }
             }
@@ -36,6 +37,7 @@
                 padding: $gutter-medium $gutter-very-small;
                 display: none;
                 text-align: justify;
+                font-family: $font-main-light;
                 font-size: $font-size-medium;
                 line-height: 1.3em;
                 text-overflow: ellipsis;

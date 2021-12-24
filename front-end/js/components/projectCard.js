@@ -8,9 +8,23 @@ let projects =  {
                                 'title'     : 'Voyages',
                                 'excerp'    : 'Des aurores boérales de Norvège aux forêts tropicales des îles d\'Hawaii, parcourez ce projet pour découvrir une partie du monde.',
                                 'date'      : ''
+                },
+                'cinema'    :   {
+                                'title'     : 'Cinéma',
+                                'excerp'    : 'Avec DeadPool, ça débite et ça déboite ! Wham !',
+                                'date'      : ''
+                },
+                'sport'     :   {
+                                'title'     : 'Sport',
+                                'excerp'    : 'Plongez dans le Pacifique avec les requins, ou prenez de la hauteur en wingsuit au-dessus du monde',
+                                'date'      : ''
                 }
 }
 
+for (let project in projects){
+    console.log(projects[project]['title']);
+    console.log((projects[project]['excerp']));
+}
 
 //^ Creation of the variables to be handled
 
