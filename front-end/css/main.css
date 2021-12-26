@@ -256,22 +256,29 @@ p {
 
 .home__content__project-card {
   width: 330px;
+  height: 220px;
   margin: 32px;
   border-radius: 5px;
 }
 .home__content__project-card__divs__div-text {
   width: 330px;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   height: 220px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+.home__content__project-card__divs__div-link {
+  position: absolute;
+  z-index: 3;
+  width: 330px;
+  height: 220px;
+}
 .home__content__project-card__title {
   width: 330px;
-  background-image: linear-gradient(to right, rgba(220, 220, 220, 0.45), rgba(255, 255, 255, 0.15));
   position: absolute;
+  z-index: 1;
   margin: 0;
   text-align: center;
   padding: 6.1538461538px 0;
@@ -287,29 +294,75 @@ p {
 .home__content__project-card__text {
   width: 95%;
   padding: 10.6666666667px 6.1538461538px;
-  display: none;
   text-align: justify;
   font-family: "Quicksand";
   font-size: 1.3333333333em;
   line-height: 1.3em;
   text-overflow: ellipsis;
+  color: transparent;
 }
 .home__content__project-card__text-date {
   padding: 10.6666666667px 6.1538461538px;
   font-style: italic;
   font-size: 0.8888888889em;
-  visibility: hidden;
-}
-.home__content__project-card__text-date .date {
-  color: darkgoldenrod;
+  color: transparent;
 }
 
-.blurry__img {
+.blurry {
   box-shadow: 0px 7.5px 1em -0.2em black;
-}
-.blurry__img-link {
-  filter: blur(0.15em);
+  filter: blur(0.5em);
   opacity: 0.5;
+  transition-duration: 1.5s;
+  transition-delay: 0.25s;
+}
+
+.unblurry {
+  box-shadow: 0px 7.5px 1em -0.15em #423309;
+  filter: none;
+  opacity: 1;
+  transition-duration: 1.5s;
+  transition-delay: 0.25s;
+}
+
+.transition__title__appears {
+  transition-duration: 1.5s;
+  transition-delay: 0.25s;
+  color: darkgoldenrod;
+}
+.transition__title__disappears {
+  transition-duration: 1.5s;
+  transition-delay: 0.25s;
+  color: transparent;
+}
+.transition__text__appears {
+  transition-duration: 1.5s;
+  transition-delay: 0.25s;
+  color: black;
+}
+.transition__text__disappears {
+  transition-duration: 1.5s;
+  transition-delay: 0.25s;
+  color: transparent;
+}
+.transition__date__appears {
+  transition-duration: 1.5s;
+  transition-delay: 0.25s;
+  color: black;
+}
+.transition__date__appears .date {
+  transition-duration: 1.5s;
+  transition-delay: 0.25s;
+  color: darkgoldenrod;
+}
+.transition__date__disappears {
+  transition-duration: 1.5s;
+  transition-delay: 0.25s;
+  color: transparent;
+}
+.transition__date__disappears .date {
+  transition-duration: 1.5s;
+  transition-delay: 0.25s;
+  color: transparent;
 }
 
 .overline__site-title {

@@ -1,0 +1,14 @@
+@mixin blurryFunction {
+    filter: blur(0.5em);
+    opacity: 0.5;
+}
+
+@mixin unblurryFunction {
+    filter: none;
+    opacity: 1;
+}
+
+@mixin transitionFunction {
+    transition-duration: 1.5s;
+    transition-delay: 0.25s;
+}

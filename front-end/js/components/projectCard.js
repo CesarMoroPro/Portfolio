@@ -2,22 +2,26 @@ let projects =  {
                 'portfolio' :   {
                                 'title'     : 'Portfolio',
                                 'excerp'    : 'Comme pour tout créateur, chaque projet que je réalise alimente mon portfolio. Vous vous trouvez justement sur cette réalisation.',
-                                'date'      : ''
+                                'date'      : '',
+                                'url'       : ''
                 },
                 'voyages'   :   {
                                 'title'     : 'Voyages',
                                 'excerp'    : 'Des aurores boérales de Norvège aux forêts tropicales des îles d\'Hawaii, parcourez ce projet pour découvrir une partie du monde.',
-                                'date'      : ''
+                                'date'      : '',
+                                'url'       : ''
                 },
                 'cinema'    :   {
                                 'title'     : 'Cinéma',
                                 'excerp'    : 'Avec DeadPool, ça débite et ça déboite ! Wham !',
-                                'date'      : ''
+                                'date'      : '',
+                                'url'       : ''
                 },
                 'sport'     :   {
                                 'title'     : 'Sport',
                                 'excerp'    : 'Plongez dans le Pacifique avec les requins, ou prenez de la hauteur en wingsuit au-dessus du monde',
-                                'date'      : ''
+                                'date'      : '',
+                                'url'       : ''
                 }
 }
 
@@ -31,7 +35,7 @@ let projects =  {
 let cardProject     = document.querySelector('.home__content__project-card');
 let cardImage       = document.querySelector('.home__content__project-card__img');
 let cardTitle       = document.querySelector('.home__content__project-card__title');
-let cardLink        = document.querySelector('.home__content__project-card__img-link');
+let cardLink        = document.querySelector('.link-title');
 let cardText        = document.querySelector('.home__content__project-card__text')
 let cardDate        = document.querySelector('.home__content__project-card__text-date');
 
@@ -40,33 +44,28 @@ let excerp = document.createElement('div');
 
 //^ Creation of functions
 
-function blurry() {
-    cardImage.classList.add('blurry__img');
-    cardLink.classList.add('blurry__img-link');
+function blurryCard() {
 
-    cardTitle.style.display = 'none';
+    cardImage.classList.replace('unblurry', 'blurry');
+    cardTitle.classList.replace('transition__title__appears', 'transition__title__disappears'); 
+    cardText.classList.replace('transition__text__disappears', 'transition__text__appears');
+    cardDate.classList.replace('transition__date__disappears', 'transition__date__appears');
+
     cardText.textContent = projects['portfolio']['excerp'];
-    cardText.style.display = 'block';
-    cardDate.style.visibility = 'visible';
 };
 
-function unblurry() {
-    cardTitle.style.display = 'block';
-    cardImage.classList.remove('blurry__img');
-    cardLink.classList.remove('blurry__img-link');
-    cardTitle.classList.remove('blurry__title');
-    
-    cardTitle.style.display = 'block';
-    cardText.style.display = 'none';
-    cardDate.style.visibility = 'hidden'; 
+function unblurryCard() {
 
-    console.log(cardProject);
+    cardImage.classList.replace('blurry', 'unblurry');
+    cardTitle.classList.replace('transition__title__disappears', 'transition__title__appears');
+    cardText.classList.replace('transition__text__appears', 'transition__text__disappears');
+    cardDate.classList.replace('transition__date__appears', 'transition__date__disappears');
 };
 
 
 //^ Creation of EventListeners
-cardProject.addEventListener('mouseover', blurry);
+cardProject.addEventListener('mouseover', blurryCard);
 
 
 //^ Suppression of EventListeners
-cardProject.addEventListener('mouseout', unblurry);
+cardProject.addEventListener('mouseout', unblurryCard);

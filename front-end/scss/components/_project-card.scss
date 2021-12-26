@@ -1,25 +1,32 @@
 .home {
     &__content {
-        &__project-card{
-            width: 330px;
+        &__project-card {
+            width: $card-width;
+            height: $card-height;
             // border: $titles solid 1px 1px 1px;
             margin: $gutter-very-large;
             border-radius: 5px;
             &__divs {
                 &__div-text {
-                    width: 330px;
+                    width: $card-width;
                     position: absolute;
-                    z-index: 1;
+                    z-index: 2;
                     height: $card-height;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                 }
+                &__div-link {
+                    position: absolute;
+                    z-index: 3;
+                    width: $card-width;
+                    height: $card-height;
+                }
             }
             &__title {
-                width: 330px;
-                background-image: $grey-light-gradient;
+                width: $card-width;
                 position: absolute;
+                z-index: 1;
                 margin: 0;
                 text-align: center;;
                 padding: $gutter-very-small 0;
@@ -27,7 +34,7 @@
                 font-family: $font-card-title;
             }
             &__img {
-                width: 330px;
+                width: $card-width;
                 height: $card-height;
                 border-radius: 5px;
                 box-shadow: 0px 7.5px 1em -0.15em $shadow-blurry;
@@ -35,34 +42,73 @@
             &__text {
                 width: 95%;
                 padding: $gutter-medium $gutter-very-small;
-                display: none;
                 text-align: justify;
                 font-family: $font-main-light;
                 font-size: $font-size-medium;
                 line-height: 1.3em;
                 text-overflow: ellipsis;
-
+                color: transparent;
             }
             &__text-date {
                 padding: $gutter-medium $gutter-very-small;
                 font-style: italic;
                 font-size: $font-size-very-small;
-                visibility: hidden;
-                .date {
-                    color: $titles;
-                }
+                color: transparent;
+                
             }
         }
     }
 }
 
 .blurry {
-    &__img {
-        box-shadow: 0px 7.5px 1em -0.2em $shadow-regular;
-    }
+    box-shadow: 0px 7.5px 1em -0.2em $shadow-regular;
+    @include blurryFunction;
+    @include transitionFunction;
+}
 
-    &__img-link {
-        filter: blur(0.15em);
-        opacity: 0.50;
-    }   
+.unblurry {
+    box-shadow: 0px 7.5px 1em -0.15em $shadow-blurry;
+    @include unblurryFunction;
+    @include transitionFunction;
+}
+
+.transition {
+    &__title {
+        &__appears {
+            @include transitionFunction;
+            color: $titles;
+        }
+        &__disappears {
+            @include transitionFunction;
+            color: transparent;
+        }
+    }
+    &__text {
+        &__appears {
+            @include transitionFunction;
+            color: black;
+        }
+        &__disappears {
+            @include transitionFunction;
+            color : transparent;
+        }
+    }
+    &__date {
+        &__appears {
+            @include transitionFunction;
+            color: black;
+            .date {
+                @include transitionFunction;
+                color: $titles;
+            }
+        }
+        &__disappears {
+            @include transitionFunction;
+            color: transparent;
+            .date {
+                @include transitionFunction;
+                color: transparent;
+            }
+        }
+    }
 }
