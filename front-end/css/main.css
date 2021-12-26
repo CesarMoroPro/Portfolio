@@ -249,6 +249,11 @@ p {
   color: darkgoldenrod;
 }
 
+.global-projects {
+  display: flex;
+  flex-direction: column;
+}
+
 .home__content__project-card {
   width: 330px;
   margin: 32px;

@@ -21,10 +21,10 @@ let projects =  {
                 }
 }
 
-for (let project in projects){
+/* for (let project in projects){
     console.log(projects[project]['title']);
     console.log((projects[project]['excerp']));
-}
+} */
 
 //^ Creation of the variables to be handled
 
