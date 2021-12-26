@@ -284,6 +284,8 @@ p {
   padding: 6.1538461538px 0;
   border-radius: 5px 5px 0 0;
   font-family: "Zen Dots";
+  letter-spacing: 7.5px;
+  font-size: 1.7391304348em;
 }
 .home__content__project-card__img {
   width: 330px;
@@ -313,7 +315,6 @@ p {
   filter: blur(0.5em);
   opacity: 0.5;
   transition-duration: 1.5s;
-  transition-delay: 0.25s;
 }
 
 .unblurry {
@@ -321,47 +322,38 @@ p {
   filter: none;
   opacity: 1;
   transition-duration: 1.5s;
-  transition-delay: 0.25s;
 }
 
 .transition__title__appears {
   transition-duration: 1.5s;
-  transition-delay: 0.25s;
   color: darkgoldenrod;
 }
 .transition__title__disappears {
   transition-duration: 1.5s;
-  transition-delay: 0.25s;
   color: transparent;
 }
 .transition__text__appears {
   transition-duration: 1.5s;
-  transition-delay: 0.25s;
   color: black;
 }
 .transition__text__disappears {
   transition-duration: 1.5s;
-  transition-delay: 0.25s;
   color: transparent;
 }
 .transition__date__appears {
   transition-duration: 1.5s;
-  transition-delay: 0.25s;
   color: black;
 }
 .transition__date__appears .date {
   transition-duration: 1.5s;
-  transition-delay: 0.25s;
   color: darkgoldenrod;
 }
 .transition__date__disappears {
   transition-duration: 1.5s;
-  transition-delay: 0.25s;
   color: transparent;
 }
 .transition__date__disappears .date {
   transition-duration: 1.5s;
-  transition-delay: 0.25s;
   color: transparent;
 }
 

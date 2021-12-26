@@ -25,17 +25,16 @@ let projects =  {
                 }
 }
 
-/* for (let project in projects){
+for (let project in projects){
     console.log(projects[project]['title']);
     console.log((projects[project]['excerp']));
-} */
+}
 
 //^ Creation of the variables to be handled
 
 let cardProject     = document.querySelector('.home__content__project-card');
 let cardImage       = document.querySelector('.home__content__project-card__img');
 let cardTitle       = document.querySelector('.home__content__project-card__title');
-let cardLink        = document.querySelector('.link-title');
 let cardText        = document.querySelector('.home__content__project-card__text')
 let cardDate        = document.querySelector('.home__content__project-card__text-date');
 
