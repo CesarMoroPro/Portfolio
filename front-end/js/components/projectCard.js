@@ -1,4 +1,9 @@
-let imgSrc = "./front-end/assets/img/";
+//^ Relative path for the images (readed from index.html)
+// const imgSrc = "./front-end/assets/img/"; // execute this const for html result
+ const imgSrc = "../front-end/assets/img/"; // execute this const for php result
+
+
+//^ Array of the differents projects
 let projects =  {
                 'portfolio' :   {
                                 'title'     : 'Portfolio',
@@ -23,6 +28,8 @@ let projects =  {
                 }
 }
 
+
+//^ Loop for each element and action about one project-card
 for (let project in projects){
     //^ Creation of the variables to be handled
 
@@ -32,42 +39,39 @@ for (let project in projects){
     let cardText        = document.querySelector('.home__content__project-card__text')
     let cardDate        = document.querySelector('.home__content__project-card__text-date');
     let cardUrl         = document.querySelector('.home__content__project-card__divs__div-link');
-  
-
-    for (let index in project){
-
-        cardImage.setAttribute('src', projects[project]['image']);
-        cardUrl.setAttribute('href', projects[project]['url']);
-        
-        cardDate.innerHTML      = "Date de dernière mise à jour : <span class='date'></span>" + projects[project]['date'] + "</span></p>";
-
-        cardTitle.textContent   = projects[project]['title'];
-        cardText.textContent    = projects[project]['excerp'];
 
 
-        //^ Creation of functions
-        function blurryCard() {
-
-            cardImage.classList.replace('unblurry', 'blurry');
-            cardTitle.classList.replace('transition__title__appears', 'transition__title__disappears'); 
-            cardText.classList.replace('transition__text__disappears', 'transition__text__appears');
-            cardDate.classList.replace('transition__date__disappears', 'transition__date__appears');
-        };
-
-        function unblurryCard() {
-
-            cardImage.classList.replace('blurry', 'unblurry');
-            cardTitle.classList.replace('transition__title__disappears', 'transition__title__appears');
-            cardText.classList.replace('transition__text__appears', 'transition__text__disappears');
-            cardDate.classList.replace('transition__date__appears', 'transition__date__disappears');
-        };
-
+    cardImage.setAttribute('src', projects[project]['image']);
+    cardUrl.setAttribute('href', projects[project]['url']);
     
-        //^ Creation of EventListeners
-        cardProject.addEventListener('mouseover', blurryCard);
+    cardDate.innerHTML      = "Date de dernière mise à jour : <span class='date'></span>" + projects[project]['date'] + "</span></p>";
+
+    cardTitle.textContent   = projects[project]['title'];
+    cardText.textContent    = projects[project]['excerp'];
 
 
-        //^ Suppression of EventListeners
-        cardProject.addEventListener('mouseout', unblurryCard);
-    }
+    //^ Creation of functions
+    function blurryCard() {
+
+        cardImage.classList.replace('unblurry', 'blurry');
+        cardTitle.classList.replace('transition__title__appears', 'transition__title__disappears'); 
+        cardText.classList.replace('transition__text__disappears', 'transition__text__appears');
+        cardDate.classList.replace('transition__date__disappears', 'transition__date__appears');
+    };
+
+    function unblurryCard() {
+
+        cardImage.classList.replace('blurry', 'unblurry');
+        cardTitle.classList.replace('transition__title__disappears', 'transition__title__appears');
+        cardText.classList.replace('transition__text__appears', 'transition__text__disappears');
+        cardDate.classList.replace('transition__date__appears', 'transition__date__disappears');
+    };
+
+
+    //^ Creation of EventListeners
+    cardProject.addEventListener('mouseover', blurryCard);
+
+
+    //^ Suppression of EventListeners
+    cardProject.addEventListener('mouseout', unblurryCard); 
 }

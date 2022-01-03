@@ -1,5 +1,9 @@
 .home {
     &__content {
+        &__projects {
+            display: flex;
+            flex-direction: column;
+        }
         &__project-card {
             width: $card-width;
             height: $card-height;
@@ -35,7 +39,6 @@
                 font-family: $font-card-title;
                 letter-spacing: $letter-spacing-project-card;
                 font-size: $font-size-medium-regular;
-                border-color: white;
             }
             &__img {
                 width: $card-width;

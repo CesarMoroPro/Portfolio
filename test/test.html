@@ -1,31 +1,3 @@
-<?php
-$portfolio = [
-    "title"     => "Portfolio",
-    "excerp"    => "Comme pour tout créateur, chaque projet que je réalise alimente mon portfolio. Vous vous trouvez justement sur cette réalisation.",
-    "image"     => "../front-end/assets/img/portfolio-card.jpg",
-    "url"       => "http://google.com",
-    "date"      => "28 12 2021"
-];
-
-$voyages = [
-    "title"     => "Voyages",
-    "excerp"    => "Des aurores boérales de Norvège aux forêts tropicales des îles d'Hawaii, parcourez ce projet pour découvrir une partie du monde.",
-    "image"     => "../front-end/assets/img/voyages-card.jpeg",
-    "url"       => "http://oclock.io",
-    "date"      => "05 09 2021"
-];
-
-$cinema = [
-    "title"     => "Cinéma",
-    "excerp"    => "Avec DeadPool, ça débite et ça déboite ! Wham !",
-    "image"     => "../front-end/assets/img/test6-card.jpg",
-    "url"       => "https://www.ironman.com",
-    "date"      => "01 02 2021"
-];
-
-$projects = [$portfolio, $voyages, $cinema];
-?>
-
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -41,7 +13,7 @@ $projects = [$portfolio, $voyages, $cinema];
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
     <!-- link fontawesome css-->
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="../../../node_modules/@fortawesome/fontawesome-free/css/all.css">
 
     <!-- link google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Zen+Dots&display=swap" rel="stylesheet">
@@ -98,32 +70,31 @@ $projects = [$portfolio, $voyages, $cinema];
         -->
 
             <section class="home__content__projects">
-            <?php foreach($projects as $project): ?>
                 <div class="home__content__project-card">
-                    <a class="home__content__project-card__divs__div-link" href="<?= $project["url"]; ?>"><div class="home__content__project-card__divs">
+                    <a class="home__content__project-card__divs__div-link"><!--! attr href dynamique en JS--><div class="home__content__project-card__divs">
                         <div class="home__content__project-card__divs__div-text">
-                            <p class="home__content__project-card__text transition__text__disappears"><?= $project["excerp"]; ?></p>
-                            <p class="home__content__project-card__text-date transition__date__disappears">Date de mise à jour : <span class="date"><?= $project["date"]; ?></span></p>
+                            <p class="home__content__project-card__text transition__text__disappears"></p>
+                            <p class="home__content__project-card__text-date transition__date__disappears">Date en JS : <span class="date">Date en JS</span></p>
                         </div>
 
                         <div class="home__content__project-card__divs__div-img">
                             <h2 class="home__content__project-card__title transition__title__appears">
                                 <i class="icons fa-solid fa-map-location-dot"></i>
-                                <?= $project["title"]; ?>
+                                    Titre en JS
                             </h2>
-                            <img class="home__content__project-card__img unblurry" alt="Image d'illustration de la carte" src="<?= $project["img"]; ?>">
+                            <img class="home__content__project-card__img unblurry" alt="Imade d'illustration de la carte"> <!--! attr src dynamique en JS-->
+                        </div>    
                     </div></a>
                 </div>
-            <?php endforeach; ?>
             </section>
         </div>
     </main>
 
     <footer class="home__footer">
         <p id="copyright">César MORO Copyright <span class="year">'Date en JS'</class></p>
-        <a class="link" href="../front-end/html/contact.html" alt="Accéder au formulaire de contact">Contact</a>
-        <a class="link" href="../front-end/html/mentions_legales.html" alt="Accéder aux mentions légales">Mentions légales</a>
+        <a class="link" href="./contact.html" alt="Accéder au formulaire de contact">Contact</a>
+        <a class="link" href="./mentions_legales.html" alt="Accéder aux mentions légales">Mentions légales</a>
     </footer>
 
-    <script type="module" src="../test/test.js"></script>
+    <script type="module" src="./test.js"></script>
 </body>
