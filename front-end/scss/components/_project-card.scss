@@ -15,6 +15,7 @@
                     display: flex;
                     flex-direction: column;
                     align-items: center;
+                    justify-content: space-around;
                 }
                 &__div-link {
                     position: absolute;
@@ -34,6 +35,7 @@
                 font-family: $font-card-title;
                 letter-spacing: $letter-spacing-project-card;
                 font-size: $font-size-medium-regular;
+                border-color: white;
             }
             &__img {
                 width: $card-width;
@@ -44,7 +46,7 @@
             &__text {
                 width: 95%;
                 padding: $gutter-medium $gutter-very-small;
-                text-align: justify;
+                text-align: center;
                 font-family: $font-main-light;
                 font-size: $font-size-medium;
                 line-height: 1.3em;
@@ -56,7 +58,6 @@
                 font-style: italic;
                 font-size: $font-size-very-small;
                 color: transparent;
-                
             }
         }
     }

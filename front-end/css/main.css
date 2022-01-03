@@ -268,6 +268,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
 }
 .home__content__project-card__divs__div-link {
   position: absolute;
@@ -286,6 +287,7 @@ p {
   font-family: "Zen Dots";
   letter-spacing: 7.5px;
   font-size: 1.7391304348em;
+  border-color: white;
 }
 .home__content__project-card__img {
   width: 330px;
@@ -296,7 +298,7 @@ p {
 .home__content__project-card__text {
   width: 95%;
   padding: 10.6666666667px 6.1538461538px;
-  text-align: justify;
+  text-align: center;
   font-family: "Quicksand";
   font-size: 1.3333333333em;
   line-height: 1.3em;
