@@ -1,0 +1,44 @@
+//^ BREAKPOINTS MOBILE
+.blurryScreen {
+    @include blurryScreenFunction;
+    @include transitionFunction;
+}
+
+.hiding {
+    @include hideFunction;
+}
+
+.notHiding {
+    @include notHideFunction;
+}
+
+.contact-form {
+    @include transitionFunction;
+    @include shadowBlurryFunction;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 25px;
+    border-radius: 5px;
+    min-height: 500px;
+    min-width: 300px;
+}
+
+.cross-to-quit {
+    color: $titles;
+    position: relative;
+    right: 10px;
+    top: 10px;
+}
+
+.title-form {
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: $breakpoint-medium-min-width) {
+    .contact-form {
+        min-width: 700px;
+        right: -150px;
+    }
+}

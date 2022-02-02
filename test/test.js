@@ -1,8 +1,8 @@
 import '../front-end/js/layout/footer.js';
 
 //^ Relative path for the images (readed from index.html)
-const imgSrc = "../front-end/assets/img/"; // execute this const for html result
-// const imgSrc = "../front-end/assets/img/"; // execute this const for php result
+const imgSrc = "../front-end/assets/img/"; // execute this const for index.html result
+// const imgSrc = "../front-end/assets/img/"; // execute this const for index.php result
 
 
 //^ Individual arrays for each project, separatly
@@ -37,7 +37,7 @@ let projects =  [portfolio, voyages, cinema];
 
 
 //^ Loop for every project-card, all doing the loop inside this one
-projects.forEach(project => {
+for(let i = 0; i < projects.length; i++){
     
     
     //^ Creation of the variables to be handled
@@ -50,13 +50,13 @@ projects.forEach(project => {
 
 
     //^ Manipulation of each elements
-    cardImage.setAttribute('src', project['image']);
-    cardUrl.setAttribute('href', project['url']);
+    cardImage.setAttribute('src', projects[i]['image']);
+    cardUrl.setAttribute('href', projects[i]['url']);
     
-    cardDate.innerHTML      = "Date de dernière mise à jour : <span class='date'></span>" + project['date'] + "</span></p>";
+    cardDate.innerHTML      = "Date de dernière mise à jour : <span class='date'></span>" + projects[i]['date'] + "</span></p>";
 
-    cardTitle.textContent   = project['title'];
-    cardText.textContent    = project['excerp'];
+    cardTitle.textContent   = projects[i]['title'];
+    cardText.textContent    = projects[i]['excerp'];
 
 
     //^ Creation of functions
@@ -83,4 +83,4 @@ projects.forEach(project => {
 
     //^ Suppression of EventListeners
     cardProject.addEventListener('mouseout', unblurryCard);
-});
+};

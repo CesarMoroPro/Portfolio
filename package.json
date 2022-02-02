@@ -11,8 +11,8 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass C": "echo 'sass /var/www/projets/personnels/Portfolio/front-end/scss/main.scss /var/www/projets/personnels/Portfolio/front-end/scss/main.css'",
-    "sass W": "sass --watch /var/www/projets/personnels/Portfolio/front-end/scss:/var/www/projets/personnels/Portfolio/front-end/css"
+    "sassC": "echo 'sass /var/www/projets/personnels/Portfolio/front-end/scss/main.scss /var/www/projets/personnels/Portfolio/front-end/scss/main.css'",
+    "sassW": "sass --watch /var/www/projets/personnels/Portfolio/front-end/scss:/var/www/projets/personnels/Portfolio/front-end/css"
   },
   "repository": {
     "type": "git",

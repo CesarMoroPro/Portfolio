@@ -76,6 +76,11 @@ p {
   line-height: 24px;
 }
 
+#global {
+  width: 95%;
+  position: relative;
+}
+
 .home__header {
   width: 100%;
   margin-bottom: 16px;
@@ -254,6 +259,52 @@ p {
   flex-direction: column;
 }
 
+.blurryScreen {
+  filter: blur(0.35em);
+  opacity: 0.15;
+  transition-duration: 1.5s;
+}
+
+.hiding {
+  opacity: 0;
+  transition-duration: 1.5s;
+}
+
+.notHiding {
+  ocapity: 1;
+  transition-duration: 1.5s;
+}
+
+.contact-form {
+  transition-duration: 1.5s;
+  box-shadow: 0px 7.5px 1em -0.15em #423309;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  top: 25px;
+  border-radius: 5px;
+  min-height: 500px;
+  min-width: 300px;
+}
+
+.cross-to-quit {
+  color: darkgoldenrod;
+  position: relative;
+  right: 10px;
+  top: 10px;
+}
+
+.title-form {
+  width: 100%;
+  text-align: center;
+}
+
+@media (min-width: 740px) {
+  .contact-form {
+    min-width: 700px;
+    right: -150px;
+  }
+}
 .home__content__projects {
   display: flex;
   flex-direction: column;

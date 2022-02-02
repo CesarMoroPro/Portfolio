@@ -1,6 +1,6 @@
 //^ Relative path for the images (readed from index.html)
-// const imgSrc = "./front-end/assets/img/"; // execute this const for html result
- const imgSrc = "../front-end/assets/img/"; // execute this const for php result
+const imgSrc = "./front-end/assets/img/"; // execute this const for html result
+// const imgSrc = "../front-end/assets/img/"; // execute this const for php result
 
 
 //^ Array of the differents projects

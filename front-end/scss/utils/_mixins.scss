@@ -1,3 +1,4 @@
+//~ Creation of blurry / unblurry functions
 @mixin blurryFunction {
     filter: blur(0.5em);
     opacity: 0.5;
@@ -8,6 +9,32 @@
     opacity: 1;
 }
 
+@mixin blurryScreenFunction {
+    filter: blur(0.35em);
+    opacity: 0.15;
+}
+
+//~ Creation of shadow functions
+@mixin shadowRegularFunction {
+    box-shadow: 0px 7.5px 1em -0.2em $shadow-regular;
+}
+
+@mixin shadowBlurryFunction {
+    box-shadow: 0px 7.5px 1em -0.15em $shadow-blurry;
+}
+
+//~ Creation of transition functions
 @mixin transitionFunction {
     transition-duration: 1.5s;
+}
+
+//~ Creation of hiding functions
+@mixin hideFunction {
+    opacity: 0;
+    @include transitionFunction;
+}
+
+@mixin notHideFunction {
+    ocapity: 1;
+    @include transitionFunction;
 }
