@@ -10,12 +10,12 @@
                 font-size: $font-size-medium-regular;
                 color: $titles;
                 padding-bottom: $gutter-large;
-                .icons {
-                    color: $titles;
-                    font-size: $font-size-extra-small;
-                    margin-right: $gutter-medium;
-                }
             }
+        }
+        .icons {
+            color: $titles;
+            font-size: $font-size-extra-small;
+            margin-right: $gutter-medium;
         }
         &__text-normal {
             text-align: justify;

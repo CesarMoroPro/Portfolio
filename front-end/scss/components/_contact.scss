@@ -1,40 +1,106 @@
-//^ BREAKPOINTS MOBILE
-.blurryScreen {
-    @include blurryScreenFunction;
-    @include transitionFunction;
-}
+.home {
 
-.contact-form {
-    @include transitionFunction;
-    @include shadowBlurryFunction;
-    width: 100%;
-    display: flex;
-    position: absolute;
-    top: 25px;
-    border-radius: 5px;
-    min-height: 500px;
-    min-width: 300px;
-}
+    //^ BREAKPOINTS MOBILE
+    .blurryScreen {
+        @include blurryScreenFunction;
+        @include transitionContactFunction;
+    }
 
-.cross-to-quit {
-    color: $titles;
-    position: relative;
-    right: 10px;
-    top: 10px;
-}
+    .unblurryScreen {
+        @include unblurryFunction;
+        @include transitionContactFunction;
+    }
 
-.on-cross-to-quit {
-    font-size: 1.5em;
-}
-
-.title-form {
-    width: 100%;
-    text-align: center;
-}
-
-@media (min-width: $breakpoint-medium-min-width) {
     .contact-form {
-        min-width: 700px;
-        right: -150px;
+        @include transitionContactFunction;
+        opacity: 0;
+    }
+
+    .contact-form--active {
+        @include transitionContactFunction;
+        @include shadowBlurryFunction;
+        opacity: 1;
+        width: 100%;
+        display: flex;
+        position: absolute;
+        top: 25px;
+        border-radius: 5px;
+        min-height: 700px;
+        min-width: 300px;
+    }
+    
+    .title-form {
+        width: 100%;
+        height: 25px;
+        text-align: center;
+    }
+
+    .icons {
+        color: $titles;
+    }
+
+    .cross-to-quit {
+        position: relative;
+        right: 10px;
+        top: 10px;
+        height: 20px;
+    }
+
+    .cross-to-quit:hover {
+        color: $titles-semi-transparent;
+        transform: rotate(20deg);
+    }
+
+    .form-fields {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 1;
+        width: 95%;
+        height: 85%;
+        margin-top: 65px;
+        margin-bottom: 10px;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
+        border: blue 1px solid;
+
+        &__legend {
+            padding-left: 5px;
+        }
+
+        &__field {
+            padding: 5px 5px;
+            margin-bottom: 2.5px;
+        }
+
+        &__marges {
+            margin-top: 15px;
+        }
+    }
+
+    input, textarea, button {
+        border: solid 0.5px $titles;
+        border-radius: 2.5px;
+        height: 20px;
+        padding-left: 5px;
+    }
+
+    input::placeholder, textarea::placeholder {
+        color: $titles;
+        font-style: italic;
+    }
+
+    textarea {
+        height: 200px;
+        width: 90%;
+        text-align: justify;
+        padding: 10px;
+        margin-top: 2.5px;
+    }
+
+    button {
+        height: 35px;
+        font-family: $font-main-light;
+        font-size: 1em;
     }
 }

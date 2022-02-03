@@ -1,7 +1,12 @@
 //~ Creation of blurry / unblurry functions
-@mixin blurryFunction {
+@mixin blurryProjectCardFunction {
     filter: blur(0.5em);
     opacity: 0.5;
+}
+
+@mixin blurryScreenFunction {
+    filter: blur(0.35em);
+    opacity: 0.15;
 }
 
 @mixin unblurryFunction {
@@ -9,10 +14,7 @@
     opacity: 1;
 }
 
-@mixin blurryScreenFunction {
-    filter: blur(0.35em);
-    opacity: 0.15;
-}
+
 
 //~ Creation of shadow functions
 @mixin shadowRegularFunction {
@@ -24,6 +26,10 @@
 }
 
 //~ Creation of transition functions
-@mixin transitionFunction {
-    transition-duration: 1.5s;
+@mixin transitionProjectCardFunction {
+    transition-duration: 1.10s;
+}
+
+@mixin transitionContactFunction {
+    transition-duration: 2.5s;
 }

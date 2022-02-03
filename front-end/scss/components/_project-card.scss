@@ -68,51 +68,51 @@
 
 .blurry {
     @include shadowRegularFunction;
-    @include blurryFunction;
-    @include transitionFunction;
+    @include blurryProjectCardFunction;
+    @include transitionProjectCardFunction;
 }
 
 .unblurry {
     @include shadowBlurryFunction;
     @include unblurryFunction;
-    @include transitionFunction;
+    @include transitionProjectCardFunction;
 }
 
 .transition {
     &__title {
         &__appears {
-            @include transitionFunction;
+            @include transitionProjectCardFunction;
             color: $titles;
         }
         &__disappears {
-            @include transitionFunction;
+            @include transitionProjectCardFunction;
             color: transparent;
         }
     }
     &__text {
         &__appears {
-            @include transitionFunction;
+            @include transitionProjectCardFunction;
             color: black;
         }
         &__disappears {
-            @include transitionFunction;
+            @include transitionProjectCardFunction;
             color : transparent;
         }
     }
     &__date {
         &__appears {
-            @include transitionFunction;
+            @include transitionProjectCardFunction;
             color: black;
             .date {
-                @include transitionFunction;
+                @include transitionProjectCardFunction;
                 color: $titles;
             }
         }
         &__disappears {
-            @include transitionFunction;
+            @include transitionProjectCardFunction;
             color: transparent;
             .date {
-                @include transitionFunction;
+                @include transitionProjectCardFunction;
                 color: transparent;
             }
         }
