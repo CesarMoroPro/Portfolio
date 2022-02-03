@@ -4,14 +4,6 @@
     @include transitionFunction;
 }
 
-.hiding {
-    @include hideFunction;
-}
-
-.notHiding {
-    @include notHideFunction;
-}
-
 .contact-form {
     @include transitionFunction;
     @include shadowBlurryFunction;
@@ -29,6 +21,10 @@
     position: relative;
     right: 10px;
     top: 10px;
+}
+
+.on-cross-to-quit {
+    font-size: 1.5em;
 }
 
 .title-form {

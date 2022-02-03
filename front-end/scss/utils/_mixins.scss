@@ -27,14 +27,3 @@
 @mixin transitionFunction {
     transition-duration: 1.5s;
 }
-
-//~ Creation of hiding functions
-@mixin hideFunction {
-    opacity: 0;
-    @include transitionFunction;
-}
-
-@mixin notHideFunction {
-    ocapity: 1;
-    @include transitionFunction;
-}
