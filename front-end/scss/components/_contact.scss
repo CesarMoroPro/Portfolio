@@ -14,6 +14,7 @@
     .contact-form {
         @include transitionContactFunction;
         opacity: 0;
+        display: none;
     }
 
     .contact-form--active {
@@ -89,8 +90,13 @@
         font-style: italic;
     }
 
+    input:hover, textarea:hover {
+        @include shadowBlurryFunction;
+    }
+
     .input--active {
         outline: $titles double;
+        @include shadowBlurryFunction;
     }
 
     textarea {
@@ -100,13 +106,7 @@
         padding: 10px;
         margin-top: 2.5px;
     }
-
-    .send-button {
-        height: 35px;
-        font-family: $font-main-light;
-        font-size: 1em;
-    }
-
+    
     .textarea {
         display: flex;
         flex-direction: column;
@@ -114,5 +114,11 @@
 
     .textarea textarea {
         align-items: center;
+    }
+
+    .send-button {
+        height: 35px;
+        font-family: $font-main-light;
+        font-size: 1em;
     }
 }

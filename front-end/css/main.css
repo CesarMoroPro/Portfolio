@@ -130,6 +130,10 @@ p {
   font-size: 2.5em;
   color: darkgoldenrod;
 }
+.home__header__profil__social__fab__mini {
+  font-size: 1em;
+  margin-left: 5px;
+}
 .home__header__profil__social__fab:hover {
   color: rgba(184, 134, 11, 0.75);
 }
@@ -245,10 +249,25 @@ p {
 .home__footer {
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: baseline;
-  margin-top: 128px;
+  margin-top: 32px;
   margin-bottom: 32px;
+}
+@media (max-width: 500px) {
+  .home__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .home__footer p {
+    margin-bottom: 2.5px;
+  }
+  .home__footer a {
+    margin-top: 2.5px;
+    margin-bottom: 5px;
+  }
 }
 .home__footer p {
   color: darkgoldenrod;
@@ -262,19 +281,20 @@ p {
 .home .blurryScreen {
   filter: blur(0.35em);
   opacity: 0.15;
-  transition-duration: 2.5s;
+  transition-duration: 3s;
 }
 .home .unblurryScreen {
   filter: none;
   opacity: 1;
-  transition-duration: 2.5s;
+  transition-duration: 3s;
 }
 .home .contact-form {
-  transition-duration: 2.5s;
+  transition-duration: 3s;
   opacity: 0;
+  display: none;
 }
 .home .contact-form--active {
-  transition-duration: 2.5s;
+  transition-duration: 3s;
   box-shadow: 0px 7.5px 1em -0.15em #423309;
   opacity: 1;
   width: 100%;
@@ -335,8 +355,12 @@ p {
   color: darkgoldenrod;
   font-style: italic;
 }
+.home input:hover, .home textarea:hover {
+  box-shadow: 0px 7.5px 1em -0.15em #423309;
+}
 .home .input--active {
   outline: darkgoldenrod double;
+  box-shadow: 0px 7.5px 1em -0.15em #423309;
 }
 .home textarea {
   height: 300px;
@@ -345,17 +369,17 @@ p {
   padding: 10px;
   margin-top: 2.5px;
 }
-.home .send-button {
-  height: 35px;
-  font-family: "Quicksand";
-  font-size: 1em;
-}
 .home .textarea {
   display: flex;
   flex-direction: column;
 }
 .home .textarea textarea {
   align-items: center;
+}
+.home .send-button {
+  height: 35px;
+  font-family: "Quicksand";
+  font-size: 1em;
 }
 
 .home__content__projects {

@@ -48,7 +48,6 @@ function openForm() {
             textarea.classList.remove('input--active');
         });
 
-
     //? 6 - Active the cross to close the form
     cross.addEventListener('click', closeForm);
 };

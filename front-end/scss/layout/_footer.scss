@@ -1,10 +1,23 @@
 .home {
     &__footer{
+        @media (max-width: 500px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p {
+                margin-bottom: 2.5px;
+            }
+            a {
+                margin-top: 2.5px;
+                margin-bottom: 5px;
+            }
+        }
         width: 100%;
         display: flex;
+        flex-direction: row;
         justify-content: space-around;
         align-items: baseline;
-        margin-top: $gutter-ultra-large;
+        margin-top: $gutter-very-large;
         margin-bottom: $gutter-very-large;
         p {
             color: $titles;
