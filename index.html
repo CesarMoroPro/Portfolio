@@ -21,6 +21,9 @@
 
 <body class="home">
 
+    <div id="global">
+        <div id="screen" class="unblurryScreen">
+            
     <header class="home__header">
         <div class="home__header__profil">
             <div class="home__header__profil__id">
@@ -42,9 +45,6 @@
             <div class="underline__site-title"></div>
         </div>
     </header>
-    
-    <div id="global">
-        <div id="screen" class="unblurryScreen">
 
             <main class="home__content">
                 <section id="home__content__bio" class="hide-for-form">
@@ -113,7 +113,7 @@
                             <div class="form-fields__two-fields contact-fields form-fields__marges">
                                 <label for="" class="form-fields__legend">Vos coordonnées :</label>
                                 <div class="form-fields__field contact-fields__phone"><input type="number" placeholder="01 02 03 04 05"></div>
-                                <div class="form-fields__field contact-fields__mail"><input type="mail" placeholder="john.smith@example.com"></div>
+                                <div class="form-fields__field contact-fields__mail"><input type="email" placeholder="john.smith@example.com"></div>
                             </div>
 
                             <div class="form-fields__two-fields other-fields form-fields__marges">
@@ -123,9 +123,9 @@
 
                             <div class="form-fields__field textarea form-fields__marges">
                                 <label for="" class="form-fields__legend">Votre demande :</label>
-                                <textarea placeholder="Saisissez-votre demande" name="" id="" cols="30" rows="10"></textarea></div>
+                                <textarea placeholder="Saisissez votre demande" name="" id="" cols="30" rows="10"></textarea></div>
 
-                            <button class="form-fields__field send-button form-fields__marges">Envoyer <i class="icons far fa-paper-plane"></i></button>
+                            <input type="submit" class="form-fields__field send-button form-fields__marges" value="Envoyer"></input>
                         </div>
                         
                     </section>

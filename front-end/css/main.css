@@ -282,7 +282,7 @@ p {
   position: absolute;
   top: 25px;
   border-radius: 5px;
-  min-height: 700px;
+  min-height: 850px;
   min-width: 300px;
 }
 .home .title-form {
@@ -314,7 +314,6 @@ p {
   margin-bottom: 10px;
   margin-left: 2.5%;
   margin-right: 2.5%;
-  border: blue 1px solid;
 }
 .home .form-fields__legend {
   padding-left: 5px;
@@ -326,7 +325,7 @@ p {
 .home .form-fields__marges {
   margin-top: 15px;
 }
-.home input, .home textarea, .home button {
+.home input, .home textarea {
   border: solid 0.5px darkgoldenrod;
   border-radius: 2.5px;
   height: 20px;
@@ -336,17 +335,27 @@ p {
   color: darkgoldenrod;
   font-style: italic;
 }
+.home .input--active {
+  outline: darkgoldenrod double;
+}
 .home textarea {
-  height: 200px;
+  height: 300px;
   width: 90%;
   text-align: justify;
   padding: 10px;
   margin-top: 2.5px;
 }
-.home button {
+.home .send-button {
   height: 35px;
   font-family: "Quicksand";
   font-size: 1em;
+}
+.home .textarea {
+  display: flex;
+  flex-direction: column;
+}
+.home .textarea textarea {
+  align-items: center;
 }
 
 .home__content__projects {

@@ -1,11 +1,13 @@
-let global      = document.getElementById('global');
-let contact     = document.querySelectorAll('.contactForm');
-let screen      = document.getElementById('screen');
-let form        = document.querySelector('.contact-form');
-let cross       = document.querySelector('.cross-to-quit');
+let global                                  = document.getElementById('global');
+let contact                                 = document.querySelectorAll('.contactForm');
+let screen                                  = document.getElementById('screen');
+let form                                    = document.querySelector('.contact-form');
+let cross                                   = document.querySelector('.cross-to-quit');
+let closedForm                              = true;
 
+let inputs                                  = document.querySelectorAll('input');
+let textarea                                = document.querySelector('textarea');
 
-let closedForm  = true;
 
 
 contact.forEach(element => {
@@ -29,7 +31,25 @@ function openForm() {
     //? 4 -  Changing the form section class
     form.classList.replace('contact-form', 'contact-form--active');
 
-    //? 5 - Active the cross to close the form
+    //? 5 - Changing the input, textearea and button class
+    inputs.forEach(input =>
+        input.addEventListener('focus', () => {
+            input.classList.add('input--active');
+        }));
+    inputs.forEach(input =>
+        input.addEventListener('blur', () => {
+            input.classList.remove('input--active');
+        }));
+
+    textarea.addEventListener('focus', () => {
+            textarea.classList.add('input--active');
+        });
+    textarea.addEventListener('blur', () => {
+            textarea.classList.remove('input--active');
+        });
+
+
+    //? 6 - Active the cross to close the form
     cross.addEventListener('click', closeForm);
 };
 
