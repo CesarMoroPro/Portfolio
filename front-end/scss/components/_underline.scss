@@ -1,5 +1,5 @@
-.underline__site-title {
-
+.underline {
+    
     //^ MOBILE BREAKPOINT
     width: 275px;
     height: 1px;
@@ -17,5 +17,13 @@
     @media (min-width: $breakpoint-large-min-width) {
         width: 800px;
         left: -$gutter-very-large;
+    }
+
+    &__name {
+        display: flex;
+        width: 100px;
+        height: 1px;
+        position: absolute;
+        left: 200px;
     }
 }

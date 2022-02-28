@@ -1,0 +1,49 @@
+$darmode-font-size: $font-size-very-small;
+
+
+//^ VARIABLES FOR DARKMODE OFF
+$darkmode-off-p-color: $grey-medium-transparent;
+$darkmode-off-social-color: $titles;
+
+
+//^ VARIABLES FOR DARKMODE ON
+$darkmode-on-background-color: black;
+$darkmode-on-p-color: $grey-light-transparent;
+$darkmode-on-social-color: $grey-light;
+
+
+//~ HEADER PROPERTIES
+//? CLASS WHEN DARKMODE IS OFF
+.home--darkmode--off {
+    background-color: white;
+}
+
+.p--darkmode--off {
+    color: $grey-medium-transparent;
+}
+
+.social--darkmode--off {
+    color: $darkmode-off-social-color;
+}
+.social--darkmode--off:hover {
+    color: $titles-semi-transparent;
+}
+
+
+//? CLASS WHEN DARKMODE IS ON
+.home--darkmode--on {
+    background-color: rgba(16, 14, 14, 0.953);
+}
+
+.p--darkmode--on {
+    color: black;
+}
+
+.social--darkmode--on {
+    color: $darkmode-on-social-color;
+}
+.social--darkmode--on:hover {
+    color: white;
+}
+
+//~ CONTENT PROPERTIES

@@ -41,17 +41,15 @@
                     align-items: flex-end;
                     align-self: stretch;
                     padding: $gutter-small;
+                    margin-top: $gutter-medium;
                     margin-right: $gutter-very-large;
                     &__fab {
                         font-size: $font-size-large;
-                        color: $titles;
+
                         &__mini {
                             font-size: $font-size-small;
                             margin-left: 5px;
                         }
-                    }
-                    &__fab:hover {
-                            color: $titles-semi-transparent;    
                     }
                 }
             }
@@ -69,6 +67,18 @@
                     text-transform: uppercase;
                     letter-spacing: $gutter-medium;
                     margin: $gutter-extra-small;
+                }
+            }
+
+            #darkmodeSelector {
+                width: auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+                left: 65px;
+                &__p {
+                    font-size: $font-size-ultra-small;
                 }
             }
         }

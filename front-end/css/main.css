@@ -57,6 +57,38 @@ table {
   border-spacing: 0;
 }
 
+.home--darkmode--off {
+  background-color: white;
+}
+
+.p--darkmode--off {
+  color: rgba(79, 78, 75, 0.5);
+}
+
+.social--darkmode--off {
+  color: darkgoldenrod;
+}
+
+.social--darkmode--off:hover {
+  color: rgba(184, 134, 11, 0.75);
+}
+
+.home--darkmode--on {
+  background-color: rgba(16, 14, 14, 0.953);
+}
+
+.p--darkmode--on {
+  color: black;
+}
+
+.social--darkmode--on {
+  color: gainsboro;
+}
+
+.social--darkmode--on:hover {
+  color: white;
+}
+
 @font-face {
   font-family: "Quicksand Regular";
   src: url("../../assets/fonts/Quicksand/Quicksand-Regular.ttf");
@@ -124,18 +156,15 @@ p {
   align-items: flex-end;
   align-self: stretch;
   padding: 8px;
+  margin-top: 10.6666666667px;
   margin-right: 32px;
 }
 .home__header__profil__social__fab {
   font-size: 2.5em;
-  color: darkgoldenrod;
 }
 .home__header__profil__social__fab__mini {
   font-size: 1em;
   margin-left: 5px;
-}
-.home__header__profil__social__fab:hover {
-  color: rgba(184, 134, 11, 0.75);
 }
 .home__header__title {
   min-width: 330px;
@@ -152,6 +181,17 @@ p {
   text-transform: uppercase;
   letter-spacing: 10.6666666667px;
   margin: 4px;
+}
+.home__header #darkmodeSelector {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  left: 65px;
+}
+.home__header #darkmodeSelector__p {
+  font-size: 0.6666666667em;
 }
 @media (min-width: 740px) {
   .home__header__profil__id {
@@ -517,7 +557,7 @@ p {
   animation-duration: 1.5s;
 }
 
-.underline__site-title {
+.underline {
   width: 275px;
   height: 1px;
   background-image: linear-gradient(to right, darkgoldenrod, rgba(184, 134, 11, 0.15));
@@ -526,16 +566,23 @@ p {
   left: -6.1538461538px;
 }
 @media (min-width: 740px) {
-  .underline__site-title {
+  .underline {
     width: 500px;
     left: -16px;
   }
 }
 @media (min-width: 1024px) {
-  .underline__site-title {
+  .underline {
     width: 800px;
     left: -32px;
   }
+}
+.underline__name {
+  display: flex;
+  width: 100px;
+  height: 1px;
+  position: absolute;
+  left: 200px;
 }
 
 .link {

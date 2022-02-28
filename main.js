@@ -1,4 +1,5 @@
 //~ Import des scripts Utils
+import './front-end/js/utils/darkmode.js';
 import './front-end/js/utils/swiper.js';
 
 //~ Import des scripts Layout
