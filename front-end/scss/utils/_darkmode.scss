@@ -1,14 +1,13 @@
-$darmode-font-size: $font-size-very-small;
+$darkmode-font-size: $font-size-very-small;
 
 
 //^ VARIABLES FOR DARKMODE OFF
-$darkmode-off-p-color: $grey-medium-transparent;
+$darkmode-off-p-color: $grey-medium-transparent; //= rgba(79, 78, 75, 0.50);
 $darkmode-off-social-color: $titles;
 
 
 //^ VARIABLES FOR DARKMODE ON
 $darkmode-on-background-color: black;
-$darkmode-on-p-color: $grey-light-transparent;
 $darkmode-on-social-color: $grey-light;
 
 
@@ -19,7 +18,12 @@ $darkmode-on-social-color: $grey-light;
 }
 
 .p--darkmode--off {
-    color: $grey-medium-transparent;
+    color: $darkmode-off-p-color;
+}
+
+.p--darkmode--off:hover {
+    color: black;
+    text-decoration: underline $darkmode-off-p-color;
 }
 
 .social--darkmode--off {
@@ -36,7 +40,12 @@ $darkmode-on-social-color: $grey-light;
 }
 
 .p--darkmode--on {
-    color: black;
+    color: $grey-light-transparent;
+}
+
+.p--darkmode--on:hover {
+    color: white;
+    text-decoration: underline $grey-light-transparent;
 }
 
 .social--darkmode--on {

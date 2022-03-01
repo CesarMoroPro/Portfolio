@@ -65,6 +65,11 @@ table {
   color: rgba(79, 78, 75, 0.5);
 }
 
+.p--darkmode--off:hover {
+  color: black;
+  text-decoration: underline rgba(79, 78, 75, 0.5);
+}
+
 .social--darkmode--off {
   color: darkgoldenrod;
 }
@@ -78,7 +83,12 @@ table {
 }
 
 .p--darkmode--on {
-  color: black;
+  color: rgba(220, 220, 220, 0.45);
+}
+
+.p--darkmode--on:hover {
+  color: white;
+  text-decoration: underline rgba(220, 220, 220, 0.45);
 }
 
 .social--darkmode--on {
