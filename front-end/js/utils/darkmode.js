@@ -1,5 +1,7 @@
-// TODO : Textes project-cards à passer en blanc en darkmode on
 // TODO : Fixer placement des éléments selon les tailles de support
+// TODO : Optimiser les darkmode (présent dans darkmode.js et projectCard.js)
+
+import '../components/projectCard.js';
 
 
 //~ ICI SONT GÉRÉES TOUTES LES INTERRACTIONS LIÉES AU DARKMODE
@@ -8,14 +10,13 @@
 let home                = document.querySelector('.home');
 
 //* SÉLECTION DU DÉCLENCHEUR DU DARKMODE
-let darkmodeSelector    = document.getElementById('darkmodeSelector');
-let darkmodeButton      = document.querySelector('.darkmodeSelector__button');
-let darkmodeIcon        = document.getElementById('icon--darkmode');
+let darkmodeSelector    = document.getElementById('darkmodeSelector'); // Zone du bouton darkmode
+let darkmodeButton      = document.querySelector('.darkmodeSelector__button'); // bouton darkmode
+// let darkmodeIcon        = document.getElementById('icon--darkmode'); // icone darkmode
 
 //* SÉLECTION DES ÉLÉMENTS ET DES COMPOSANTS
 let social              = document.querySelectorAll('.home__header__profil__social__fab');
-let texts               = document.querySelectorAll('.p');
-let cardTexts           = document.querySelectorAll('.home__content__project-card__divs p');
+let texts               = document.querySelectorAll('.p'); // textes généraux
 let socialMini          = document.querySelector('.home__header__profil__social__fab__mini');
 let links               = document.querySelectorAll('.link');
 

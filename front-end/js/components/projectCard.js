@@ -2,7 +2,6 @@
 const imgSrc = "./front-end/assets/img/"; // execute this const for html result
 // const imgSrc = "../front-end/assets/img/"; // execute this const for php result
 
-
 //^ Array of the differents projects
 let projects =  {
                 'portfolio' :   {
@@ -59,6 +58,13 @@ for (let project in projects){
         cardDate.classList.replace('transition__date__disappears', 'transition__date__appears');
     };
 
+    function blurryCardDarkmodeOn() {
+        cardImage.classList.replace('unblurry', 'blurry');
+        cardTitle.classList.replace('transition__title__appears', 'transition__title__disappears');
+        cardText.classList.replace('transition__text__disappears', 'transition__text__darkmode--on--appears');
+        cardDate.classList.replace('transition__date__disappears', 'transition__date__darkmode--on--appears');
+    }
+
     function unblurryCard() {
 
         cardImage.classList.replace('blurry', 'unblurry');
@@ -67,11 +73,39 @@ for (let project in projects){
         cardDate.classList.replace('transition__date__appears', 'transition__date__disappears');
     };
 
+    function unblurryCardDarkmodeOn() {
+        cardImage.classList.replace('blurry', 'unblurry');
+        cardTitle.classList.replace('transition__title__disappears', 'transition__title__appears');
+        cardText.classList.replace('transition__text__darkmode--on--appears', 'transition__text__disappears');
+        cardDate.classList.replace('transition__date__darkmode--on--appears', 'transition__date__disappears');
+    }
 
-    //^ Creation of EventListeners
-    cardProject.addEventListener('mouseover', blurryCard);
 
 
-    //^ Suppression of EventListeners
-    cardProject.addEventListener('mouseout', unblurryCard); 
+    let darkmodeButton = document.querySelector('.darkmodeSelector__button'); // bouton darkmode
+
+    //* BOOLÉEN D'ACTIVATION DU DARKMODE
+    let activatedDarkmode   = false;
+
+
+    //* ÉCOUTEUR, AU CLICK SUR LA DIV DARKMODE
+    darkmodeButton.addEventListener('click', () => {
+        if (activatedDarkmode === false) {
+            
+            //~ DARKMODE ON
+            //* BOOLÉEN D'ACTIVATION DEVIENT TRUE == ACTIF
+            activatedDarkmode = true;  
+            cardProject.addEventListener('mouseover', blurryCardDarkmodeOn);
+            cardProject.addEventListener('mouseout', unblurryCardDarkmodeOn);
+            
+
+        } else {
+            
+            //~ DARKMODE OFF
+            //* BOOLÉEN D'ACTIVIATION PASSE À FALSE == INACTIF
+            activatedDarkmode = false;           
+            cardProject.addEventListener('mouseover', blurryCard);
+            cardProject.addEventListener('mouseout', unblurryCard);
+        }
+    })
 }

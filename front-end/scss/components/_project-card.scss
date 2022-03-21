@@ -64,67 +64,79 @@
             }
         }
     }
-}
 
-.blurry {
-    @include shadowRegularFunction;
-    @include blurryProjectCardFunction;
-    @include transitionProjectCardFunction;
-}
-
-.unblurry {
-    @include shadowBlurryFunction;
-    @include unblurryFunction;
-    @include transitionProjectCardFunction;
-}
-
-.transition {
-    &__title {
-        &__appears {
-            @include transitionProjectCardFunction;
-            color: $titles;
-        }
-        &__disappears {
-            @include transitionProjectCardFunction;
-            color: transparent;
-        }
+    .blurry {
+        @include shadowRegularFunction;
+        @include blurryProjectCardFunction;
+        @include transitionProjectCardFunction;
     }
-    &__text {
-        &__appears {
-            @include transitionProjectCardFunction;
-            color: black;
-        }
-        &__appears--darkmode--on {
-            @include transitionProjectCardFunction;
-            color: white;
-        }
-        &__disappears {
-            @include transitionProjectCardFunction;
-            color : transparent;
-        }
+    
+    .unblurry {
+        @include shadowBlurryFunction;
+        @include unblurryFunction;
+        @include transitionProjectCardFunction;
     }
-    &__date {
-        &__appears {
-            @include transitionProjectCardFunction;
-            color: black;
-            
-            &__date {
+    
+    .transition {
+        &__title {
+            &__appears {
                 @include transitionProjectCardFunction;
                 color: $titles;
             }
-        }
-        &__appears--darkmode--on {
-            @include transitionProjectCardFunction;
-            color: white;
-        }
-        &__disappears {
-            @include transitionProjectCardFunction;
-            color: transparent;
-            
-            &__date {
+            &__disappears {
                 @include transitionProjectCardFunction;
                 color: transparent;
             }
         }
+        &__text {
+            &__appears {
+                @include transitionProjectCardFunction;
+                color: black;
+            }
+            &__disappears {
+                @include transitionProjectCardFunction;
+                color : transparent;
+            }
+        }
+        &__date {
+            &__appears {
+                @include transitionProjectCardFunction;
+                color: black;
+                
+                &__date {
+                    @include transitionProjectCardFunction;
+                    color: $titles;
+                }
+            }
+            &__appears--darkmode--on {
+                @include transitionProjectCardFunction;
+                color: white;
+            }
+            &__disappears {
+                @include transitionProjectCardFunction;
+                color: transparent;
+                
+                &__date {
+                    @include transitionProjectCardFunction;
+                    color: transparent;
+                }
+            }
+        }
+    }
+
+
+    //~ DARKMODE ON
+    .transition {
+        &__text {
+            &__darkmode--on--appears {
+                color: white;
+            }
+        }
+        &__date {
+            &__darkmode--on--appears {
+                color: white;
+            }
+        }
     }
 }
+
