@@ -7,11 +7,10 @@
 //~ Import des 7-1 utils
 @import './utils/variables';
 @import './utils/mixins';
-@import './utils/darkmode';
 
 //~ Import des 7-1 bases
 @import './base/fonts';
-@import './base/box-sizing';
+@import './base/body';
 
 //~ Import des 7-1 layouts
 @import './layout/header';

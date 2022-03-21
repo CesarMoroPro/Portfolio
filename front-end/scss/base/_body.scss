@@ -1,3 +1,4 @@
+//! Classes générales et tags
 .home {
     min-width: 330px;
     margin-left: $gutter-medium;
@@ -14,7 +15,13 @@ p {
 
 }
 
+//! id
 #global {
     width: 95%;
     position: relative;
+}
+
+//! Classes
+.home--darkmode--on {
+    background-color: rgba(16, 14, 14, 0.953);
 }

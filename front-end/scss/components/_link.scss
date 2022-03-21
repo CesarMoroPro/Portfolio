@@ -9,3 +9,13 @@
 .link-title {
     margin: $gutter-small;
 }
+
+
+// ~ DARKMODE ON
+.link--darkmode--on {
+    color: $darkmode-on-light-color;
+}
+
+.link--darkmode--on:hover {
+    color: white;
+}

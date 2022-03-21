@@ -6,6 +6,8 @@
             align-items: center;
             p {
                 margin-bottom: 2.5px;
+                text-align: center;
+                font-size: $font-size-very-small;
             }
             a {
                 margin-top: 2.5px;
@@ -19,8 +21,11 @@
         align-items: baseline;
         margin-top: $gutter-very-large;
         margin-bottom: $gutter-very-large;
-        p {
-            color: $titles;
-        }
+    }
+
+
+    //~ DARKMODE ON
+    .text--darkmode--on{
+        color: $darkmode-on-main-color;
     }
 }

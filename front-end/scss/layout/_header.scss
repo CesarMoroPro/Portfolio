@@ -1,5 +1,6 @@
 .home {
     //^ MOBILE-FIRST
+    //! Classes générales et tags
         &__header {
             width: 100%;
             margin-bottom: $gutter-regular;
@@ -45,11 +46,14 @@
                     margin-right: $gutter-very-large;
                     &__fab {
                         font-size: $font-size-large;
-
+                        color: $titles;
                         &__mini {
                             font-size: $font-size-small;
                             margin-left: 5px;
                         }
+                    }
+                    &__fab:hover {
+                        color: $titles-semi-transparent;
                     }
                 }
             }
@@ -70,15 +74,21 @@
                 }
             }
 
-            #darkmodeSelector {
+            //! id
+            .darkmodeSelector {
                 width: auto;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
                 position: relative;
                 left: 65px;
-                &__p {
+                &__button {
                     font-size: $font-size-ultra-small;
+                    color: $grey-medium-transparent;
+                }
+                &__button:hover {
+                    color: black;
+                    text-decoration: underline $grey-medium-transparent;
                 }
             }
         }
@@ -148,5 +158,21 @@
                 }
             }
         }
+    }
+
+
+    //~ DARKMODE ON
+    .social--darkmode--on {
+        color: $darkmode-on-light-color;
+    }
+    .social--darkmode--on:hover {
+        color: $darkmode-on-main-color;
+    }
+    .darkmodeButton--darkmode--on {
+        color: $grey-light-transparent;
+    }
+    .darkmodeButton--darkmode--on:hover {
+        color: white;
+        text-decoration: underline $grey-light-transparent;
     }
 }

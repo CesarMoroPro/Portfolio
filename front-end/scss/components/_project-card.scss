@@ -94,6 +94,10 @@
             @include transitionProjectCardFunction;
             color: black;
         }
+        &__appears--darkmode--on {
+            @include transitionProjectCardFunction;
+            color: white;
+        }
         &__disappears {
             @include transitionProjectCardFunction;
             color : transparent;
@@ -103,15 +107,21 @@
         &__appears {
             @include transitionProjectCardFunction;
             color: black;
-            .date {
+            
+            &__date {
                 @include transitionProjectCardFunction;
                 color: $titles;
             }
         }
+        &__appears--darkmode--on {
+            @include transitionProjectCardFunction;
+            color: white;
+        }
         &__disappears {
             @include transitionProjectCardFunction;
             color: transparent;
-            .date {
+            
+            &__date {
                 @include transitionProjectCardFunction;
                 color: transparent;
             }

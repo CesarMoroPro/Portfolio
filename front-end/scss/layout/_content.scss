@@ -1,6 +1,5 @@
 .home {
-
-    //^ BREAKPOINT MOBILE
+    //^ MOBILE-FIRST
     &__content {
         &__title {  
             margin-left: $gutter-medium;
@@ -64,5 +63,11 @@
                 }
             }
         }
+    }
+    
+
+    //~ DARKMODE ON
+    .text--darkmode--on {
+        color: $darkmode-on-main-color;
     }
 }

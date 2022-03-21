@@ -44,7 +44,7 @@ for (let project in projects){
     cardImage.setAttribute('src', projects[project]['image']);
     cardUrl.setAttribute('href', projects[project]['url']);
     
-    cardDate.innerHTML      = "Date de dernière mise à jour : <span class='date'></span>" + projects[project]['date'] + "</span></p>";
+    cardDate.innerHTML      = "Date de création : <span class='date'></span>" + projects[project]['date'] + "</span></p>";
 
     cardTitle.textContent   = projects[project]['title'];
     cardText.textContent    = projects[project]['excerp'];

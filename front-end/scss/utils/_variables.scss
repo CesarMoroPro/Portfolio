@@ -82,8 +82,13 @@ $shadow-blurry: #423309;
 $shadow-regular: black;
 
 
-//^ DARK-MODE COLORS
-//! EVERY VARIABLES ABOUT DARKMODE ARE REGISTERED IN THE SCSS DARKMODE FILE.
 
+//~ VARIABLES FOR DARKMODE ON
+//? BODY
+$darkmode-on-background-color: black;
+//? HEADER
+$darkmode-on-light-color: $grey-light;
+//? CONTENT
+$darkmode-on-main-color: white;
 
 
