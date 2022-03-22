@@ -1,6 +1,31 @@
 .home {
-
+    
     //^ BREAKPOINTS MOBILE
+    input, textarea {
+        border: solid 0.5px $titles;
+        border-radius: 2.5px;
+        height: 20px;
+        padding-left: 5px;
+    }
+
+    input::placeholder, textarea::placeholder {
+        color: $titles;
+        font-style: italic;
+    }
+
+    input:hover, textarea:hover {
+        @include shadowBlurryFunction;
+    }
+
+    textarea {
+        height: 300px;
+        width: 90%;
+        text-align: justify;
+        padding: 10px;
+        margin-top: 2.5px;
+    }
+
+
     .blurryScreen {
         @include blurryScreenFunction;
         @include transitionContactFunction;
@@ -78,33 +103,9 @@
         }
     }
 
-    input, textarea {
-        border: solid 0.5px $titles;
-        border-radius: 2.5px;
-        height: 20px;
-        padding-left: 5px;
-    }
-
-    input::placeholder, textarea::placeholder {
-        color: $titles;
-        font-style: italic;
-    }
-
-    input:hover, textarea:hover {
-        @include shadowBlurryFunction;
-    }
-
     .input--active {
         outline: $titles double;
         @include shadowBlurryFunction;
-    }
-
-    textarea {
-        height: 300px;
-        width: 90%;
-        text-align: justify;
-        padding: 10px;
-        margin-top: 2.5px;
     }
     
     .textarea {
@@ -120,5 +121,13 @@
         height: 35px;
         font-family: $font-main-light;
         font-size: 1em;
+    }
+
+
+    //~ DARKMODE ON
+    .form-fields {
+        &__legend {
+            color: $darkmode-on-main-color;
+        }
     }
 }

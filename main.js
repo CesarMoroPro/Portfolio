@@ -1,3 +1,6 @@
+// TODO : Optimiser les placements des éléments
+// TODO : Factoriser les classes transition__disappears des Project-Cards en JS, SCSS, HTML
+
 //~ Import des scripts Utils
 import './front-end/js/utils/darkmode.js';
 //import './front-end/js/utils/swiper.js';

@@ -88,7 +88,7 @@
                 color: transparent;
             }
         }
-        &__text {
+        &__allP {
             &__appears {
                 @include transitionProjectCardFunction;
                 color: black;
@@ -108,10 +108,6 @@
                     color: $titles;
                 }
             }
-            &__appears--darkmode--on {
-                @include transitionProjectCardFunction;
-                color: white;
-            }
             &__disappears {
                 @include transitionProjectCardFunction;
                 color: transparent;
@@ -126,17 +122,9 @@
 
 
     //~ DARKMODE ON
-    .transition {
-        &__text {
-            &__darkmode--on--appears {
-                color: white;
-            }
-        }
-        &__date {
-            &__darkmode--on--appears {
-                color: white;
-            }
-        }
+    .project-card--texts--darkmode--on--appears {
+        @include transitionProjectCardFunction;
+        color: white;
     }
 }
 

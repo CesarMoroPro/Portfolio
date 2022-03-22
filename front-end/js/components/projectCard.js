@@ -1,8 +1,9 @@
-//^ Relative path for the images (readed from index.html)
+//? ================================= VARIABLES ===========================================
+//* CHEMIN RELATIF POUR LES IMAGES DU PROJECT-CARD (LU DEPUIS INDEX.HTML)
 const imgSrc = "./front-end/assets/img/"; // execute this const for html result
 // const imgSrc = "../front-end/assets/img/"; // execute this const for php result
 
-//^ Array of the differents projects
+//* TABLEAU DE DONNÉES DES DIFFÉRENTS PROJETS
 let projects =  {
                 'portfolio' :   {
                                 'title'     : 'Portfolio',
@@ -11,6 +12,7 @@ let projects =  {
                                 'url'       : 'http://google.com',
                                 'image'     : imgSrc + 'portfolio-card.jpg'
                 },
+                /*
                 'voyages'   :   {
                                 'title'     : 'Voyages',
                                 'excerp'    : 'Des aurores boérales de Norvège aux forêts tropicales des îles d\'Hawaii, parcourez ce projet pour découvrir une partie du monde.',
@@ -25,87 +27,74 @@ let projects =  {
                                 'url'       : 'https://www.allocine.fr/film/fichefilm_gen_cfilm=146349.html',
                                 'image'     : imgSrc + 'test6-card.jpg'
                 }
+                */
 }
 
+//* RÉCUPÉRATION DE CHAQUE ÉLÉMENT D'UNE PROJECT-CARD
+let cardProjects     = document.querySelectorAll('.home__content__project-card');
+let cardImages       = document.querySelectorAll('.home__content__project-card__img');
+let cardTitles       = document.querySelectorAll('.home__content__project-card__title');
+let cardTexts        = document.querySelectorAll('.home__content__project-card__text')
+let cardDates        = document.querySelectorAll('.home__content__project-card__text-date');
+let cardProjectAllP    = document.querySelectorAll('.home__content__project-card__divs p');
+let cardUrls         = document.querySelectorAll('.home__content__project-card__divs__div-link');
 
-//^ Loop for each element and action about one project-card
+/*
+//* RÉCUPÉRATION DU BOUTON D'ACTIVATION DU DARKMODE
+let darkmodeButton      = document.querySelector('.darkmodeSelector__button'); // bouton darkmode
+
+//* BOOLÉEN D'ACTIVATION DU DARKMODE
+let activatedDarkmode = false;
+*/
+
+
+//? ================================= FONCTIONS ===========================================
+//* CRÉATION DES FONCTIONS
+function blurryCard() {
+
+    cardImages.forEach(element =>
+        element.classList.replace('unblurry', 'blurry'));
+    cardTitles.forEach(element =>
+        element.classList.replace('transition__title__appears', 'transition__title__disappears')); 
+    cardProjectAllP.forEach(element =>
+        element.classList.replace('transition__allP__disappears', 'transition__allP__appears'));
+};
+
+function unblurryCard() {
+
+    cardImages.forEach(element =>
+        element.classList.replace('blurry', 'unblurry'));
+    cardTitles.forEach(element =>
+        element.classList.replace('transition__title__disappears', 'transition__title__appears'));
+    cardProjectAllP.forEach(element =>
+        element.classList.replace('transition__allP__appears', 'transition__allP__disappears'));
+};
+
+
+
+//? ================================= ÉCOUTEURS D'ÉVÉNEMENTS ===========================================
+//* ÉCOUTEUR SURVOL D'UNE PROJECT-CARD
+cardProjects.forEach(element =>
+    element.addEventListener('mouseover', blurryCard));
+cardProjects.forEach(element =>
+    element.addEventListener('mouseout', unblurryCard));
+
+
+
+//? ================================= TRAITEMENT FINAL =========================================== 
+//* BOUCLE SUR TOUS LES ÉLÉMENTS D'UNE PROJECT-CARD ENTRAINANT UNE ACTION
 for (let project in projects){
-    //^ Creation of the variables to be handled
 
-    let cardProject     = document.querySelector('.home__content__project-card');
-    let cardImage       = document.querySelector('.home__content__project-card__img');
-    let cardTitle       = document.querySelector('.home__content__project-card__title');
-    let cardText        = document.querySelector('.home__content__project-card__text')
-    let cardDate        = document.querySelector('.home__content__project-card__text-date');
-    let cardUrl         = document.querySelector('.home__content__project-card__divs__div-link');
-
-
-    cardImage.setAttribute('src', projects[project]['image']);
-    cardUrl.setAttribute('href', projects[project]['url']);
+   cardImages.forEach(element =>
+        element.setAttribute('src', projects[project]['image']));
+    cardUrls.forEach(element =>
+        element.setAttribute('href', projects[project]['url']));
     
-    cardDate.innerHTML      = "Date de création : <span class='date'></span>" + projects[project]['date'] + "</span></p>";
+    cardDates.forEach(element =>
+        element.innerHTML      = "Date de création : <span class='date'></span>" + projects[project]['date'] + "</span></p>");
 
-    cardTitle.textContent   = projects[project]['title'];
-    cardText.textContent    = projects[project]['excerp'];
-
-
-    //^ Creation of functions
-    function blurryCard() {
-
-        cardImage.classList.replace('unblurry', 'blurry');
-        cardTitle.classList.replace('transition__title__appears', 'transition__title__disappears'); 
-        cardText.classList.replace('transition__text__disappears', 'transition__text__appears');
-        cardDate.classList.replace('transition__date__disappears', 'transition__date__appears');
-    };
-
-    function blurryCardDarkmodeOn() {
-        cardImage.classList.replace('unblurry', 'blurry');
-        cardTitle.classList.replace('transition__title__appears', 'transition__title__disappears');
-        cardText.classList.replace('transition__text__disappears', 'transition__text__darkmode--on--appears');
-        cardDate.classList.replace('transition__date__disappears', 'transition__date__darkmode--on--appears');
-    }
-
-    function unblurryCard() {
-
-        cardImage.classList.replace('blurry', 'unblurry');
-        cardTitle.classList.replace('transition__title__disappears', 'transition__title__appears');
-        cardText.classList.replace('transition__text__appears', 'transition__text__disappears');
-        cardDate.classList.replace('transition__date__appears', 'transition__date__disappears');
-    };
-
-    function unblurryCardDarkmodeOn() {
-        cardImage.classList.replace('blurry', 'unblurry');
-        cardTitle.classList.replace('transition__title__disappears', 'transition__title__appears');
-        cardText.classList.replace('transition__text__darkmode--on--appears', 'transition__text__disappears');
-        cardDate.classList.replace('transition__date__darkmode--on--appears', 'transition__date__disappears');
-    }
-
-
-
-    let darkmodeButton = document.querySelector('.darkmodeSelector__button'); // bouton darkmode
-
-    //* BOOLÉEN D'ACTIVATION DU DARKMODE
-    let activatedDarkmode   = false;
-
-
-    //* ÉCOUTEUR, AU CLICK SUR LA DIV DARKMODE
-    darkmodeButton.addEventListener('click', () => {
-        if (activatedDarkmode === false) {
-            
-            //~ DARKMODE ON
-            //* BOOLÉEN D'ACTIVATION DEVIENT TRUE == ACTIF
-            activatedDarkmode = true;  
-            cardProject.addEventListener('mouseover', blurryCardDarkmodeOn);
-            cardProject.addEventListener('mouseout', unblurryCardDarkmodeOn);
-            
-
-        } else {
-            
-            //~ DARKMODE OFF
-            //* BOOLÉEN D'ACTIVIATION PASSE À FALSE == INACTIF
-            activatedDarkmode = false;           
-            cardProject.addEventListener('mouseover', blurryCard);
-            cardProject.addEventListener('mouseout', unblurryCard);
-        }
-    })
+    cardTitles.forEach(element =>
+        element.textContent   = projects[project]['title']);
+    cardTexts.forEach(element =>
+        element.textContent    = projects[project]['excerp']);    
 }

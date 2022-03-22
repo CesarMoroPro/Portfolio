@@ -1,11 +1,6 @@
-// TODO : Fixer placement des éléments selon les tailles de support
-// TODO : Optimiser les darkmode (présent dans darkmode.js et projectCard.js)
+//~ ICI SONT GÉRÉES TOUTES LES INTERRACTIONS LIÉES AU DARKMODE SAUF PROJECT-CARD
 
-import '../components/projectCard.js';
-
-
-//~ ICI SONT GÉRÉES TOUTES LES INTERRACTIONS LIÉES AU DARKMODE
-
+//? ================================= VARIABLES ===========================================
 //* SÉLECTION DU BODY
 let home                = document.querySelector('.home');
 
@@ -17,6 +12,8 @@ let darkmodeButton      = document.querySelector('.darkmodeSelector__button'); /
 //* SÉLECTION DES ÉLÉMENTS ET DES COMPOSANTS
 let social              = document.querySelectorAll('.home__header__profil__social__fab');
 let texts               = document.querySelectorAll('.p'); // textes généraux
+let cardProjects        = document.querySelectorAll('.home__content__project-card');
+let cardProjectAllP    = document.querySelectorAll('.home__content__project-card__divs p');
 let socialMini          = document.querySelector('.home__header__profil__social__fab__mini');
 let links               = document.querySelectorAll('.link');
 
@@ -24,9 +21,11 @@ let links               = document.querySelectorAll('.link');
 let activatedDarkmode   = false;
 
 
-//* ÉCOUTEUR, AU CLICK SUR LA DIV DARKMODE
-darkmodeButton.addEventListener('click', () => {
+
+//? ================================= FONCTIONS ===========================================
+function activateDarkmode() {
     if (activatedDarkmode === false) {
+        console.log('%c' + "On vient d'activer le darkmode", 'color: #f0f; font-size: 1.5rem; background-color:white');
         //* BOOLÉEN D'ACTIVATION DEVIENT TRUE == ACTIF
         activatedDarkmode = true;
 
@@ -45,6 +44,12 @@ darkmodeButton.addEventListener('click', () => {
         //* MAIN
         texts.forEach(element => 
             element.classList.add('text--darkmode--on'));
+        cardProjects.forEach(element =>
+            element.addEventListener('mouseover', () =>
+                cardProjectAllP.forEach(element => element.classList.add('project-card--texts--darkmode--on--appears'))));
+        cardProjects.forEach(element =>
+            element.addEventListener('mouseout', () =>
+                cardProjectAllP.forEach(element => element.classList.remove('project-card--texts--darkmode--on--appears'))));
 
         //* FOOTER
         socialMini.classList.add('social--darkmode--on');
@@ -52,6 +57,7 @@ darkmodeButton.addEventListener('click', () => {
             element.classList.add('link--darkmode--on'));
     }
     else {
+        console.log('%c' + "On a désactivé le darkmode", 'color: red; font-size: 1.5rem');
         //* BOOLÉEN D'ACTIVIATION PASSE À FALSE == INACTIF
         activatedDarkmode = false;
 
@@ -70,10 +76,22 @@ darkmodeButton.addEventListener('click', () => {
         //* MAIN
         texts.forEach(element =>
             element.classList.remove('text--darkmode--on'));
+        cardProjects.forEach(element =>
+            element.addEventListener('mouseover', () =>
+                cardProjectAllP.forEach(element => element.classList.add('transition__allP_appears'))));
+        cardProjects.forEach(element =>
+            element.addEventListener('mouseout', () =>
+                cardProjectAllP.forEach(element => element.classList.remove('transition__allP__appears'))));
 
         //* FOOTER
         socialMini.classList.remove('social--darkmode--on');
         links.forEach(element =>
             element.classList.remove('link--darkmode--on'));
     };
-});
+
+}
+
+
+//? ================================= ÉCOUTEURS D'ÉVÉNEMENTS ===========================================
+//* ÉCOUTEUR SUR LA DIV DARKMODE
+darkmodeButton.addEventListener('click', activateDarkmode);
