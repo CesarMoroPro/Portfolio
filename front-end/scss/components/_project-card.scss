@@ -98,26 +98,6 @@
                 color : transparent;
             }
         }
-        &__date {
-            &__appears {
-                @include transitionProjectCardFunction;
-                color: black;
-                
-                &__date {
-                    @include transitionProjectCardFunction;
-                    color: $titles;
-                }
-            }
-            &__disappears {
-                @include transitionProjectCardFunction;
-                color: transparent;
-                
-                &__date {
-                    @include transitionProjectCardFunction;
-                    color: transparent;
-                }
-            }
-        }
     }
 
 
@@ -127,4 +107,3 @@
         color: white;
     }
 }
-

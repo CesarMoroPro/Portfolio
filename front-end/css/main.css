@@ -512,22 +512,6 @@ p {
   transition-duration: 1.1s;
   color: transparent;
 }
-.home .transition__date__appears {
-  transition-duration: 1.1s;
-  color: black;
-}
-.home .transition__date__appears__date {
-  transition-duration: 1.1s;
-  color: darkgoldenrod;
-}
-.home .transition__date__disappears {
-  transition-duration: 1.1s;
-  color: transparent;
-}
-.home .transition__date__disappears__date {
-  transition-duration: 1.1s;
-  color: transparent;
-}
 .home .project-card--texts--darkmode--on--appears {
   transition-duration: 1.1s;
   color: white;
