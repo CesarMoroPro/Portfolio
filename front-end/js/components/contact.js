@@ -1,26 +1,33 @@
+//? ======================== VARIABLES =======================================
+//* Import de la variable activatedDarkmode
+import { activatedDarkmode } from "../utils/darkmode.js";
+
 let global                                  = document.getElementById('global');
 let contact                                 = document.querySelectorAll('.contactForm');
 let screen                                  = document.getElementById('screen');
 let form                                    = document.querySelector('.contact-form');
 let cross                                   = document.querySelector('.cross-to-quit');
-let closedForm                              = true;
-
 let inputs                                  = document.querySelectorAll('input');
+let labels                                  = document.querySelectorAll('.form-fields__legend');
 let textarea                                = document.querySelector('textarea');
 
+let closedForm                              = true;
+
+console.log(labels);
 
 
-contact.forEach(element => {
-    element.addEventListener('click', openForm)
-});
-
-
-
-//^ Creation of function to open the form
+//? =============================== FONCTIONS ================================
 function openForm() {
+    console.log(activatedDarkmode);
+    //~ DARKMODE ON
+    if(activatedDarkmode === true){
+    labels.forEach(element =>
+        element.classList.add('legend--darkmode--on'));
+    }
 
     //? 1 - closedForm becomes FALSE
     closedForm = false;
+    
     //? 2 - Stop the eventListener on contact elements
     contact.forEach(element => {
         element.removeEventListener('click', openForm)
@@ -52,8 +59,6 @@ function openForm() {
     cross.addEventListener('click', closeForm);
 };
 
-
-//^ Creation of function to close the form
 function closeForm() {
     
     //? 1 - closedForm becomes TRUE
@@ -68,3 +73,10 @@ function closeForm() {
     //? 4 - Changing the form section class
     form.classList.replace('contact-form--active', 'contact-form');
 };
+
+
+
+//? ==================== TRAITEMENT ============================================
+contact.forEach(element => {
+    element.addEventListener('click', openForm)
+});

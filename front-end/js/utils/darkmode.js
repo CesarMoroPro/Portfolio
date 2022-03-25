@@ -18,8 +18,7 @@ let socialMini          = document.querySelector('.home__header__profil__social_
 let links               = document.querySelectorAll('.link');
 
 //* BOOLÉEN D'ACTIVATION DU DARKMODE
-let activatedDarkmode   = false;
-console.log(activatedDarkmode);
+export let activatedDarkmode   = false;
 
 
 
@@ -64,7 +63,6 @@ function activateDarkmode() {
             element.addEventListener('mouseover', addDarkmodeClassOnAllP));
         cardProjects.forEach(element =>
             element.addEventListener('mouseout', removeDarkmodeClassOnAllP));
-                
 
         //* FOOTER
         socialMini.classList.add('social--darkmode--on');

@@ -91,6 +91,7 @@
 
         &__legend {
             padding-left: 5px;
+            color: black;
         }
 
         &__field {
@@ -125,9 +126,7 @@
 
 
     //~ DARKMODE ON
-    .form-fields {
-        &__legend {
+    .legend--darkmode--on {
             color: $darkmode-on-main-color;
-        }
     }
 }
