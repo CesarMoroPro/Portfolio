@@ -7,23 +7,35 @@
     border-radius: 2px;
     position: relative;
     left: -$gutter-very-small;
-    
-    //^ MEDIUM BREAKPOINT
-    @media (min-width: $breakpoint-medium-min-width) {
-        width: 500px;
-        left: -$gutter-regular;
-    }
-    //^ LARGE BREAKPOINT
-    @media (min-width: $breakpoint-large-min-width) {
-        width: 800px;
-        left: -$gutter-very-large;
-    }
-
     &__name {
         display: flex;
         width: 100px;
         height: 1px;
         position: absolute;
-        left: 200px;
+        top: 47px;
+        left: 15px;
     }
+    
+    //^ MEDIUM BREAKPOINT
+    @media (min-width: $breakpoint-medium-min-width) {
+        width: 500px;
+        left: -$gutter-regular;
+        &__name {
+            width: 120px;
+            top: 58px;
+            left: 20px;
+        }
+    }
+    //^ LARGE BREAKPOINT
+    @media (min-width: $breakpoint-large-min-width) {
+        width: 800px;
+        left: -$gutter-very-large;
+        &__name {
+            width: 145px;
+            top: 70px;
+            left: 25px;
+        }
+    }
+
+    
 }

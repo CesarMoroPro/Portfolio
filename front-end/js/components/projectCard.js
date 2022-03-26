@@ -12,23 +12,25 @@ let projects =  {
                                 'url'       : 'http://google.com',
                                 'image'     : imgSrc + 'portfolio-card.jpg'
                 },
-                /*
-                'voyages'   :   {
-                                'title'     : 'Voyages',
-                                'excerp'    : 'Des aurores boérales de Norvège aux forêts tropicales des îles d\'Hawaii, parcourez ce projet pour découvrir une partie du monde.',
-                                'date'      : '30 04 2018',
-                                'url'       : 'https://www.gohawaii.com/fr',
-                                'image'     : imgSrc + 'voyages-card.jpeg'
+
+                'devnest'   :   {
+                                'title'     : 'Devnest',
+                                'excerp'    : 'Vidéo Youtube : projet de fin de formation réalisé en équipe avec deux autres étudiants, après 5 mois de formation.',
+                                'date'      : '01 12 2020',
+                                'url'       : 'https://www.youtube.com/watch?v=Gbczg095K_A&t=3775s',
+                                'image'     : imgSrc + 'devnest-card.jpg'
                 },
-                'cinema'    :   {
+                
+                'C\'qu\'il y a d\'pire !'    :   {
                                 'title'     : 'Cinéma',
                                 'excerp'    : 'Avec DeadPool, ça débite et ça déboite ! Wham !',
                                 'date'      : '03 11 2016',
                                 'url'       : 'https://www.allocine.fr/film/fichefilm_gen_cfilm=146349.html',
                                 'image'     : imgSrc + 'test6-card.jpg'
                 }
-                */
 }
+
+
 
 //* RÉCUPÉRATION DE CHAQUE ÉLÉMENT D'UNE PROJECT-CARD
 let cardProjects     = document.querySelectorAll('.home__content__project-card');
@@ -36,8 +38,11 @@ let cardImages       = document.querySelectorAll('.home__content__project-card__
 let cardTitles       = document.querySelectorAll('.home__content__project-card__title');
 let cardTexts        = document.querySelectorAll('.home__content__project-card__text')
 let cardDates        = document.querySelectorAll('.home__content__project-card__text-date');
-let cardProjectAllP    = document.querySelectorAll('.home__content__project-card__divs p');
+let cardProjectAllP  = document.querySelectorAll('.home__content__project-card__divs p');
 let cardUrls         = document.querySelectorAll('.home__content__project-card__divs__div-link');
+
+console.table(projects);
+console.log(cardImages);
 
 /*
 //* RÉCUPÉRATION DU BOUTON D'ACTIVATION DU DARKMODE
@@ -83,9 +88,28 @@ cardProjects.forEach(element =>
 
 //? ================================= TRAITEMENT FINAL =========================================== 
 //* BOUCLE SUR TOUS LES ÉLÉMENTS D'UNE PROJECT-CARD ENTRAINANT UNE ACTION
+/*
 for (let project in projects){
+    console.log(project);
 
    cardImages.forEach(element =>
+        element.setAttribute('src', projects[project]['image']));
+    cardUrls.forEach(element =>
+        element.setAttribute('href', projects[project]['url']));
+    
+    cardDates.forEach(element =>
+        element.innerHTML      = "Date de création : <span class='date'></span>" + projects[project]['date'] + "</span></p>");
+
+    cardTitles.forEach(element =>
+        element.textContent   = projects[project]['title']);
+    cardTexts.forEach(element =>
+        element.textContent    = projects[project]['excerp']);    
+}
+*/
+
+for (let project in projects){
+    
+    cardImages.forEach(element =>
         element.setAttribute('src', projects[project]['image']));
     cardUrls.forEach(element =>
         element.setAttribute('href', projects[project]['url']));

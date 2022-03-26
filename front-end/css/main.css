@@ -62,7 +62,7 @@ table {
   src: url("../../assets/fonts/Quicksand/Quicksand-Regular.ttf");
 }
 .home {
-  min-width: 330px;
+  min-width: 375px;
   margin-left: 10.6666666667px;
   margin-right: 10.6666666667px;
   display: flex;
@@ -70,13 +70,11 @@ table {
   align-items: center;
   font-family: "Quicksand";
 }
-
-p {
+.home p {
   letter-spacing: 0.75px;
   line-height: 24px;
 }
-
-#global {
+.home #global {
   width: 95%;
   position: relative;
 }
@@ -115,6 +113,7 @@ p {
   justify-content: center;
   align-items: center;
   padding-left: 10.6666666667px;
+  position: relative;
 }
 .home__header__profil__id__name__h1 {
   font-size: 1.7391304348em;
@@ -164,7 +163,7 @@ p {
   justify-content: space-between;
   align-items: center;
   position: relative;
-  left: 65px;
+  left: 60px;
 }
 .home__header .darkmodeSelector__button {
   font-size: 0.6666666667em;
@@ -173,6 +172,9 @@ p {
 .home__header .darkmodeSelector__button:hover {
   color: black;
   text-decoration: underline rgba(79, 78, 75, 0.5);
+}
+.home__header .name-block {
+  position: relative;
 }
 @media (min-width: 740px) {
   .home__header__profil__id {
@@ -199,6 +201,9 @@ p {
     font-size: 2.5em;
     letter-spacing: 32px;
   }
+  .home .darkmodeSelector {
+    left: 160px;
+  }
 }
 @media (min-width: 1024px) {
   .home__header__profil__id__pic {
@@ -214,6 +219,9 @@ p {
   .home__header__title__h2 {
     font-size: 3em;
     letter-spacing: 64px;
+  }
+  .home .darkmodeSelector {
+    left: 295px;
   }
 }
 .home .social--darkmode--on {
@@ -284,6 +292,7 @@ p {
 }
 
 .home__footer {
+  text-align: center;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -553,10 +562,23 @@ p {
   position: relative;
   left: -6.1538461538px;
 }
+.underline__name {
+  display: flex;
+  width: 100px;
+  height: 1px;
+  position: absolute;
+  top: 47px;
+  left: 15px;
+}
 @media (min-width: 740px) {
   .underline {
     width: 500px;
     left: -16px;
+  }
+  .underline__name {
+    width: 120px;
+    top: 58px;
+    left: 20px;
   }
 }
 @media (min-width: 1024px) {
@@ -564,13 +586,11 @@ p {
     width: 800px;
     left: -32px;
   }
-}
-.underline__name {
-  display: flex;
-  width: 100px;
-  height: 1px;
-  position: absolute;
-  left: 200px;
+  .underline__name {
+    width: 145px;
+    top: 70px;
+    left: 25px;
+  }
 }
 
 .link {

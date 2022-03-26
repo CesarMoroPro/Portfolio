@@ -1,6 +1,6 @@
 .home {
     //^ MOBILE-FIRST
-    //! Classes générales et tags
+    //! Balises et classes générales
         &__header {
             width: 100%;
             margin-bottom: $gutter-regular;
@@ -28,6 +28,7 @@
                         justify-content: center;;
                         align-items: center;
                         padding-left: $gutter-medium;
+                        position: relative;
                         &__h1 {
                             font-size: $font-size-medium-regular;
                             color: $titles;
@@ -81,7 +82,7 @@
                 justify-content: space-between;
                 align-items: center;
                 position: relative;
-                left: 65px;
+                left: 60px;
                 &__button {
                     font-size: $font-size-ultra-small;
                     color: $grey-medium-transparent;
@@ -90,6 +91,11 @@
                     color: black;
                     text-decoration: underline $grey-medium-transparent;
                 }
+            }
+
+            //! Classes spéciales
+            .name-block {
+                position: relative;
             }
         }
 
@@ -128,6 +134,11 @@
                 }
             }
         }
+
+        //! id
+        .darkmodeSelector{
+            left: 160px;
+        }
     }
                 
     //^ LARGE BREAKPOINT
@@ -157,6 +168,11 @@
                     letter-spacing: $gutter-extra-large;
                 }
             }
+        }
+
+        //! id
+        .darkmodeSelector{
+            left: 295px;
         }
     }
 

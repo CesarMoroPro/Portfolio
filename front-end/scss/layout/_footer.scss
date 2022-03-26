@@ -1,5 +1,6 @@
 .home {
     &__footer{
+        text-align: center;
         @media (max-width: 500px) {
             display: flex;
             flex-direction: column;

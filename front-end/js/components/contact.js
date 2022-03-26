@@ -13,8 +13,6 @@ let textarea                                = document.querySelector('textarea')
 
 let closedForm                              = true;
 
-console.log(labels);
-
 
 //? =============================== FONCTIONS ================================
 function openForm() {
