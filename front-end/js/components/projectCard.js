@@ -21,102 +21,77 @@ let projects =  {
                                 'image'     : imgSrc + 'devnest-card.jpg'
                 },
                 
-                'C\'qu\'il y a d\'pire !'    :   {
-                                'title'     : 'Cinéma',
-                                'excerp'    : 'Avec DeadPool, ça débite et ça déboite ! Wham !',
-                                'date'      : '03 11 2016',
-                                'url'       : 'https://www.allocine.fr/film/fichefilm_gen_cfilm=146349.html',
+                'c\'qu\'il y a d\'pire !'   :   {
+                                'title'     : "C'qu'il y a d'pire",
+                                'excerp'    : 'Un site pour partager ses punchlines un tantinet sarcastiques',
+                                'date'      : '31 03 2022',
+                                'url'       : 'https://www.viedemerde.fr/',
                                 'image'     : imgSrc + 'test6-card.jpg'
+                },
+
+                'voyages' :     {
+                                'title'     : 'Voyages',
+                                'excerp'    : "Des îles Hawaiiennes aux aurores boréales d'Islande, partez découvrir notre si belle planète",
+                                'date'      : '03 11 2016',
+                                'url'       : 'https://www.hawaiitracker.com/',
+                                'image'     : imgSrc + 'voyages-card.jpeg'
                 }
 }
 
 
 
-//* RÉCUPÉRATION DE CHAQUE ÉLÉMENT D'UNE PROJECT-CARD
+//* RÉCUPÉRATION DE CHAQUE ÉLÉMENT DE TOUTES LES PROJECT-CARDS
 let cardProjects     = document.querySelectorAll('.home__content__project-card');
-let cardImages       = document.querySelectorAll('.home__content__project-card__img');
-let cardTitles       = document.querySelectorAll('.home__content__project-card__title');
-let cardTexts        = document.querySelectorAll('.home__content__project-card__text')
-let cardDates        = document.querySelectorAll('.home__content__project-card__text-date');
-let cardProjectAllP  = document.querySelectorAll('.home__content__project-card__divs p');
-let cardUrls         = document.querySelectorAll('.home__content__project-card__divs__div-link');
 
-
-/*
-//* RÉCUPÉRATION DU BOUTON D'ACTIVATION DU DARKMODE
-let darkmodeButton      = document.querySelector('.darkmodeSelector__button'); // bouton darkmode
-
-//* BOOLÉEN D'ACTIVATION DU DARKMODE
-let activatedDarkmode = false;
-*/
-
-
-//? ================================= FONCTIONS ===========================================
-//* CRÉATION DES FONCTIONS
-function blurryCard() {
-
-    cardImages.forEach(element =>
-        element.classList.replace('unblurry', 'blurry'));
-    cardTitles.forEach(element =>
-        element.classList.replace('transition__title__appears', 'transition__title__disappears')); 
-    cardProjectAllP.forEach(element =>
-        element.classList.replace('transition__allP__disappears', 'transition__allP__appears'));
-};
-
-function unblurryCard() {
-
-    cardImages.forEach(element =>
-        element.classList.replace('blurry', 'unblurry'));
-    cardTitles.forEach(element =>
-        element.classList.replace('transition__title__disappears', 'transition__title__appears'));
-    cardProjectAllP.forEach(element =>
-        element.classList.replace('transition__allP__appears', 'transition__allP__disappears'));
-};
+cardProjects.forEach((project) => {
+  
+    //? ========= VARIABLES LOCALES ==========
+    let cardImage        = project.querySelector('.home__content__project-card__img');
+    let cardTitle        = project.querySelector('.home__content__project-card__title');
+    let cardTexts        = document.querySelectorAll('.home__content__project-card__text')
+    let cardDate         = project.querySelector('.home__content__project-card__text-date');
+    let cardProjectAllP  = project.querySelectorAll('.home__content__project-card__divs p');
+    let cardUrl          = project.querySelector('.home__content__project-card__divs__div-link');
 
 
 
-//? ================================= ÉCOUTEURS D'ÉVÉNEMENTS ===========================================
-//* ÉCOUTEUR SURVOL D'UNE PROJECT-CARD
-cardProjects.forEach(element =>
-    element.addEventListener('mouseover', blurryCard));
-cardProjects.forEach(element =>
-    element.addEventListener('mouseout', unblurryCard));
+    //? ========= FONCTIONS ==========
+    function blurryCard() {
 
-
-
-//? ================================= TRAITEMENT FINAL =========================================== 
-//* BOUCLE SUR TOUS LES ÉLÉMENTS D'UNE PROJECT-CARD ENTRAINANT UNE ACTION
-/*
-for (let project in projects){
-    console.log(project);
-
-   cardImages.forEach(element =>
-        element.setAttribute('src', projects[project]['image']));
-    cardUrls.forEach(element =>
-        element.setAttribute('href', projects[project]['url']));
+        cardImage.classList.replace('unblurry', 'blurry');
+        cardTitle.classList.replace('transition__title__appears', 'transition__title__disappears'); 
+        cardProjectAllP.forEach(element =>
+            element.classList.replace('transition__allP__disappears', 'transition__allP__appears'));
+    };
     
-    cardDates.forEach(element =>
-        element.innerHTML      = "Date de création : <span class='date'></span>" + projects[project]['date'] + "</span></p>");
-
-    cardTitles.forEach(element =>
-        element.textContent   = projects[project]['title']);
-    cardTexts.forEach(element =>
-        element.textContent    = projects[project]['excerp']);    
-}
-*/
-
-for (let project in projects){
     
-    cardImages.forEach(element =>
-        element.setAttribute('src', projects[project]['image']));
-    cardUrls.forEach(element =>
-        element.setAttribute('href', projects[project]['url']));
+    function unblurryCard() {
     
-    cardDates.forEach(element =>
-        element.innerHTML      = "Date de création : <span class='date'></span>" + projects[project]['date'] + "</span></p>");
+        cardImage.classList.replace('blurry', 'unblurry');
+        cardTitle.classList.replace('transition__title__disappears', 'transition__title__appears');
+        cardProjectAllP.forEach(element =>
+            element.classList.replace('transition__allP__appears', 'transition__allP__disappears'));
+    };
 
-    cardTitles.forEach(element =>
-        element.textContent   = projects[project]['title']);
-    cardTexts.forEach(element =>
-        element.textContent    = projects[project]['excerp']);    
-}
+
+
+    //? ========= BOUCLES ==========
+    for (let project in projects){
+    
+        cardImage.setAttribute('src', projects[project]['image']);
+        cardUrl.setAttribute('href', projects[project]['url']);
+        
+        cardDate.innerHTML = "Date de création : <span class='date'></span>" + projects[project]['date'] + "</span></p>";
+    
+        cardTitle.textContent = projects[project]['title'];
+        cardTexts.forEach(element =>
+            element.textContent    = projects[project]['excerp']);
+    };
+
+
+
+    //? ========= ÉCOUTEURS D'ÉVÈNEMENTS ==========
+    project.addEventListener('mouseover', blurryCard);
+    project.addEventListener('mouseout', unblurryCard);
+
+});

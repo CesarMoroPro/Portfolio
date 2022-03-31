@@ -5,9 +5,7 @@
 let home                = document.querySelector('.home');
 
 //* SÉLECTION DU DÉCLENCHEUR DU DARKMODE
-let darkmodeSelector    = document.getElementById('darkmodeSelector'); // Zone du bouton darkmode
 let darkmodeButton      = document.querySelector('.darkmodeSelector__button'); // bouton darkmode
-// let darkmodeIcon        = document.getElementById('icon--darkmode'); // icone darkmode
 
 //* SÉLECTION DES ÉLÉMENTS ET DES COMPOSANTS
 let social              = document.querySelectorAll('.home__header__profil__social__fab');
