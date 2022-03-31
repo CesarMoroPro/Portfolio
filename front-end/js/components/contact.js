@@ -16,7 +16,6 @@ let closedForm                              = true;
 
 //? =============================== FONCTIONS ================================
 function openForm() {
-    console.log(activatedDarkmode);
     //~ DARKMODE ON
     if(activatedDarkmode === true){
     labels.forEach(element =>

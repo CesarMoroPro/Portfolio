@@ -1,9 +1,5 @@
 .home {
     &__content {
-        &__projects {
-            display: flex;
-            flex-direction: column;
-        }
         &__project-card {
             width: $card-width;
             height: $card-height;

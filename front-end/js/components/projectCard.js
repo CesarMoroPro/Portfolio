@@ -41,8 +41,6 @@ let cardDates        = document.querySelectorAll('.home__content__project-card__
 let cardProjectAllP  = document.querySelectorAll('.home__content__project-card__divs p');
 let cardUrls         = document.querySelectorAll('.home__content__project-card__divs__div-link');
 
-console.table(projects);
-console.log(cardImages);
 
 /*
 //* RÉCUPÉRATION DU BOUTON D'ACTIVATION DU DARKMODE

@@ -276,7 +276,7 @@ table {
   .home__content__projects {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
   }
 }
 @media (min-width: 1024px) {
@@ -434,10 +434,6 @@ table {
   color: white;
 }
 
-.home__content__projects {
-  display: flex;
-  flex-direction: column;
-}
 .home__content__project-card {
   width: 330px;
   height: 220px;
