@@ -63,7 +63,7 @@ cardProjects.forEach((project) => {
         cardProjectAllP.forEach(element =>
             element.classList.replace('transition__allP__disappears', 'transition__allP__appears'));
     };
-    
+
     
     function unblurryCard() {
     
@@ -75,7 +75,7 @@ cardProjects.forEach((project) => {
 
 
 
-    //? ========= BOUCLES ==========
+    //? ========= BOUCLES POUR LES COMPOSANTS DES PROJETS ==========
     for (let project in projects){
     
         cardImage.setAttribute('src', projects[project]['image']);

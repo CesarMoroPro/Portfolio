@@ -8,33 +8,45 @@ let home                = document.querySelector('.home');
 let darkmodeButton      = document.querySelector('.darkmodeSelector__button'); // bouton darkmode
 
 //* SÉLECTION DES ÉLÉMENTS ET DES COMPOSANTS
+//? VARIABLES PRIMAIRES
 let social              = document.querySelectorAll('.home__header__profil__social__fab');
 let texts               = document.querySelectorAll('.p'); // textes généraux
-let cardProjects        = document.querySelectorAll('.home__content__project-card');
-let cardProjectAllP     = document.querySelectorAll('.home__content__project-card__divs p');
 let socialMini          = document.querySelector('.home__header__profil__social__fab__mini');
 let links               = document.querySelectorAll('.link');
+let cardProjects        = document.querySelectorAll('.home__content__project-card');
 
+//? VARIABLES SECONDAIRES
+let project;
+for(let i = 0; i < cardProjects.length; i++){
+    project = cardProjects[i];
+}
+
+let infos = project.querySelectorAll('.infos');
+
+//? VARIABLES À EXPORTER
 //* BOOLÉEN D'ACTIVATION DU DARKMODE
 export let activatedDarkmode   = false;
 
 
 
+
 //? ================================= FONCTIONS ===========================================
-function addDarkmodeClassOnAllP() {
-    cardProjectAllP.forEach(element => 
-        element.classList.add('project-card--texts--darkmode--on--appears'));
+function addDarkmodeClass() {
+    
+    infos.forEach(info => {
+        info.classList.add('project-card--texts--darkmode--on--appears');
+        info.classList.replace('transition__allP__disappears', 'transition__allP__appears');
+    });
 }
 
-function removeDarkmodeClassOnAllP() {
-    cardProjectAllP.forEach(element => 
-        element.classList.remove('project-card--texts--darkmode--on--appears'));
+function removeDarkmodeClass() {
+
+    infos.forEach(info => {
+        info.classList.remove('project-card--texts--darkmode--on--appears');
+        info.classList.replace('transition__allP__appears','transition__allP__disappears');
+    });
 }
 
-function removeClass() {
-    cardProjectAllP.forEach(element =>
-        element.classList.remove('project-card--texts--darkmode--on--appears'));
-}
 
 function activateDarkmode() {
     if (activatedDarkmode === false) {
@@ -57,17 +69,16 @@ function activateDarkmode() {
         //* MAIN
         texts.forEach(element => 
             element.classList.add('text--darkmode--on'));
-        cardProjects.forEach(element =>
-            element.addEventListener('mouseover', addDarkmodeClassOnAllP));
-        cardProjects.forEach(element =>
-            element.addEventListener('mouseout', removeDarkmodeClassOnAllP));
+
+        project.addEventListener('mouseover', addDarkmodeClass);
+        project.addEventListener('mouseout', removeDarkmodeClass);
 
         //* FOOTER
         socialMini.classList.add('social--darkmode--on');
         links.forEach(element =>
             element.classList.add('link--darkmode--on'));
-    }
-    else {
+
+    } else {
                 
         //* BOOLÉEN D'ACTIVIATION PASSE À FALSE == INACTIF
         activatedDarkmode = false;
@@ -87,8 +98,8 @@ function activateDarkmode() {
         //* MAIN
         texts.forEach(element =>
             element.classList.remove('text--darkmode--on'));
-        cardProjects.forEach(element =>
-            element.removeEventListener('mouseover', addDarkmodeClassOnAllP));
+
+        project.addEventListener('mouseover', removeDarkmodeClass);
 
         //* FOOTER
         socialMini.classList.remove('social--darkmode--on');
