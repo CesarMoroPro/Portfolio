@@ -98,8 +98,7 @@
 
 
     //~ DARKMODE ON
-    .project-card--texts--darkmode--on--appears {
-        @include transitionProjectCardFunction;
+    .project-card--texts--darkmode--on {
         color: white;
     }
 }

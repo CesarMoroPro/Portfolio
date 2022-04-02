@@ -29,26 +29,9 @@ export let activatedDarkmode   = false;
 
 
 
-
 //? ================================= FONCTIONS ===========================================
-function addDarkmodeClass() {
-    
-    infos.forEach(info => {
-        info.classList.add('project-card--texts--darkmode--on--appears');
-        info.classList.replace('transition__allP__disappears', 'transition__allP__appears');
-    });
-}
-
-function removeDarkmodeClass() {
-
-    infos.forEach(info => {
-        info.classList.remove('project-card--texts--darkmode--on--appears');
-        info.classList.replace('transition__allP__appears','transition__allP__disappears');
-    });
-}
-
-
 function activateDarkmode() {
+    
     if (activatedDarkmode === false) {
         
         //* BOOLÉEN D'ACTIVATION DEVIENT TRUE == ACTIF
@@ -70,8 +53,16 @@ function activateDarkmode() {
         texts.forEach(element => 
             element.classList.add('text--darkmode--on'));
 
-        project.addEventListener('mouseover', addDarkmodeClass);
-        project.addEventListener('mouseout', removeDarkmodeClass);
+        project.addEventListener('mouseover', () => {
+            infos.forEach(info => {
+                info.classList.add('project-card--texts--darkmode--on');
+            })
+        });
+        project.addEventListener('mouseout', () => {
+            infos.forEach(info => {
+                info.classList.remove('project-card--texts--darkmode--on');
+            })
+        });
 
         //* FOOTER
         socialMini.classList.add('social--darkmode--on');
@@ -79,7 +70,7 @@ function activateDarkmode() {
             element.classList.add('link--darkmode--on'));
 
     } else {
-                
+        
         //* BOOLÉEN D'ACTIVIATION PASSE À FALSE == INACTIF
         activatedDarkmode = false;
         
@@ -99,14 +90,16 @@ function activateDarkmode() {
         texts.forEach(element =>
             element.classList.remove('text--darkmode--on'));
 
-        project.addEventListener('mouseover', removeDarkmodeClass);
+        project.addEventListener('mouseover', () => {
+            infos.forEach(info =>
+                info.classList.remove('project-card--texts--darkmode--on'));
+        });
 
         //* FOOTER
         socialMini.classList.remove('social--darkmode--on');
         links.forEach(element =>
             element.classList.remove('link--darkmode--on'));
     };
-
 }
 
 

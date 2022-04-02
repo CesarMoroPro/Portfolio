@@ -518,8 +518,7 @@ table {
   transition-duration: 1.1s;
   color: transparent;
 }
-.home .project-card--texts--darkmode--on--appears {
-  transition-duration: 1.1s;
+.home .project-card--texts--darkmode--on {
   color: white;
 }
 

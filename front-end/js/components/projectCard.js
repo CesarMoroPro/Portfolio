@@ -4,39 +4,38 @@ const imgSrc = "./front-end/assets/img/"; // execute this const for html result
 // const imgSrc = "../front-end/assets/img/"; // execute this const for php result
 
 //* TABLEAU DE DONNÉES DES DIFFÉRENTS PROJETS
-let projects =  {
-                'portfolio' :   {
-                                'title'     : 'Portfolio',
-                                'excerp'    : 'Comme pour tout créateur, chaque projet que je réalise alimente mon portfolio. Vous vous trouvez justement sur cette réalisation.',
-                                'date'      : '29 12 2021',
-                                'url'       : 'http://google.com',
-                                'image'     : imgSrc + 'portfolio-card.jpg'
-                },
+let projects =  [
+                    {
+                        'title'     : 'Portfolio',
+                        'excerp'    : 'Comme pour tout créateur, chaque projet que je réalise alimente mon portfolio. Vous vous trouvez justement sur cette réalisation.',
+                        'date'      : '29 12 2021',
+                        'url'       : 'http://google.com',
+                        'image'     : imgSrc + 'portfolio-card.jpg'
+                    },
+                    {
+                        'title'     : 'Devnest',
+                        'excerp'    : 'Vidéo Youtube : projet de fin de formation réalisé en équipe avec deux autres étudiants, après 5 mois de formation.',
+                        'date'      : '01 12 2020',
+                        'url'       : 'https://www.youtube.com/watch?v=Gbczg095K_A&t=3775s',
+                        'image'     : imgSrc + 'devnest-card.jpg'
+                    },
+                    
+                    {
+                        'title'     : "C'qu'il y a d'pire",
+                        'excerp'    : 'Un site pour partager ses punchlines un tantinet sarcastiques',
+                        'date'      : '31 03 2022',
+                        'url'       : 'https://www.viedemerde.fr/',
+                        'image'     : imgSrc + 'test6-card.jpg'
+                    },
 
-                'devnest'   :   {
-                                'title'     : 'Devnest',
-                                'excerp'    : 'Vidéo Youtube : projet de fin de formation réalisé en équipe avec deux autres étudiants, après 5 mois de formation.',
-                                'date'      : '01 12 2020',
-                                'url'       : 'https://www.youtube.com/watch?v=Gbczg095K_A&t=3775s',
-                                'image'     : imgSrc + 'devnest-card.jpg'
-                },
-                
-                'c\'qu\'il y a d\'pire !'   :   {
-                                'title'     : "C'qu'il y a d'pire",
-                                'excerp'    : 'Un site pour partager ses punchlines un tantinet sarcastiques',
-                                'date'      : '31 03 2022',
-                                'url'       : 'https://www.viedemerde.fr/',
-                                'image'     : imgSrc + 'test6-card.jpg'
-                },
-
-                'voyages' :     {
-                                'title'     : 'Voyages',
-                                'excerp'    : "Des îles Hawaiiennes aux aurores boréales d'Islande, partez découvrir notre si belle planète",
-                                'date'      : '03 11 2016',
-                                'url'       : 'https://www.hawaiitracker.com/',
-                                'image'     : imgSrc + 'voyages-card.jpeg'
-                }
-}
+                    {
+                        'title'     : 'Voyages',
+                        'excerp'    : "Des îles Hawaiiennes aux aurores boréales d'Islande, partez découvrir notre si belle planète",
+                        'date'      : '03 11 2016',
+                        'url'       : 'https://www.hawaiitracker.com/',
+                        'image'     : imgSrc + 'voyages-card.jpeg'
+                    }
+                ]
 
 
 
@@ -76,18 +75,20 @@ cardProjects.forEach((project) => {
 
 
     //? ========= BOUCLES POUR LES COMPOSANTS DES PROJETS ==========
-    for (let project in projects){
-    
-        cardImage.setAttribute('src', projects[project]['image']);
-        cardUrl.setAttribute('href', projects[project]['url']);
-        
-        cardDate.innerHTML = "Date de création : <span class='date'></span>" + projects[project]['date'] + "</span></p>";
-    
-        cardTitle.textContent = projects[project]['title'];
-        cardTexts.forEach(element =>
-            element.textContent    = projects[project]['excerp']);
-    };
+    for(let i = 0; i < projects.length; i++){
+ 
+        let project = projects[i];
 
+        cardImage.setAttribute('src', project['image']);
+        cardUrl.setAttribute('href', project['url']);
+        
+        cardDate.innerHTML = "Date de création : <span class='date'></span>" + project['date'] + "</span></p>";
+    
+        cardTitle.textContent = project['title'];
+        cardTexts.forEach(element =>
+            element.textContent = project['excerp']);
+    }
+    
 
 
     //? ========= ÉCOUTEURS D'ÉVÈNEMENTS ==========
