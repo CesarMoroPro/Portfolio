@@ -1,3 +1,11 @@
+<?php
+
+// INCLUSION DU FICHIER REQUETES.PHP POUR RECEVOIR LES ÉLÉMENTS DYNAMIQUEMENT
+include('./requetes.php');
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -6,63 +14,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>César MORO : Portfolio</title>
     <!-- link main css-->
-    <link rel="stylesheet" href="./front-end/css/main.css"/>
+    <link rel="stylesheet" href="../front-end/css/main.css"/>
     
     <!-- link CDN swiper css-->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
     <!-- link fontawesome css-->
-    <link rel="stylesheet" href="../../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
 
     <!-- link google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Zen+Dots&display=swap" rel="stylesheet">
 </head>
 
-<body class="home">
+<body class="home home--darkmode--off">
 
     <div id="global">
         <div id="screen" class="unblurryScreen">
             
-            <header class="home__header">
-                <div class="home__header__profil">
-                    <div class="home__header__profil__id">
-                        <img class="home__header__profil__id__pic" src="./front-end/assets/img/portfolio-profil-majorque.jpg" alt="Photo de profil de César MORO">
-                        <div class="home__header__profil__id__name">
-                            <div class="name-block">
-                                <div class="underline underline__name"></div>
-                                <h1 class="home__header__profil__id__name__h1 clignoteLight">César <br>&nbsp&nbsp&nbsp&nbspMORO</h1>
-                            </div>    
-                        </div>
-                    </div>
-                    <div class="home__header__profil__social">
-                        <a alt="lien interne vers le formulaire de contact" class="contactForm"><i class="home__header__profil__social__fab fas fa-envelope-square"></i></a>
-                        <a href="https://www.linkedin.com/in/c%C3%A9sar-moro-276b13162/" alt="lien ouvrant un nouvel onglet vers le profil LinkedIn de César MORO"><i class="home__header__profil__social__fab fab fa-linkedin"></i></a>
-                        <a href="https://github.com/CesarMoroPro" alt="lien ouvrant un nouvel onglet vers le profil GitHub de César MORO"><i class="home__header__profil__social__fab fab fa-github-square"></i></a>
-                    </div>
+    <header class="home__header">
+        <div class="home__header__profil">
+            <div class="home__header__profil__id">
+                <img class="home__header__profil__id__pic" src="../front-end/assets/img/portfolio-profil-majorque.jpg" alt="Photo de profil de César MORO">
+                <div class="home__header__profil__id__name">
+                    <div class="underline underline__name"></div>
+                    <h1 class="home__header__profil__id__name__h1 clignoteLight">César <br>&nbsp&nbsp&nbsp&nbspMORO</h1>
                 </div>
+            </div>
+            <div class="home__header__profil__social">
+                <a alt="lien interne vers le formulaire de contact" class="contactForm"><i class="home__header__profil__social__fab fas fa-envelope-square social--darkmode--off"></i></a>
+                <a href="https://www.linkedin.com/in/c%C3%A9sar-moro-276b13162/" alt="lien ouvrant un nouvel onglet vers le profil LinkedIn de César MORO"><i class="home__header__profil__social__fab fab fa-linkedin social--darkmode--off"></i></a>
+                <a href="https://github.com/CesarMoroPro" alt="lien ouvrant un nouvel onglet vers le profil GitHub de César MORO"><i class="home__header__profil__social__fab fab fa-github-square social--darkmode--off"></i></a>
+            </div>
+        </div>
 
-                <div class="home__header__title">
-                    <div class="overline__site-title"></div>
-                    <h2 class="home__header__title__h2">Portfolio</h2>
-                    <div class="underline underline__site-title"></div>
+        <div class="home__header__title">
+            <div class="overline__site-title"></div>
+            <h2 class="home__header__title__h2">Portfolio</h2>
+            <div class="underline underline__site-title"></div>
 
-                    <div class="darkmodeSelector">
-                        <p class="darkmodeSelector__button">Basculer en mode sombre</p>
-                        <!-- <i id="icon--darkmode" class="pAndIcon--darkmode--off far fa-times-circle"></i> -->
-                    </div>
-                </div>
-            </header>
+            <div id="darkmodeSelector">
+                <p id="darkmodeSelector__p" class="p--darkmode--off">Basculer en mode sombre</p>
+                <!-- <i id="icon--darkmode" class="pAndIcon--darkmode--off far fa-times-circle"></i> -->
+            </div>
+        </div>
+    </header>
 
             <main class="home__content">
                 <section id="home__content__bio" class="hide-for-form">
                     <h3 class="home__content__title__h3 hide-for-form"><i class="icons far fa-user"></i>Hello World !</h3>
-                    <p class="home__content__text-normal p">Bonjour à tous, et merci de vous intéresser à moi.<br>
+                    <p class="home__content__text-normal">Bonjour à tous, et merci de vous intéresser à moi.<br>
                     Rigueur, relation clients, autonomie.<br>
                     Vous allez vraiment lire tout ça ? ;)
                 </section>
 
                 <h3 class="home__content__title__h3 hide-for-form"><i class="icons fas fa-laptop-code"></i>Mes réalisations</h3>
-                <!--  
+                <!--   
                 <div class="global-projects">
                     <div class="grid ">
                         <button class="grid-item javascript"    data-filter="test-1">JavaScript</button>
@@ -72,29 +78,28 @@
                         <button class="grid-item sass"          data-filter="test-5">Sass</button>
                     </div>
                 -->
-                    <section class="home__content__projects">
 
-                        <!--? =========== CARTE NUMÉRO 1 ============ -->
+                    <section class="home__content__projects">
                         <div class="home__content__project-card">
                             <a class="home__content__project-card__divs__div-link"><!--! attr href dynamique en JS-->
                                 <div class="home__content__project-card__divs">
                                     <div class="home__content__project-card__divs__div-text">
-                                        <p class="home__content__project-card__text infos transition__allP__disappears"></p>
-                                        <p class="home__content__project-card__text-date infos transition__allP__disappears">Date en JS : <span class="transition__date__disappears_date">Date en JS</span></p>
+                                        <p class="home__content__project-card__text transition__text__disappears"></p>
+                                        <p class="home__content__project-card__text-date transition__date__disappears">Date en JS : <span class="date">Date en JS</span></p>
                                     </div>
 
                                     <div class="home__content__project-card__divs__div-img">
                                         <h2 class="home__content__project-card__title transition__title__appears">
                                             <i class="icons fa-solid fa-map-location-dot"></i>
-                                                Titre en JS
+                                                <?= 'yolo' ?>
                                         </h2>
                                         <img class="home__content__project-card__img unblurry" alt="Image d'illustration de la carte"> <!--! attr src dynamique en JS-->
                                     </div>    
                                 </div>
                             </a>
                         </div>
-
                     </section>
+                    
             </main>
         </div>
         
@@ -133,11 +138,11 @@
         </section>
 
         <footer class="home__footer hide-for-form">
-            <p id="copyright" class="p">César MORO Web Development - Copyright <span class="year">Date en JS</span></p>
-            <a class="link contactForm" href="#" alt="lien interne vers le formulaire de contact">Contact <i class="home__header__profil__social__fab__mini fas fa-envelope-square social--darkmode--off"></i></a>
-            <a class="link" href="./mentions_legales.html" alt="Accéder aux mentions légales">Mentions légales</a>
+                <p id="copyright">César MORO Copyright <span class="year">'Date en JS'</class></p>
+                <a class="link contactForm" href=".#" alt="lien interne vers le formulaire de contact">Contact <i class="home__header__profil__social__fab__mini fas fa-envelope-square"></i></a>
+                <a class="link" href="./mentions_legales.html" alt="Accéder aux mentions légales">Mentions légales</a>
         </footer>
     </div>
 
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="../main.js"></script>
 </body>

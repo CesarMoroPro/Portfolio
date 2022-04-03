@@ -1,8 +1,9 @@
 //? ================================= VARIABLES ===========================================
 //* CHEMIN RELATIF POUR LES IMAGES DU PROJECT-CARD (LU DEPUIS INDEX.HTML)
 const imgSrc = "./front-end/assets/img/"; // execute this const for html result
-// const imgSrc = "../front-end/assets/img/"; // execute this const for php result
+// const imgSrc = "./front-end/assets/img/"; // execute this const for PHP result
 
+/*
 //* TABLEAU DE DONNÉES DES DIFFÉRENTS PROJETS
 let projects =  [
                     {
@@ -36,7 +37,7 @@ let projects =  [
                         'image'     : imgSrc + 'voyages-card.jpeg'
                     }
                 ]
-
+*/
 
 
 //* RÉCUPÉRATION DE CHAQUE ÉLÉMENT DE TOUTES LES PROJECT-CARDS
@@ -73,7 +74,7 @@ cardProjects.forEach((project) => {
     };
 
 
-
+/*
     //? ========= BOUCLES POUR LES COMPOSANTS DES PROJETS ==========
     for(let i = 0; i < projects.length; i++){
  
@@ -88,7 +89,7 @@ cardProjects.forEach((project) => {
         cardTexts.forEach(element =>
             element.textContent = project['excerp']);
     }
-    
+*/
 
 
     //? ========= ÉCOUTEURS D'ÉVÈNEMENTS ==========

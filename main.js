@@ -1,5 +1,5 @@
-// TODO : Retravailler sérieusement le responsive (tout doit être visible à l'écran sans faire bouger).
 // TODO : Factoriser les classes transition__disappears des Project-Cards en JS, SCSS, HTML.
+// TODO : Dynamiser les cartes
 
 //~ Import des scripts Utils
 import './front-end/js/utils/darkmode.js';
