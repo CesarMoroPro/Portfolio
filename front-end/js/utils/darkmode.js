@@ -15,14 +15,6 @@ let socialMini          = document.querySelector('.home__header__profil__social_
 let links               = document.querySelectorAll('.link');
 let cardProjects        = document.querySelectorAll('.home__content__project-card');
 
-//? VARIABLES SECONDAIRES
-let project;
-for(let i = 0; i < cardProjects.length; i++){
-    project = cardProjects[i];
-}
-
-let infos = project.querySelectorAll('.infos');
-
 //? VARIABLES À EXPORTER
 //* BOOLÉEN D'ACTIVATION DU DARKMODE
 export let activatedDarkmode   = false;
@@ -53,16 +45,23 @@ function activateDarkmode() {
         texts.forEach(element => 
             element.classList.add('text--darkmode--on'));
 
-        project.addEventListener('mouseover', () => {
-            infos.forEach(info => {
-                info.classList.add('project-card--texts--darkmode--on');
-            })
-        });
-        project.addEventListener('mouseout', () => {
-            infos.forEach(info => {
-                info.classList.remove('project-card--texts--darkmode--on');
-            })
-        });
+        for(let i = 0; i < cardProjects.length; i++){
+            let project = cardProjects[i];
+            let infos = project.querySelectorAll('.infos');
+
+            project.addEventListener('mouseover', () => {
+                infos.forEach(info => {
+                    info.classList.add('project-card--texts--darkmode--on');
+                });
+            });
+
+            project.addEventListener('mouseout', () => {
+                infos.forEach(info => {
+                    info.classList.remove('project-card--texts--darkmode--on');
+                });
+            });
+        };
+
 
         //* FOOTER
         socialMini.classList.add('social--darkmode--on');
@@ -90,10 +89,15 @@ function activateDarkmode() {
         texts.forEach(element =>
             element.classList.remove('text--darkmode--on'));
 
-        project.addEventListener('mouseover', () => {
-            infos.forEach(info =>
-                info.classList.remove('project-card--texts--darkmode--on'));
-        });
+        for(let i = 0; i < cardProjects.length; i++){
+            let project = cardProjects[i];
+            let infos = project.querySelectorAll('.infos');
+        
+            project.addEventListener('mouseover', () => {
+                infos.forEach(info =>
+                    info.classList.remove('project-card--texts--darkmode--on'));
+            });
+        };
 
         //* FOOTER
         socialMini.classList.remove('social--darkmode--on');
