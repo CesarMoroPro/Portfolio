@@ -48,10 +48,8 @@ cardProjects.forEach((project) => {
     //? ========= VARIABLES LOCALES ==========
     let cardImage        = project.querySelector('.home__content__project-card__img');
     let cardTitle        = project.querySelector('.home__content__project-card__title');
-    let cardTexts        = document.querySelectorAll('.home__content__project-card__text')
-    let cardDate         = project.querySelector('.home__content__project-card__text-date');
     let cardProjectAllP  = project.querySelectorAll('.home__content__project-card__divs p');
-    let cardUrl          = project.querySelector('.home__content__project-card__divs__div-link');
+    let cardDates        = project.querySelector('.colored-date');
 
 
 
@@ -62,6 +60,7 @@ cardProjects.forEach((project) => {
         cardTitle.classList.replace('transition__title__appears', 'transition__title__disappears'); 
         cardProjectAllP.forEach(element =>
             element.classList.replace('transition__allP__disappears', 'transition__allP__appears'));
+        cardDates.classList.replace('transition__allP__disappears', 'transition__allP__appears');
     };
 
     
@@ -71,6 +70,7 @@ cardProjects.forEach((project) => {
         cardTitle.classList.replace('transition__title__disappears', 'transition__title__appears');
         cardProjectAllP.forEach(element =>
             element.classList.replace('transition__allP__appears', 'transition__allP__disappears'));
+        cardDates.classList.replace('transition__allP__appears', 'transition__allP__disappears');
     };
 
 

@@ -29,7 +29,7 @@ $projects = [
                 [
                     'title'     => 'Voyages',
                     'excerp'    => "Des îles Hawaiiennes aux aurores boréales d'Islande, partez découvrir notre si belle planète",
-                    'date'      => '03 11 2016',
+                    'date'      => '07 02 2022',
                     'url'       => 'https://www.hawaiitracker.com/',
                     'image'     => $imgSrc . 'voyages-card.jpeg'
                 ]

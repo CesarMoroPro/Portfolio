@@ -11,7 +11,7 @@ let darkmodeButton      = document.querySelector('.darkmodeSelector__button'); /
 //? VARIABLES PRIMAIRES
 let social              = document.querySelectorAll('.home__header__profil__social__fab');
 let texts               = document.querySelectorAll('.p'); // textes généraux
-let socialMini          = document.querySelector('.home__header__profil__social__fab__mini');
+let socialMini          = document.querySelectorAll('.home__header__profil__social__fab__mini');
 let links               = document.querySelectorAll('.link');
 let cardProjects        = document.querySelectorAll('.home__content__project-card');
 
@@ -64,7 +64,8 @@ function activateDarkmode() {
 
 
         //* FOOTER
-        socialMini.classList.add('social--darkmode--on');
+        socialMini.forEach(element =>
+            element.classList.add('social--darkmode--on'));
         links.forEach(element =>
             element.classList.add('link--darkmode--on'));
 
@@ -100,7 +101,8 @@ function activateDarkmode() {
         };
 
         //* FOOTER
-        socialMini.classList.remove('social--darkmode--on');
+        socialMini.forEach(element =>
+            element.classList.remove('social--darkmode--on'));
         links.forEach(element =>
             element.classList.remove('link--darkmode--on'));
     };

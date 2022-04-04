@@ -57,9 +57,15 @@
                 font-style: italic;
                 font-size: $font-size-very-small;
                 color: transparent;
+
+                .colored-date {
+                    color: transparent;
+                }
             }
         }
     }
+
+    
 
     .blurry {
         @include shadowRegularFunction;
@@ -88,6 +94,10 @@
             &__appears {
                 @include transitionProjectCardFunction;
                 color: black;
+                .colored-date {
+                    color: $titles;
+                    text-decoration: underline;
+                }
             }
             &__disappears {
                 @include transitionProjectCardFunction;
