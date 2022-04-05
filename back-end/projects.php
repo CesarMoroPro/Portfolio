@@ -28,10 +28,10 @@ $projects = [
 
                 [
                     'title'     => 'MotorSam',
-                    'excerp'    => "Diplômé de l'ESAAT (Roubaix) et Technicien moto Expert chez Harley Davidson, retrouvez dans ce projet les motos préparées par Sam",
+                    'excerp'    => "Diplômé de l'ESAAT (Roubaix) et Technicien moto Expert chez Harley Davidson, retrouvez dans ce projet les motos préparées par Sam.",
                     'date'      => '05 04 2022',
                     'url'       => 'https://www.hawaiitracker.com/',
-                    'image'     => $imgSrc . 'moto3.jpg'
+                    'image'     => $imgSrc . 'motorsam2.png'
                 ],
 
                 [
