@@ -19,16 +19,16 @@ $projects = [
                 ],
                 
                 [
-                    'title'     => "C'qu'il y a d'pire",
-                    'excerp'    => 'Un site pour partager ses punchlines un tantinet sarcastiques',
+                    'title'     => "C'qu'il y a d'triste",
+                    'excerp'    => 'Un site pour partager ses punchlines un tantinet sarcastiques ou caustiques : c\'est no-limit !',
                     'date'      => '31 03 2022',
                     'url'       => 'https://www.viedemerde.fr/',
-                    'image'     => $imgSrc . 'cquiadtriste.png'
+                    'image'     => $imgSrc . 'cqtdm.png'
                 ],
 
                 [
                     'title'     => 'MotorSam',
-                    'excerp'    => "Diplômé de l'ESAAT (Roubaix) et Technicien moto expert chez Harley Davidson, retrouvez dans ce projet les motos préparées par Sam",
+                    'excerp'    => "Diplômé de l'ESAAT (Roubaix) et Technicien moto Expert chez Harley Davidson, retrouvez dans ce projet les motos préparées par Sam",
                     'date'      => '05 04 2022',
                     'url'       => 'https://www.hawaiitracker.com/',
                     'image'     => $imgSrc . 'moto3.jpg'
