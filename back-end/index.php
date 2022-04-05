@@ -67,7 +67,7 @@ require_once('projects.php');
                     Et si on évitait une trop longue description de moi-même? Je comprends bien que vous ayez envie de mieux connaître le potentiel futur partenaire que je pourrais être pour vous, et c'est bien normal.</br></br>
                     Au lieu de ça, je préfère vous proposer de porter votre attention sur les projets sur lesquels j'ai travaillé, et si mon travail vous plaît, pourquoi ne pas me contacter pour en savoir plus ? </br></br>
                     Bon, d'accord, quelques mots pour déjà vous orienter : rigueur, autonomie, savoir-être, bienveillance, valeurs et relations humaines... Ce que vous retrouverez dans une lettre de motivation classique, bien que ce soit réellement vrai.</br></br>
-                    Alors j'ajouterais : évasion, adrénaline, aventure, protection des océans, et d'autres mais je vais m'arrêter là. N'hésitez donc pas à me contacter !
+                    Alors j'ajouterais : évasion, moto, adrénaline, aventure, protection des océans, et d'autres mais je vais m'arrêter là. N'hésitez donc pas à me contacter !
                     
                 </section>
 
