@@ -378,7 +378,7 @@ table {
   height: 25px;
   text-align: center;
 }
-.home .icons {
+.home .icons.cross-to-quit {
   color: darkgoldenrod;
 }
 .home .cross-to-quit {

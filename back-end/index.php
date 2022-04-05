@@ -71,7 +71,7 @@ require_once('projects.php');
                     
                 </section>
 
-                <h3 class="home__content__title__h3 hide-for-form"><i class="icons fas fa-laptop-code"></i>Mes réalisations</h3>
+                <h3 class="home__content__title__h3 hide-for-form"><i class="icons fas fa-laptop-code"></i>Mes réalisations</h3> <!-- //? À ajouter : <i class="icons fas fa-solid fa-square-info"></i> --> 
                 <!--  
                 <div class="global-projects">
                     <div class="grid ">

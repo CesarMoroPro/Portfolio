@@ -23,7 +23,15 @@ $projects = [
                     'excerp'    => 'Un site pour partager ses punchlines un tantinet sarcastiques',
                     'date'      => '31 03 2022',
                     'url'       => 'https://www.viedemerde.fr/',
-                    'image'     => $imgSrc . 'test6-card.jpg'
+                    'image'     => $imgSrc . 'cquiadtriste.png'
+                ],
+
+                [
+                    'title'     => 'MotorSam',
+                    'excerp'    => "Diplômé de l'ESAAT (Roubaix) et Technicien moto expert chez Harley Davidson, retrouvez dans ce projet les motos préparées par Sam",
+                    'date'      => '05 04 2022',
+                    'url'       => 'https://www.hawaiitracker.com/',
+                    'image'     => $imgSrc . 'moto3.jpg'
                 ],
 
                 [
