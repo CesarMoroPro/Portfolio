@@ -359,7 +359,8 @@ table {
 .home .contact-form {
   transition-duration: 3s;
   opacity: 0;
-  display: none;
+  display: flex;
+  visibility: hidden;
 }
 .home .contact-form--active {
   transition-duration: 3s;
@@ -392,6 +393,7 @@ table {
   transform: rotate(20deg);
 }
 .home .form-fields {
+  transition-duration: 3s;
   display: flex;
   flex-direction: column;
   position: absolute;

@@ -99,7 +99,6 @@ require_once('projects.php');
 
                                             <div class="home__content__project-card__divs__div-img">
                                                 <h2 class="home__content__project-card__title transition__title__appears">
-                                                    <i class="icons fa-solid fa-map-location-dot"></i>
                                                         <?= $project['title'] ?>
                                                 </h2>
                                                 <img class="home__content__project-card__img unblurry" alt="Image d'illustration de la carte" src="<?= $project['image'];?>">

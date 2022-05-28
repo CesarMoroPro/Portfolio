@@ -39,7 +39,8 @@
     .contact-form {
         @include transitionContactFunction;
         opacity: 0;
-        display: none;
+        display: flex;
+        visibility: hidden;
     }
 
     .contact-form--active {
@@ -78,6 +79,7 @@
     }
 
     .form-fields {
+        @include transitionContactFunction;
         display: flex;
         flex-direction: column;
         position: absolute;
