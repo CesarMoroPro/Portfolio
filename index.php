@@ -1,6 +1,6 @@
 <?php 
 
-require_once('./back-end/projects.php');
+require_once('./back-end/components/projects.php');
 
 ?>
 
