@@ -14,6 +14,7 @@ let texts               = document.querySelectorAll('.p'); // textes généraux
 let socialMini          = document.querySelectorAll('.home__header__profil__social__fab__mini');
 let links               = document.querySelectorAll('.link');
 let cardProjects        = document.querySelectorAll('.home__content__project-card');
+let filterButtons       = document.getElementsByClassName('filter-button');
 
 //? VARIABLES À EXPORTER
 //* BOOLÉEN D'ACTIVATION DU DARKMODE

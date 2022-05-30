@@ -67,7 +67,7 @@ require_once('projects.php');
                     Et si on évitait une trop longue description de moi-même? Je comprends bien que vous ayez envie de mieux connaître le potentiel futur partenaire que je pourrais être pour vous, et c'est bien normal.</br></br>
                     Au lieu de ça, je préfère vous proposer de porter votre attention sur les projets sur lesquels j'ai travaillé, et si mon travail vous plaît, pourquoi ne pas me contacter pour en savoir plus ? </br></br>
                     Bon, d'accord, quelques mots pour déjà vous orienter : rigueur, autonomie, savoir-être, bienveillance, valeurs et relations humaines... Ce que vous retrouverez dans une lettre de motivation classique, bien que ce soit réellement vrai.</br></br>
-                    Alors j'ajouterais : évasion, moto, adrénaline, aventure, protection des océans, et d'autres mais je vais m'arrêter là. N'hésitez donc pas à me contacter !
+                    Alors j'ajoute : évasion, moto, adrénaline, aventure, running, protection des océans, et d'autres mais je vais m'arrêter là. N'hésitez donc pas à me contacter !
                     
                 </section>
 
@@ -146,9 +146,9 @@ require_once('projects.php');
         </section>
 
         <footer class="home__footer hide-for-form">
-            <p id="copyright" class="p">César MORO Web Development - Copyright <span class="year">Date en JS</span></p>
-            <a class="link contactForm" href="#" alt="lien interne vers le formulaire de contact">Contact <i class="home__header__profil__social__fab__mini fas fa-envelope-square social--darkmode--off"></i></a>
-            <a class="link" href="./mentions_legales.html" alt="Accéder aux mentions légales">Mentions légales</a>
+                <p id="copyright" class="p">César MORO Web Development - Copyright <span class="year">Date en JS</span></p>
+                <a class="link contactForm" href="#" alt="lien interne vers le formulaire de contact">Contact <i class="home__header__profil__social__fab__mini fas fa-envelope-square social--darkmode--off"></i></a>
+                <a class="link" href="./mentions_legales.html" alt="Accéder aux mentions légales">Mentions légales</a>
         </footer>
     </div>
 

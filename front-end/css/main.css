@@ -292,7 +292,12 @@ table {
 }
 
 .home__footer {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.home__footer__text {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -302,17 +307,18 @@ table {
   margin-bottom: 32px;
 }
 @media (max-width: 500px) {
-  .home__footer {
+  .home__footer__text {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
-  .home__footer p {
+  .home__footer__text p {
     margin-bottom: 2.5px;
     text-align: center;
     font-size: 0.8888888889em;
   }
-  .home__footer a {
+  .home__footer__text a {
     margin-top: 2.5px;
     margin-bottom: 5px;
   }
@@ -617,6 +623,43 @@ table {
 
 .link--darkmode--on:hover {
   color: white;
+}
+
+@media (max-width: 740px) {
+  #filters-div {
+    min-height: 40px;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .filter-button {
+    border: 1px solid #030177;
+    border-radius: 5px;
+    height: 25px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .filter-button-mouseover {
+    background-color: rgba(123, 171, 226, 0.25);
+    color: #030177;
+    border-color: #010047;
+  }
+
+  .filter-button-clicked {
+    background-color: rgba(3, 1, 119, 0.15);
+    border-color: #030177;
+    color: #010047;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

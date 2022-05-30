@@ -1,0 +1,35 @@
+@media (max-width: $breakpoint-medium-min-width){
+        #filters-div {
+        min-height: 40px;
+        margin: 5px;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .filter-button {
+        border: 1px solid rgb(3, 1, 119);
+        border-radius: 5px;
+        height: 25px;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        padding: 5px;
+    }
+    .filter-button-mouseover {
+        background-color: rgba(123, 171, 226, 0.25);
+        color: rgb(3, 1, 119);
+        border-color: rgb(1, 0, 71);
+    }
+
+    .filter-button-clicked {
+        background-color: rgb(3, 1, 119, 0.15);
+        border-color: rgb(3, 1, 119);
+        color: rgb(1, 0, 71);
+    }
+}
