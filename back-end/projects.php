@@ -1,6 +1,6 @@
 <?php
 
-$imgSrc = '../front-end/assets/img/';
+$imgSrc = './front-end/assets/img/';
 
 $projects = [
                 [

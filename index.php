@@ -1,6 +1,6 @@
 <?php 
 
-require_once('projects.php');
+require_once('./back-end/projects.php');
 
 ?>
 
@@ -12,13 +12,10 @@ require_once('projects.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>César MORO : Portfolio</title>
     <!-- link main css-->
-    <link rel="stylesheet" href="../front-end/css/main.css"/>
-    
-    <!-- link CDN swiper css-->
-    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/> -->
+    <link rel="stylesheet" href="./front-end/css/main.css"/>
 
     <!-- link fontawesome css-->
-    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
 
     <!-- link google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Zen+Dots&display=swap" rel="stylesheet">
@@ -32,7 +29,7 @@ require_once('projects.php');
             <header class="home__header">
                 <div class="home__header__profil">
                     <div class="home__header__profil__id">
-                        <img class="home__header__profil__id__pic" src="../front-end/assets/img/portfolio-profil-majorque.jpg" alt="Photo de profil de César MORO">
+                        <img class="home__header__profil__id__pic" src="./front-end/assets/img/portfolio-profil-majorque.jpg" alt="Photo de profil de César MORO">
                         <div class="home__header__profil__id__name">
                             <div class="name-block">
                                 <div class="underline underline__name"></div>
@@ -72,16 +69,7 @@ require_once('projects.php');
                 </section>
 
                 <h3 class="home__content__title__h3 hide-for-form"><i class="icons fas fa-laptop-code"></i>Mes réalisations</h3> <!-- //? À ajouter : <i class="icons fas fa-solid fa-square-info"></i> --> 
-                <!--  
-                <div class="global-projects">
-                    <div class="grid ">
-                        <button class="grid-item javascript"    data-filter="test-1">JavaScript</button>
-                        <button class="grid-item jquery"        data-filter="test-2">jQuery</button>
-                        <button class="grid-item swiperjs"      data-filter="test-3">Swiper</button>
-                        <button class="grid-item isotope"       data-filter="test-4">Isotope</button>
-                        <button class="grid-item sass"          data-filter="test-5">Sass</button>
-                    </div>
-                -->
+
                     <section class="home__content__projects">
 
                         <!--//? =========== CARTES DE PROJETS DYNAMIQUES ============ -->
@@ -152,5 +140,5 @@ require_once('projects.php');
         </footer>
     </div>
 
-    <script type="module" src="../main.js"></script>
+    <script type="module" src="./main.js"></script>
 </body>
