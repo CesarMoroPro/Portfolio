@@ -27,13 +27,9 @@
 
 //~ Creation of transition functions
 @mixin transitionProjectCardFunction {
-    transition-duration: 1.10s;
+    transition-duration: 0.5s;
 }
 
 @mixin transitionContactFunction {
-    transition-duration: 3s;
-}
-
-@mixin transitionLongFunction {
-    transition-duration: 5s;
+    transition-duration: 0.75s;
 }
