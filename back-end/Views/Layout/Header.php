@@ -1,3 +1,5 @@
+<body class="home">
+
 <header class="home__header">
                 <div class="home__header__profil">
                     <div class="home__header__profil__id">

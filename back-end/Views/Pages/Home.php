@@ -1,3 +1,8 @@
+<?php 
+    require_once('./back-end/Views/Utils/Head.php');
+    require_once('./back-end/Views/Layout/Header.php')    
+?>
+
 <main class="home__content">
                 <section id="home__content__bio" class="hide-for-form">
                     
@@ -39,3 +44,5 @@
                         <?php } endfor; ?>
                     </section>
             </main>
+        
+<?php require_once('./back-end/Views/Layout/Footer.php'); ?>

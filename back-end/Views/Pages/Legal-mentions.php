@@ -1,8 +1,7 @@
-<body class="home">
-
-    <?php
-        require_once('./back-end/Views/Layout/Header.php');
-    ?>
+<?php
+    require_once('../Utils/Head.php');
+    require_once('../Layout/Header.php');
+?>
 
 
     <main class="home__content">
@@ -14,12 +13,7 @@
     </main>
 
 
-
-    <footer class="home__footer">
-        <p>César MORO Copyright 2021</p>
-        <a class="link" href="./contact.html" alt="Accéder au formulaire de contact">Contact</a>
-        <a class="link" href="./Legal-mentions.php" alt="Accéder aux mentions légales">Mentions légales</a>
-    </footer>
+    <?php require_once('../Layout/Footer.php'); ?>
 
 
 </body>

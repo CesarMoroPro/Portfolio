@@ -1,21 +1,18 @@
 <?php 
-    require_once('./back-end/Views/Utils/Doctype.php');
-    require_once('./back-end/Modeles/projects.php');
+    require_once('./back-end/Models/Projects.php');
 ?>
 
 <body class="home">
 
     <div id="global">
         <div id="screen" class="unblurryScreen">
-            <?php 
-                require_once('./back-end/Views/Layout/Header.php'); 
+            <?php
                 require_once('./back-end/Views/Pages/Home.php');
             ?>
         </div>
         
         
-        <?php 
-            require_once('./back-end/Views/Layout/Footer.php');
+        <?php
             require_once('./back-end/Views/Components/Contact-form.php'); 
         ?>
     </div>
