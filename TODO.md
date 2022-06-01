@@ -1,9 +1,9 @@
 # TODO URGENT : Animation + affichage
 
 * :white_check_mark: Réduire le temps de floutage des cartes et formulaire de contact.
-* En mode Mobile, déclencher l'animation des project-cards puisque le survol ne fonctionne pas.
-* Retravailler le mobile first dans le footer.
+* :white_check_mark: Retravailler le mobile first dans le footer (non mobile).
 * Retravailler le contact-form qui allonge inutilement le footer (display ou visibility).
+* En mode Mobile, déclencher l'animation des project-cards puisque le survol ne fonctionne pas.
 * Paramètrer le contact par mail.
 
 

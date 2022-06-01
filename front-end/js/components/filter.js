@@ -1,5 +1,3 @@
-console.log('%c' + "Hi !", 'color: #f0f; font-size: 1.5rem; background-color:white');
-
 let filterButtonsList       = document.getElementsByClassName('filter-button');
 let filterDomainList        = document.getElementsByClassName('filter-domain');
 
