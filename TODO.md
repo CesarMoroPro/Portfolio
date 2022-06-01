@@ -2,8 +2,9 @@
 
 * :white_check_mark: Réduire le temps de floutage des cartes et formulaire de contact.
 * :white_check_mark: Retravailler le mobile first dans le footer (non mobile).
-* Retravailler le contact-form qui allonge inutilement le footer (display ou visibility).
+* :white_check_mark: Retravailler le contact-form qui allonge inutilement le footer (display ou visibility, ou height à 0 avec propagation aux éléments enfants).
 * En mode Mobile, déclencher l'animation des project-cards puisque le survol ne fonctionne pas.
+* MISE EN PROD ICI
 * Paramètrer le contact par mail.
 
 

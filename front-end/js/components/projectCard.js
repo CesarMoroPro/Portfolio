@@ -1,43 +1,16 @@
 //? ================================= VARIABLES ===========================================
-//* CHEMIN RELATIF POUR LES IMAGES DU PROJECT-CARD (LU DEPUIS INDEX.HTML)
-const imgSrc = "./front-end/assets/img/"; // execute this const for html result
-// const imgSrc = "./front-end/assets/img/"; // execute this const for PHP result
+//* RÉCUPÉRATION DE LA TAILLE DE L'ÉCRAN (Utile pour l'animation en tactile)
+let screenWidth         = screen.width;
+let screenHeight        = screen.height; // = 3X px
 
-/*
-//* TABLEAU DE DONNÉES DES DIFFÉRENTS PROJETS
-let projects =  [
-                    {
-                        'title'     : 'Portfolio',
-                        'excerp'    : 'Comme pour tout créateur, chaque projet que je réalise alimente mon portfolio. Vous vous trouvez justement sur cette réalisation.',
-                        'date'      : '29 12 2021',
-                        'url'       : 'http://google.com',
-                        'image'     : imgSrc + 'portfolio-card.jpg'
-                    },
-                    {
-                        'title'     : 'Devnest',
-                        'excerp'    : 'Vidéo Youtube : projet de fin de formation réalisé en équipe avec deux autres étudiants, après 5 mois de formation.',
-                        'date'      : '01 12 2020',
-                        'url'       : 'https://www.youtube.com/watch?v=Gbczg095K_A&t=3775s',
-                        'image'     : imgSrc + 'devnest-card.jpg'
-                    },
-                    
-                    {
-                        'title'     : "C'qu'il y a d'pire",
-                        'excerp'    : 'Un site pour partager ses punchlines un tantinet sarcastiques',
-                        'date'      : '31 03 2022',
-                        'url'       : 'https://www.viedemerde.fr/',
-                        'image'     : imgSrc + 'test6-card.jpg'
-                    },
+//* DIVISON DE LA HAUTEUR D'ÉCRAN EN 3 PARTIES (Utile pour l'animation en tactile)
+let heightOne           = Math.ceil((screenHeight/3)); // = X px
+let heightTwo           = Math.ceil((screenHeight/3)*2); // = 2X px
 
-                    {
-                        'title'     : 'Voyages',
-                        'excerp'    : "Des îles Hawaiiennes aux aurores boréales d'Islande, partez découvrir notre si belle planète",
-                        'date'      : '03 11 2016',
-                        'url'       : 'https://www.hawaiitracker.com/',
-                        'image'     : imgSrc + 'voyages-card.jpeg'
-                    }
-                ]
-*/
+//* VARIABLES CORRESPONDANT AUX VARIABLES SCSS, à modifier manuellement si changement en SCSS (Utile pour l'animation en tactile)
+let breakpointMediumMinWidth    = 740+'px';
+
+
 
 
 //* RÉCUPÉRATION DE CHAQUE ÉLÉMENT DE TOUTES LES PROJECT-CARDS
@@ -51,6 +24,10 @@ cardProjects.forEach((project) => {
     let cardProjectAllP  = project.querySelectorAll('.home__content__project-card__divs p');
     let cardDates        = project.querySelector('.colored-date');
 
+    //? ========= VARIABLES LOCALES UTILES POUR LE MODE TACTILE
+    let projectHeight         = project.offsetHeight;
+    let projectYPosition      = project.getBoundingClientRect().y;
+
 
 
     //? ========= FONCTIONS ==========
@@ -61,7 +38,7 @@ cardProjects.forEach((project) => {
         cardProjectAllP.forEach(element =>
             element.classList.replace('transition__allP__disappears', 'transition__allP__appears'));
         cardDates.classList.replace('transition__allP__disappears', 'transition__allP__appears');
-    };
+    }
 
     
     function unblurryCard() {
@@ -71,26 +48,14 @@ cardProjects.forEach((project) => {
         cardProjectAllP.forEach(element =>
             element.classList.replace('transition__allP__appears', 'transition__allP__disappears'));
         cardDates.classList.replace('transition__allP__appears', 'transition__allP__disappears');
-    };
-
-
-/*
-    //? ========= BOUCLES POUR LES COMPOSANTS DES PROJETS ==========
-    for(let i = 0; i < projects.length; i++){
- 
-        let project = projects[i];
-
-        cardImage.setAttribute('src', project['image']);
-        cardUrl.setAttribute('href', project['url']);
-        
-        cardDate.innerHTML = "Date de création : <span class='date'></span>" + project['date'] + "</span></p>";
-    
-        cardTitle.textContent = project['title'];
-        cardTexts.forEach(element =>
-            element.textContent = project['excerp']);
     }
-*/
 
+    
+    //* CONDITION UTILE POUR LE MODE TACTILE
+    //if (screenWidth < breakpointMediumMinWidth){ // 740px correspond à Scss > Utils > Variables > $breakpoint-medium-min-width. Changer ici la valeur manuellement si on change la valeur de cette variable SCSS
+        // if(project.)
+        // }
+    //} 
 
     //? ========= ÉCOUTEURS D'ÉVÈNEMENTS ==========
     project.addEventListener('mouseover', blurryCard);
