@@ -41,6 +41,10 @@
         opacity: 0;
         display: flex;
         visibility: hidden;
+        height: 0;
+        :nth-child(1n){
+            height: 0;
+        }
     }
 
     .contact-form--active {
@@ -54,6 +58,9 @@
         border-radius: 5px;
         min-height: 850px;
         min-width: 300px;
+        :nth-child(1n){
+            min-height: auto;
+        }
     }
     
     .title-form {

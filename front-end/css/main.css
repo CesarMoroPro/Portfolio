@@ -363,6 +363,10 @@ table {
   opacity: 0;
   display: flex;
   visibility: hidden;
+  height: 0;
+}
+.home .contact-form :nth-child(1n) {
+  height: 0;
 }
 .home .contact-form--active {
   transition-duration: 0.75s;
@@ -375,6 +379,9 @@ table {
   border-radius: 5px;
   min-height: 850px;
   min-width: 300px;
+}
+.home .contact-form--active :nth-child(1n) {
+  min-height: auto;
 }
 .home .title-form {
   width: 100%;
