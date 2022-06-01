@@ -25,7 +25,7 @@
                                 $project = $projects[$i];
                         ?>
                                 <div class="home__content__project-card">
-                                    <a class="home__content__project-card__divs__div-link" href="<?= $project['url'];?>">
+                                    <!--<a class="home__content__project-card__divs__div-link" href="<?php //$project['url'];?>">-->
                                         <div class="home__content__project-card__divs">
                                             <div class="home__content__project-card__divs__div-text">
                                                 <p class="home__content__project-card__text infos transition__allP__disappears"><?= $project['excerp'];?></p>

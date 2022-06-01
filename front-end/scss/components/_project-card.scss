@@ -6,6 +6,7 @@
             // border: $titles solid 1px 1px 1px;
             margin: $gutter-very-large;
             border-radius: 5px;
+            z-index: 10;
             &__divs {
                 &__div-text {
                     width: $card-width;
@@ -63,6 +64,10 @@
                 }
             }
         }
+    }
+
+    .project-card-hidden {
+        display: none;
     }
 
     

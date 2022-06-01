@@ -1,0 +1,44 @@
+.home {
+    &__content {
+        &__project-card-opened {
+            &__div {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            }
+
+            &__resume {
+                margin: 20px;
+            }
+
+            &__techno-tags {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 15px 0;
+
+                &__tags{
+                    margin: 5px;
+                }
+            }
+
+            &__slides {
+                margin: 15px 0;
+            }
+
+            &__goto {
+                &__button {
+                    color: $gold;
+                    background-color: $gold-semi-transparent;
+                    border-radius: 5px;
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .view-hidden {
+        display: none;
+    }
+}

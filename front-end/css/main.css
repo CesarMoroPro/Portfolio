@@ -450,6 +450,7 @@ table {
   height: 220px;
   margin: 32px;
   border-radius: 5px;
+  z-index: 10;
 }
 .home__content__project-card__divs__div-text {
   width: 330px;
@@ -504,6 +505,9 @@ table {
 .home__content__project-card__text-date .colored-date {
   color: transparent;
 }
+.home .project-card-hidden {
+  display: none;
+}
 .home .blurry {
   box-shadow: 0px 7.5px 1em -0.2em black;
   filter: blur(0.5em);
@@ -538,6 +542,37 @@ table {
 }
 .home .project-card--texts--darkmode--on {
   color: white;
+}
+
+.home__content__project-card-opened__div {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+.home__content__project-card-opened__resume {
+  margin: 20px;
+}
+.home__content__project-card-opened__techno-tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15px 0;
+}
+.home__content__project-card-opened__techno-tags__tags {
+  margin: 5px;
+}
+.home__content__project-card-opened__slides {
+  margin: 15px 0;
+}
+.home__content__project-card-opened__goto__button {
+  color: darkgoldenrod;
+  background-color: rgba(184, 134, 11, 0.75);
+  border-radius: 5px;
+  border: none;
+}
+.home .view-hidden {
+  display: none;
 }
 
 .overline__site-title {

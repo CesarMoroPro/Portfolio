@@ -1,18 +1,4 @@
 //? ================================= VARIABLES ===========================================
-//* RÉCUPÉRATION DE LA TAILLE DE L'ÉCRAN (Utile pour l'animation en tactile)
-let screenWidth         = screen.width;
-let screenHeight        = screen.height; // = 3X px
-
-//* DIVISON DE LA HAUTEUR D'ÉCRAN EN 3 PARTIES (Utile pour l'animation en tactile)
-let heightOne           = Math.ceil((screenHeight/3)); // = X px
-let heightTwo           = Math.ceil((screenHeight/3)*2); // = 2X px
-
-//* VARIABLES CORRESPONDANT AUX VARIABLES SCSS, à modifier manuellement si changement en SCSS (Utile pour l'animation en tactile)
-let breakpointMediumMinWidth    = 740+'px';
-
-
-
-
 //* RÉCUPÉRATION DE CHAQUE ÉLÉMENT DE TOUTES LES PROJECT-CARDS
 let cardProjects     = document.querySelectorAll('.home__content__project-card');
 
@@ -49,13 +35,6 @@ cardProjects.forEach((project) => {
             element.classList.replace('transition__allP__appears', 'transition__allP__disappears'));
         cardDates.classList.replace('transition__allP__appears', 'transition__allP__disappears');
     }
-
-    
-    //* CONDITION UTILE POUR LE MODE TACTILE
-    //if (screenWidth < breakpointMediumMinWidth){ // 740px correspond à Scss > Utils > Variables > $breakpoint-medium-min-width. Changer ici la valeur manuellement si on change la valeur de cette variable SCSS
-        // if(project.)
-        // }
-    //} 
 
     //? ========= ÉCOUTEURS D'ÉVÈNEMENTS ==========
     project.addEventListener('mouseover', blurryCard);
