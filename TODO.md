@@ -3,7 +3,9 @@
 * :white_check_mark: Réduire le temps de floutage des cartes et formulaire de contact.
 * :white_check_mark: Retravailler le mobile first dans le footer (non mobile).
 * :white_check_mark: Retravailler le contact-form qui allonge inutilement le footer (display ou visibility, ou height à 0 avec propagation aux éléments enfants).
-* En mode Mobile, déclencher l'animation des project-cards puisque le survol ne fonctionne pas.
+* :white_check_mark: Refonte des animations sur les projectcards. Pas de floutage, mais faire disparaitre la carte.
+* :white_check_mark: Apparition d'une div servant d'aperçu et contenant les infos du projet concerné.
+* Intégrer en php cette nouvelle animation.
 * MISE EN PROD ICI
 * Paramètrer le contact par mail.
 

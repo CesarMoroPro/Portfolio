@@ -12,7 +12,7 @@
     <!-- <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/> -->
 
     <!-- link fontawesome css-->
-    <link rel="stylesheet" href="../../../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
 
     <!-- link google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Zen+Dots&display=swap" rel="stylesheet">
@@ -47,8 +47,7 @@
                     <div class="underline underline__site-title"></div>
 
                     <div class="darkmodeSelector">
-                        <p class="darkmodeSelector__button">Basculer en mode sombre</p>
-                        <!-- <i id="icon--darkmode" class="pAndIcon--darkmode--off far fa-times-circle"></i> -->
+                        <!--<p class="darkmodeSelector__button">Basculer en mode sombre</p>-->
                     </div>
                 </div>
             </header>
@@ -61,9 +60,11 @@
                     Vous allez vraiment lire tout ça ? ;)
                 </section>
 
-                <h3 class="home__content__title__h3 hide-for-form"><i class="icons fas fa-laptop-code"></i>Mes réalisations</h3>
+                <h3 class="home__content__title__h3 hide-for-form" id="title-real"><i class="icons fas fa-laptop-code"></i>Mes réalisations</h3>
                 
+                <!--* Filtres à développer -->
                         <!-- ! DIV FILTERS FROM SCRATCH-->
+                    <!-- 
                     <div id="filters-div">
                         <p>Vous pouvez sélectionner un domaine de réalisation :</p>
                         <div class="filter-button filter-domain">Front-end</div>
@@ -74,6 +75,8 @@
                         <div class="filter-button filter-type">Réel & professionnel</div>
                         <div class="filter-button filter-type">Entraînement</div>
                     </div>
+                    -->
+                
                 
                     <section class="home__content__projects">
 
@@ -95,35 +98,13 @@
                                     </div>    
                                 </div>
                             </a>
-                        </div>
-
-                        <!--? =============== ENCART APERÇU PROJET, EN DISPLAY NONE PAR DEFAULT -->
-                        <div class="home__content__project-card-opened__div view-hidden">
-                            <div class="home__content__project-card-opened__resume">Le résumé du projet sera ancré ici même</div>
-                            <div class="home__content__project-card-opened__techno-tags">
-                                <div class="home__content__project-card-opened__techno-tags__tags">HTML</div>
-                                <div class="home__content__project-card-opened__techno-tags__tags">CSS</div>
-                                <div class="home__content__project-card-opened__techno-tags__tags">SASS</div>
-                                <div class="home__content__project-card-opened__techno-tags__tags">JavaScript Vanilla</div>
-                                <div class="home__content__project-card-opened__techno-tags__tags">PHP</div>
-                                <div class="home__content__project-card-opened__techno-tags__tags">SQL</div>
-                                <div class="home__content__project-card-opened__techno-tags__tags">phpMyAdmin</div>
-                                <div class="home__content__project-card-opened__techno-tags__tags">Git</div>
-                            </div>
-                            <div class="home__content__project-card-opened__slides">Ici seront insérées les slides des screenshots</div>
-                        </div>
-                        <div class="home__content__project-card-opened__goto view-hidden"><button class="home__content__project-card-opened__goto__button">Voir le projet</button></div>
-
-
-
+                        </div>                   
                     </section>
             </main>
         </div>
         
     <!--! CETTE SECTION EST PAR DÉFAUT EN DISPLAY: NONE-->
         <section class="contact-form">
-        
-
             <h3 class="home__content__title__h3 title-form">Formulaire de contact</h3>
                 <i class="icons far fa-times-circle cross-to-quit"></i>
 

@@ -112,4 +112,5 @@ function activateDarkmode() {
 
 //? ================================= ÉCOUTEURS D'ÉVÉNEMENTS ===========================================
 //* ÉCOUTEUR SUR LA DIV DARKMODE
-darkmodeButton.addEventListener('click', activateDarkmode);
+//darkmodeButton.addEventListener('click', activateDarkmode);
+console.log("décommenter darkmode.js:115 pour avoir l'option darkmode");

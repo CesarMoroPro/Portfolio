@@ -64,11 +64,97 @@
                 }
             }
         }
+
+
+
+
+        &__project-card-opened {
+            &__div {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            border: 1px solid $gold;
+            border-radius: 10px 10px 0 0;
+            }
+
+            &__resume {
+                margin: 20px;
+                text-align: justify;
+
+                &__title {
+                    display: inline;
+                    text-transform: uppercase;
+                    color: blue;
+                    font-weight: bold;
+                }
+            }
+
+            &__techno-tags {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 15px 0;
+
+                &__tags{
+                    margin: 5px;
+                }
+            }
+
+            &__slides {
+                margin: 15px 20px;
+                height: 100px;
+                border: 1px solid blue;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &__goto {
+                &__button {
+                    border-radius: 5px;
+                    border: none;
+                    margin: 5px 0 15px 0;
+                    padding: 8px;
+                    width: 150px;
+                    color: blue;
+                    background-color: $gold-semi-transparent;
+                }
+
+                &__button:hover {
+                    text-decoration: underline;
+                    background-color: $gold;
+                    color: white;
+                    font-weight: bold;;
+                }
+            }
+        }
     }
 
-    .project-card-hidden {
+    
+    
+
+
+    .display-none {
         display: none;
     }
+
+    .popup {
+        border: solid 1px $gold;
+        border-radius: 20px;
+        width: auto;
+        height: 250px;
+        text-align: center;
+        margin: $gutter-very-large;
+        margin-bottom: 0;
+    }
+
+    //~ DARKMODE ON
+    .project-card--texts--darkmode--on {
+        color: white;
+    }
+
+
 
     
 
@@ -109,11 +195,5 @@
                 color : transparent;
             }
         }
-    }
-
-
-    //~ DARKMODE ON
-    .project-card--texts--darkmode--on {
-        color: white;
     }
 }

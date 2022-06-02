@@ -505,8 +505,70 @@ table {
 .home__content__project-card__text-date .colored-date {
   color: transparent;
 }
-.home .project-card-hidden {
+.home__content__project-card-opened__div {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  border: 1px solid darkgoldenrod;
+  border-radius: 10px 10px 0 0;
+}
+.home__content__project-card-opened__resume {
+  margin: 20px;
+  text-align: justify;
+}
+.home__content__project-card-opened__resume__title {
+  display: inline;
+  text-transform: uppercase;
+  color: blue;
+  font-weight: bold;
+}
+.home__content__project-card-opened__techno-tags {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 15px 0;
+}
+.home__content__project-card-opened__techno-tags__tags {
+  margin: 5px;
+}
+.home__content__project-card-opened__slides {
+  margin: 15px 20px;
+  height: 100px;
+  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home__content__project-card-opened__goto__button {
+  border-radius: 5px;
+  border: none;
+  margin: 5px 0 15px 0;
+  padding: 8px;
+  width: 150px;
+  color: blue;
+  background-color: rgba(184, 134, 11, 0.75);
+}
+.home__content__project-card-opened__goto__button:hover {
+  text-decoration: underline;
+  background-color: darkgoldenrod;
+  color: white;
+  font-weight: bold;
+}
+.home .display-none {
   display: none;
+}
+.home .popup {
+  border: solid 1px darkgoldenrod;
+  border-radius: 20px;
+  width: auto;
+  height: 250px;
+  text-align: center;
+  margin: 32px;
+  margin-bottom: 0;
+}
+.home .project-card--texts--darkmode--on {
+  color: white;
 }
 .home .blurry {
   box-shadow: 0px 7.5px 1em -0.2em black;
@@ -539,40 +601,6 @@ table {
 .home .transition__allP__disappears {
   transition-duration: 0.5s;
   color: transparent;
-}
-.home .project-card--texts--darkmode--on {
-  color: white;
-}
-
-.home__content__project-card-opened__div {
-  width: 100%;
-  height: auto;
-  text-align: center;
-}
-.home__content__project-card-opened__resume {
-  margin: 20px;
-}
-.home__content__project-card-opened__techno-tags {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 15px 0;
-}
-.home__content__project-card-opened__techno-tags__tags {
-  margin: 5px;
-}
-.home__content__project-card-opened__slides {
-  margin: 15px 0;
-}
-.home__content__project-card-opened__goto__button {
-  color: darkgoldenrod;
-  background-color: rgba(184, 134, 11, 0.75);
-  border-radius: 5px;
-  border: none;
-}
-.home .view-hidden {
-  display: none;
 }
 
 .overline__site-title {

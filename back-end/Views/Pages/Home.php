@@ -41,7 +41,9 @@
                                         </div>
                                     </a>
                                 </div>
-                        <?php } endfor; ?>
+                        <?php 
+                            require_once('./back-end/Views/Components/projectCardView.php');     
+                            } endfor; ?>
                     </section>
             </main>
         
