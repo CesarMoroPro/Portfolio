@@ -69,21 +69,29 @@
 
 
         &__project-card-opened {
+
+            p {
+                color: black;
+                font-size: $font-size-hypra-small;
+                display: inline;
+            }
+
             &__div {
             width: 100%;
             height: auto;
             text-align: center;
-            border: 1px solid $gold;
-            border-radius: 10px 10px 0 0;
+            border: solid 1px $gold;
+            border-radius: 20px;
             }
 
             &__resume {
                 margin: 20px;
                 text-align: justify;
 
-                &__title {
+                &__title-resume {
                     display: inline;
                     text-transform: uppercase;
+                    font-size: $font-size-ultra-small;
                     color: blue;
                     font-weight: bold;
                 }
@@ -93,11 +101,17 @@
                 display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
-                justify-content: center;
+                justify-content: space-evenly;
                 margin: 15px 0;
 
                 &__tags{
                     margin: 5px;
+                    border-radius: 3px;
+                    padding: 0 8px;
+                    height: 17px;
+                    background-color: rgba(123, 171, 226, 0.25);
+                    display: flex;
+                    align-items: center;
                 }
             }
 
@@ -125,7 +139,7 @@
                     text-decoration: underline;
                     background-color: $gold;
                     color: white;
-                    font-weight: bold;;
+                    font-weight: bold;
                 }
             }
         }
@@ -140,10 +154,8 @@
     }
 
     .popup {
-        border: solid 1px $gold;
-        border-radius: 20px;
         width: auto;
-        height: 250px;
+        height: auto;
         text-align: center;
         margin: $gutter-very-large;
         margin-bottom: 0;

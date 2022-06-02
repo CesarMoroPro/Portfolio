@@ -36,6 +36,7 @@ $letter-spacing-project-card: 7.5px;
 //? SIZE REFERENCE:
 $font-size-regular: 2em;
 //? OTHERS FONT SIZES:
+$font-size-hypra-small: math.div($font-size-regular, 4);
 $font-size-ultra-small: math.div($font-size-regular, 3);
 $font-size-extra-small: math.div($font-size-regular, 2.5);
 $font-size-very-small: math.div($font-size-regular, 2.25);

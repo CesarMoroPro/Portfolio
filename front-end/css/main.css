@@ -505,20 +505,26 @@ table {
 .home__content__project-card__text-date .colored-date {
   color: transparent;
 }
+.home__content__project-card-opened p {
+  color: black;
+  font-size: 0.5em;
+  display: inline;
+}
 .home__content__project-card-opened__div {
   width: 100%;
   height: auto;
   text-align: center;
-  border: 1px solid darkgoldenrod;
-  border-radius: 10px 10px 0 0;
+  border: solid 1px darkgoldenrod;
+  border-radius: 20px;
 }
 .home__content__project-card-opened__resume {
   margin: 20px;
   text-align: justify;
 }
-.home__content__project-card-opened__resume__title {
+.home__content__project-card-opened__resume__title-resume {
   display: inline;
   text-transform: uppercase;
+  font-size: 0.6666666667em;
   color: blue;
   font-weight: bold;
 }
@@ -526,11 +532,17 @@ table {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   margin: 15px 0;
 }
 .home__content__project-card-opened__techno-tags__tags {
   margin: 5px;
+  border-radius: 3px;
+  padding: 0 8px;
+  height: 17px;
+  background-color: rgba(123, 171, 226, 0.25);
+  display: flex;
+  align-items: center;
 }
 .home__content__project-card-opened__slides {
   margin: 15px 20px;
@@ -559,10 +571,8 @@ table {
   display: none;
 }
 .home .popup {
-  border: solid 1px darkgoldenrod;
-  border-radius: 20px;
   width: auto;
-  height: 250px;
+  height: auto;
   text-align: center;
   margin: 32px;
   margin-bottom: 0;

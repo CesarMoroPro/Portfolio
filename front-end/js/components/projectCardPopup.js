@@ -1,3 +1,6 @@
+//* IMPORT DE LA FONCTION CRÉANT LE CONTENU HTML D'UNE POPUP
+import { createPresentationCard } from './presentationCard.js';
+
 //* RÉCUPÉRATION DE CHAQUE ÉLÉMENT DE TOUTES LES PROJECT-CARDS
 let cardProjects        = document.querySelectorAll('.home__content__project-card');
 let titleRealisations   = document.getElementById('title-real');
@@ -27,8 +30,6 @@ cardProjects.forEach((project) => {
         //* TRAITEMENT CONDITIONNEL
         if(deviceWidth < breakPointMinWidth){
             toggleCardPopup();
-        } else {
-            
         }
 
 
@@ -38,9 +39,8 @@ cardProjects.forEach((project) => {
             if(click === false){
                 // click passe à true puisque la carte est cliquée
                 click = true;
-                console.log('%c' + click, 'color: #f0f; font-size: 1.5rem; background-color:white');
 
-                // Disparition de la carte de projet
+                // disparition de la carte de projet
                 project.classList.add('display-none');
 
                 // création de l'élément popup
@@ -50,10 +50,13 @@ cardProjects.forEach((project) => {
                 titleRealisations.append(popup);
                 popup.classList.add('popup');
 
+                // ajouter le contenu dans la popup
+                createPresentationCard(popup);
+
+
                 // rendre la popup cliquable pour repasser click à false
                 popup.addEventListener('click', () => {
                     click = false;
-                    console.log('%c' + click, 'color: #f0f; font-size: 1.5rem; background-color:white');
                     popup.classList.add('display-none');
                     project.classList.remove('display-none');
                 })
