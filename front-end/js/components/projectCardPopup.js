@@ -8,7 +8,7 @@ let goToProjectButtons  = document.querySelectorAll('.home__content__project-car
 
 let deviceWidth         = screen.width;
 console.log("Dimensions Width : " + deviceWidth + "px");
-let breakPointMinWidth  = 1000; // Selon la variable définie en Scss > utils > variables.scss
+let breakPointMinWidth  = 3000; // Selon la variable définie en Scss > utils > variables.scss
                                 // À modifier manuellement si changement en Scss
 
 //* VARIABLES GLOBALES
@@ -58,7 +58,7 @@ cardProjects.forEach((project) => {
                 // rendre la popup cliquable pour repasser click à false et masquer la popup
                 popup.addEventListener('click', () => {
                     click = false;
-                    popup.classList.add('display-none');
+                    popup.remove();
                     project.classList.remove('display-none');
                 })
             }
