@@ -1,5 +1,10 @@
 .home {
     &__content {
+        &__projects {
+            display: flex;
+            flex-direction: column;
+        }
+
         &__project-card {
             width: $card-width;
             height: $card-height;
@@ -117,7 +122,7 @@
 
             &__slides {
                 margin: 15px 20px;
-                height: 100px;
+                height: 200px;
                 border: 1px solid blue;
                 display: flex;
                 align-items: center;
@@ -160,6 +165,13 @@
         margin: $gutter-very-large;
         margin-bottom: 0;
     }
+
+    .overview {
+        width: 100%;
+    }
+
+
+
 
     //~ DARKMODE ON
     .project-card--texts--darkmode--on {

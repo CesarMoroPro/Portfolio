@@ -1,15 +1,14 @@
 //* IMPORT DE LA FONCTION CRÉANT LE CONTENU HTML D'UNE POPUP
-import { createPresentationCard } from './presentationCard.js';
+import { createPresentationCard } from '../exports/presentationCard.js';
 
 //* RÉCUPÉRATION DE CHAQUE ÉLÉMENT DE TOUTES LES PROJECT-CARDS
 let cardProjects        = document.querySelectorAll('.home__content__project-card');
 let titleRealisations   = document.getElementById('title-real');
-let projectNewDivs      = document.querySelectorAll('.home__content__project-card-opened__div');
 let goToProjectButtons  = document.querySelectorAll('.home__content__project-card-opened__goto');
 
 let deviceWidth         = screen.width;
 console.log("Dimensions Width : " + deviceWidth + "px");
-let breakPointMinWidth  = 3000; // Selon la variable définie en Scss > utils > variables.scss
+let breakPointMinWidth  = 1000; // Selon la variable définie en Scss > utils > variables.scss
                                 // À modifier manuellement si changement en Scss
 
 //* VARIABLES GLOBALES
@@ -30,6 +29,8 @@ cardProjects.forEach((project) => {
         //* TRAITEMENT CONDITIONNEL
         if(deviceWidth < breakPointMinWidth){
             toggleCardPopup();
+        } else {
+            toggleCardOverview();
         }
 
 
@@ -54,7 +55,7 @@ cardProjects.forEach((project) => {
                 createPresentationCard(popup);
 
 
-                // rendre la popup cliquable pour repasser click à false
+                // rendre la popup cliquable pour repasser click à false et masquer la popup
                 popup.addEventListener('click', () => {
                     click = false;
                     popup.classList.add('display-none');
@@ -63,23 +64,48 @@ cardProjects.forEach((project) => {
             }
         }
 
-        function newDiv() {
-            projectNewDivs.forEach((div) => {
-                // Je récupère toutes mes vues d'ensemble, et je range chacune d'elle dans la variable view
-                div.classList.add('popup');
-                console.log('%c' + "nouvelle div créée", 'color: #f0f; font-size: 1.5rem; background-color:white');
-            });
-        };
+        function toggleCardOverview() {
+            if(click === false) {
+                // click passe à true puisqu'on a cliqué sur la carte
+                click = true;
+
+                // création de la div qui doit apaparaître sous la carte de projet
+                let overview = document.createElement('div');
+                
+                // insertion de la div sous la carte de projet
+                let projectsSection = document.querySelector('.home__content__projects');
+                projectsSection.append(overview);
+                projectsSection.classList.add('column');
+                overview.classList.add('overview');
+
+                // ajouter le contenu dans l'overview depuis le module exporté
+                createPresentationCard(overview);
+
+                // rendre l'overview cliquable pour repasser click à false et masquer l'overview
+                overview.addEventListener('click', () => {
+                    overview.remove();
+                    click = false;
+                })
+
+                // rendre la carte de projet cliquable pour fermer aussi l'overview
+                project.addEventListener('click', () => {
+                    overview.remove();
+                    click = false;
+                    console.log('%c' + click, 'color: #f0f; font-size: 1.5rem; background-color:white');
+                })
+                console.log('%c' + click, 'color: #f0f; font-size: 1.5rem; background-color:white');
+            }
+        }
         
 
-        function activeButton() {
-            goToProjectButtons.forEach((button) => {
-                // Je récupère tous les boutons qui redirigent vers le projet de la carte cliquée
+        // function activeButton() {
+        //     goToProjectButtons.forEach((button) => {
+        //         // Je récupère tous les boutons qui redirigent vers le projet de la carte cliquée
 
-                button.addEventListener('click', () => {
-                    console.log("redirection à définir par la suite");
-                });
-            });
-        }
+        //         button.addEventListener('click', () => {
+        //             console.log("redirection à définir par la suite");
+        //         });
+        //     });
+        // }
     }
 });

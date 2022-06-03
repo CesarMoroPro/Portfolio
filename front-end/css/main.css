@@ -278,6 +278,9 @@ table {
     flex-wrap: wrap;
     justify-content: space-evenly;
   }
+  .home__content__projects .column {
+    flex-direction: column;
+  }
 }
 @media (min-width: 1024px) {
   .home__content__title__h3 {
@@ -445,6 +448,10 @@ table {
   color: white;
 }
 
+.home__content__projects {
+  display: flex;
+  flex-direction: column;
+}
 .home__content__project-card {
   width: 330px;
   height: 220px;
@@ -546,7 +553,7 @@ table {
 }
 .home__content__project-card-opened__slides {
   margin: 15px 20px;
-  height: 100px;
+  height: 200px;
   border: 1px solid blue;
   display: flex;
   align-items: center;
@@ -576,6 +583,9 @@ table {
   text-align: center;
   margin: 32px;
   margin-bottom: 0;
+}
+.home .overview {
+  width: 100%;
 }
 .home .project-card--texts--darkmode--on {
   color: white;
