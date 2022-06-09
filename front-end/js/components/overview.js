@@ -23,7 +23,7 @@ cardProjects.forEach((project) => {
         }
 
         // récupération de la div overview
-        let overview = document.querySelector('.home__content__overview');
+        let overview = document.querySelector('.home__content__overview__div');
         if(click === false) {
             // insertion de la div sous la carte de projet
             overview.classList.remove('display-none');
