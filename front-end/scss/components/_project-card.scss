@@ -1,9 +1,22 @@
 .home {
     &__content {
-        &__projects {
+        &__card-and-overview {
             display: flex;
             flex-direction: column;
+            justify-content: center;
+            align-items: center;                
         }
+
+        &__projects {
+            
+            display: flex;
+            flex-direction: column;
+            height: auto;
+
+            @media (min-width: $breakpoint-medium-min-width){
+                flex-direction: row;
+            }
+        }        
 
         &__project-card {
             width: $card-width;
@@ -11,18 +24,7 @@
             // border: $titles solid 1px 1px 1px;
             margin: $gutter-very-large;
             border-radius: 5px;
-            z-index: 10;
             &__divs {
-                &__div-text {
-                    width: $card-width;
-                    position: absolute;
-                    z-index: 2;
-                    height: $card-height;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: space-around;
-                }
                 &__div-link {
                     position: absolute;
                     z-index: 3;
@@ -33,7 +35,6 @@
             &__title {
                 width: $card-width;
                 position: absolute;
-                z-index: 1;
                 margin: 0;
                 text-align: center;;
                 padding: $gutter-very-small 0;
@@ -48,127 +49,10 @@
                 border-radius: 5px;
                 box-shadow: 0px 7.5px 1em -0.15em $shadow-blurry;
             }
-            &__text {
-                width: 95%;
-                padding: $gutter-medium $gutter-very-small;
-                text-align: center;
-                font-family: $font-main-light;
-                font-size: $font-size-medium;
-                line-height: 1.3em;
-                text-overflow: ellipsis;
-                color: transparent;
-            }
-            &__text-date {
-                padding: $gutter-medium $gutter-very-small;
-                font-style: italic;
-                font-size: $font-size-very-small;
-                color: transparent;
-
-                .colored-date {
-                    color: transparent;
-                }
-            }
-        }
-
-
-
-
-        &__project-card-opened {
-
-            p {
-                color: black;
-                font-size: $font-size-hypra-small;
-                display: inline;
-            }
-
-            &__div {
-            width: 100%;
-            height: auto;
-            text-align: center;
-            border: solid 1px $gold;
-            border-radius: 20px;
-            }
-
-            &__resume {
-                margin: 20px;
-                text-align: justify;
-
-                &__title-resume {
-                    display: inline;
-                    text-transform: uppercase;
-                    font-size: $font-size-ultra-small;
-                    color: blue;
-                    font-weight: bold;
-                }
-            }
-
-            &__techno-tags {
-                display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: space-evenly;
-                margin: 15px 0;
-
-                &__tags{
-                    margin: 5px;
-                    border-radius: 3px;
-                    padding: 0 8px;
-                    height: 17px;
-                    background-color: rgba(123, 171, 226, 0.25);
-                    display: flex;
-                    align-items: center;
-                }
-            }
-
-            &__slides {
-                margin: 15px 20px;
-                height: 200px;
-                border: 1px solid blue;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            &__goto {
-                &__button {
-                    border-radius: 5px;
-                    border: none;
-                    margin: 5px 0 15px 0;
-                    padding: 8px;
-                    width: 150px;
-                    color: blue;
-                    background-color: $gold-semi-transparent;
-                }
-
-                &__button:hover {
-                    text-decoration: underline;
-                    background-color: $gold;
-                    color: white;
-                    font-weight: bold;
-                }
-            }
         }
     }
 
-    
-    
-
-
-    .display-none {
-        display: none;
-    }
-
-    .popup {
-        width: auto;
-        height: auto;
-        text-align: center;
-        margin: $gutter-very-large;
-        margin-bottom: 0;
-    }
-
-    .overview {
-        width: 100%;
-    }
+        
 
 
 

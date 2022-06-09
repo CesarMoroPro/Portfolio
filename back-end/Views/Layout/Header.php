@@ -23,8 +23,10 @@
                     <h2 class="home__header__title__h2">Portfolio</h2>
                     <div class="underline underline__site-title"></div>
 
+                    <!-- Ici le bouton d'activation du darkmode
                     <div class="darkmodeSelector">
                         <p class="darkmodeSelector__button">Basculer en mode sombre</p>
                     </div>
+                    -->
                 </div>
 </header>

@@ -1,0 +1,99 @@
+.home {
+    &__content {
+        &__overview {
+
+            .cross-to-quit {
+                font-size: 0.65em;
+            }
+
+            p {
+                color: black;
+                font-size: $font-size-hypra-small;
+                display: inline;
+            }
+
+            &__div {
+            width: 100%;
+            height: auto;
+            text-align: center;
+            border: solid 1px $gold;
+            border-radius: 20px;
+            }
+
+            &__resume {
+                margin: 20px;
+                text-align: justify;
+
+                &__title-resume {
+                    display: inline;
+                    text-transform: uppercase;
+                    font-size: $font-size-ultra-small;
+                    color: blue;
+                    font-weight: bold;
+                }
+            }
+
+            &__techno-tags {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                margin: 15px 0;
+
+                &__tags{
+                    margin: 5px;
+                    border-radius: 3px;
+                    padding: 2px 8px;
+                    height: 17px;
+                    background-color: rgba(123, 171, 226, 0.25);
+                    display: flex;
+                    align-items: flex-start;
+                }
+            }
+
+            &__slides {
+                margin: 15px 20px;
+                height: 200px;
+                border: 1px solid blue;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &__goto {
+                display: flex;
+                justify-content: center;
+
+                &__button {
+                    border-radius: 5px;
+                    border: none;
+                    margin: 5px 0 15px 0;
+                    padding: 8px;
+                    width: 150px;
+                    color: blue;
+                    background-color: $gold-semi-transparent;
+                }
+
+                &__button:hover {
+                    text-decoration: underline;
+                    background-color: $gold;
+                    color: white;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    
+    .display-none {
+        display: none;
+        height: 0;
+        width: 0;
+    }
+
+    .overview {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+}

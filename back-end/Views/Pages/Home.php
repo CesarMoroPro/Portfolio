@@ -19,19 +19,14 @@
 
                     <section class="home__content__projects">
 
-                        <!--//? =========== CARTES DE PROJETS DYNAMIQUES ============ -->
-                        <?php 
-                            for($i = 0; $i < count($projects); $i++): { 
-                                $project = $projects[$i];
-                        ?>
+                            <!-- //? =========== CARTES DE PROJETS DYNAMIQUES ============ -->
+                            <?php for($i = 0; $i < count($projects); $i++): { ?>
+                                <div class="home__content__card-and-overview">
+                                <?php $project = $projects[$i];?>
+
                                 <div class="home__content__project-card">
                                     <!--<a class="home__content__project-card__divs__div-link" href="<?php //$project['url'];?>">-->
                                         <div class="home__content__project-card__divs">
-                                            <div class="home__content__project-card__divs__div-text">
-                                                <p class="home__content__project-card__text infos transition__allP__disappears"><?= $project['excerp'];?></p>
-                                                <p class="home__content__project-card__text-date infos transition__allP__disappears">Date de création : <span class="colored-date transition__allP__disappears"><?= $project['date']; ?></span></p>
-                                            </div>
-
                                             <div class="home__content__project-card__divs__div-img">
                                                 <h2 class="home__content__project-card__title transition__title__appears">
                                                         <?= $project['title'] ?>
@@ -41,9 +36,12 @@
                                         </div>
                                     </a>
                                 </div>
-                        <?php 
-                            require_once('./back-end/Views/Components/projectCardView.php');     
-                            } endfor; ?>
+
+                                <!-- //? ========= OVERVIEW DYNAMIQUES, DEFAULT = DISPLAY NONE =================== -->
+                                <?php require('./back-end/Views/Components/Overview.php');?>
+                                </div>
+                            <?php } endfor;?>
+
                     </section>
             </main>
         
