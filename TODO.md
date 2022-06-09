@@ -4,8 +4,9 @@
 * :white_check_mark: Retravailler le mobile first dans le footer (non mobile).
 * :white_check_mark: Retravailler le contact-form qui allonge inutilement le footer (display ou visibility, ou height à 0 avec propagation aux éléments enfants).
 * :white_check_mark: Refonte des animations sur les projectcards. Pas de floutage, mais faire disparaitre la carte.
-* :white_check_mark: Apparition d'une div servant d'aperçu et contenant les infos du projet concerné.
-* Intégrer en php cette nouvelle animation.
+* :white_check_mark: Apparition d'une overview et contenant les infos du projet concerné.
+* :white_check_mark: Intégrer en php cette nouvelle animation.
+* Corriger le bug faisant toujours apparaître l'overview de la carte 1 au lieu des overviews respectives.
 * MISE EN PROD ICI
 * Paramètrer le contact par mail.
 

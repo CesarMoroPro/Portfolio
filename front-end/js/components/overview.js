@@ -1,9 +1,9 @@
-//* RÉCUPÉRATION DE CHAQUE ÉLÉMENT DE TOUTES LES PROJECT-CARDS
+//* RÉCUPÉRATION DE CHAQUE ÉLÉMENT DE TOUTES LES PROJECT-CARDS + OVERVIEWS
 let cardProjects        = document.querySelectorAll('.home__content__project-card');
+let overviews           = document.querySelectorAll('.home__content__overview__div');
 let goToProjectButtons  = document.querySelectorAll('.home__content__project-card-opened__goto');
 
-let deviceWidth         = screen.width;
-let breakPointMinWidth  = 1000; // Selon la variable définie en Scss > utils > variables.scss
+let breakPointMinWidth  = 740; // Selon la variable définie en Scss > utils > variables.scss
                                 // À modifier manuellement si changement en Scss
 
 //* VARIABLES GLOBALES
@@ -12,42 +12,53 @@ let click = false;
 
 
 //* TRAITEMENT GLOBAL DES ANIMATIONS CARTES
-cardProjects.forEach((project) => { 
-    // Je récupère toutes mes cartes de projet, et je range chacune d'elle dans la variable projet
+for(let i = 0; i < cardProjects.length; i++){
+    for(let j = 0; j < overviews.length; j++) {
+        if(i === j){
 
-    function toggleCardOverview() {
-        // obligation de rester en colonne pour une width inférieure à tablet-min-width
-        if(screen.width < breakPointMinWidth){
-            let projectsSection = document.querySelector('.home__content__projects');
-            projectsSection.classList.add('column');
-        }
+            for(let project of cardProjects){
+                // Je récupère toutes mes cartes de projet, et je range chacune d'elle dans la variable projet
 
-        // récupération de la div overview
-        let overview = document.querySelector('.home__content__overview__div');
-        if(click === false) {
-            // insertion de la div sous la carte de projet
-            overview.classList.remove('display-none');
+                function toggleCardOverview() {
+                
+                    if(click === false) {
 
-            // click passe à true puisqu'on a cliqué sur la carte
-            click = true;
+                        let overview = overviews[j];
+                        // insertion de la div sous la carte de projet
+                        overview.classList.remove('display-none');
 
-            // rendre l'overview cliquable dès le premier clic
-            overview.addEventListener('click', () => {
-                overview.classList.add('display-none');
-                click = false;
-            })
-        } else {
-            overview.addEventListener('click', () => {
-                overview.classList.add('display-none');
-                click = false;
-            })
+                        // rendre l'overview cliquable dès le premier clic
+                        overview.addEventListener('click', () => {
+                            overview.classList.add('display-none');
+                            click = false;
+                        });
+                        
+                        
+                        // click passe à true puisqu'on a cliqué sur la carte
+                        click = true;
+
+
+                    } else {
+                        overviews.forEach(overview => {
+                            overview.addEventListener('click', () => {
+                                overview.classList.add('display-none');
+                                click = false;
+                            })
+                        });
+                    }
+
+
+                }
+                
+
+                project.addEventListener('click', toggleCardOverview);
+
+            }
+
+
         }
     }
-    
-
-    project.addEventListener('click', toggleCardOverview);
-
-});
+}
     
 
 

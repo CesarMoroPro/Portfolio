@@ -24,8 +24,7 @@
                                 <div class="home__content__card-and-overview">
                                 <?php $project = $projects[$i];?>
 
-                                <div class="home__content__project-card">
-                                    <!--<a class="home__content__project-card__divs__div-link" href="<?php //$project['url'];?>">-->
+                                    <div class="home__content__project-card">
                                         <div class="home__content__project-card__divs">
                                             <div class="home__content__project-card__divs__div-img">
                                                 <h2 class="home__content__project-card__title transition__title__appears">
@@ -34,11 +33,10 @@
                                                 <img class="home__content__project-card__img unblurry" alt="Image d'illustration de la carte" src="<?= $project['image'];?>">
                                             </div>    
                                         </div>
-                                    </a>
-                                </div>
+                                    </div>
 
-                                <!-- //? ========= OVERVIEW DYNAMIQUES, DEFAULT = DISPLAY NONE =================== -->
-                                <?php require('./back-end/Views/Components/Overview.php');?>
+                                    <!-- //? ========= OVERVIEW DYNAMIQUES, DEFAULT = DISPLAY NONE =================== -->
+                                    <?php require('./back-end/Views/Components/Overview.php');?>
                                 </div>
                             <?php } endfor;?>
 

@@ -1,6 +1,6 @@
 <?php
 
-$imgSrc = './front-end/assets/img/';
+$imgSrc = './front-end/assets/img/projects/';
 
 $projects = [
                 [
@@ -16,5 +16,5 @@ $projects = [
                     'date'      => '01 12 2020',
                     'url'       => 'https://www.youtube.com/watch?v=Gbczg095K_A&t=3775s',
                     'image'     => $imgSrc . 'devnest-card.jpg'
-                ]
+                ],
             ];
